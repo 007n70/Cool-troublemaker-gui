@@ -1,34 +1,4 @@
-local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
-local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
-
-Notification:Notify(
-    {Title = "Greetings fellas", Description = ":)"},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "option"},
-    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State) print(tostring(State)) end}
-)
-wait(1)
-Notification:Notify(
-    {Title = "Man it've so long since i quited", Description = "idk maybe 7 years? i don' exactly remember XD"},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"},
-    {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84)}
-)
-wait(1)
-Notification:Notify(
-    {Title = "Thanks for using my script, i try my best :D", Description = "HEAVILY RESPECT TO THE SCRIPT OWNERS!!! Loading..."},
-    {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "default"}
-)
-
-
-
-
-local colors = {
-    SchemeColor = Color3.fromRGB(10,0,255),
-    Background = Color3.fromRGB(0, 0, 0),
-    Header = Color3.fromRGB(0, 0, 0),
-    TextColor = Color3.fromRGB(255,255,255),
-    ElementColor = Color3.fromRGB(20, 20, 20)
-}
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Notification-script-/refs/heads/main/just%20use%20it"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("COOL TROUBLE MAKER", "BloodTheme")
 local Tab = Window:NewTab("TROLLIN")
@@ -712,6 +682,9 @@ end)
 Section:NewButton("Fe server admin", "Best script ever(btw this one are 4 year old or older XD)", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ONEReverseCard/My-Scripts/main/Netless%20Server%20Admin.md"))()
 end)
+Section:NewButton("Pet hat", "any hats you wear will become a pet", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty56.lua"))()
+end)
 Section:NewButton("Netless", "use it when you need to ofc", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4E9UU5G6"))()
 end)
@@ -746,99 +719,6 @@ Section:NewButton("Bring parts", "annoying ppl is not cool but it fun if we do a
 end)
 Section:NewButton("Gravity", "Newton was lucky", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/96XzjEiK"))()
-end)
-local Tab = Window:NewTab("hats")
-local Section = Tab:NewSection("lol you're bald you're just using wig imo")
-Section:NewButton("hold hats", "you look so bald without your hat lol", function()
-    local lp = game.Players.LocalPlayer
-local char = lp.Character
-
-for i, v in pairs(char:GetChildren()) do
-    if v:IsA("BallSocketConstraint") then
-        v:Destroy()
-    end
-end
-
-for i, v in pairs(char:GetChildren()) do
-    if v:IsA("HingeConstraint") then
-        v:Destroy()
-    end
-end
-
-for i, v in pairs(char.Humanoid:GetAccessories()) do
-local hat = v.Name
-
-char[hat].Archivable = true
-local fake = char[hat]:Clone()
-fake.Parent = char
-fake.Handle.Transparency = 1
-
-local hold = false
-local enabled = false
-
-char[hat].Handle.AccessoryWeld:Destroy()
-
-local tool = Instance.new("Tool", lp.Backpack)
-tool.RequiresHandle = true
-tool.CanBeDropped = false
-tool.Name = hat
-
-local handle = Instance.new("Part", tool)
-handle.Name = "Handle"
-handle.Size = Vector3.new(1, 1, 1)
-handle.Massless = true
-handle.Transparency = 1
-
-local positions = {
-    forward = tool.GripForward,
-    pos = tool.GripPos,
-    right = tool.GripRight,
-    up = tool.GripUp
-}
-
-tool.Equipped:connect(function()
- hold = true
-end)
-
-tool.Unequipped:connect(function()
-   hold = false
-end)
-
-tool.Activated:connect(function()
-    if enabled == false then
-        enabled = true
-        tool.GripForward = Vector3.new(-0.976,0,-0.217)
-    tool.GripPos = Vector3.new(.95,-0.76,1.4)
-    tool.GripRight = Vector3.new(0.217,0, 0.976)
-    tool.GripUp = Vector3.new(0,1,0)
-    wait(.8)
-    tool.GripForward = positions.forward
-    tool.GripPos = positions.pos
-    tool.GripRight = positions.right
-    tool.GripUp = positions.up
-    enabled = false
-    end
-end)
-
-game:GetService("RunService").Heartbeat:connect(function()
-    pcall(function()
-       char[hat].Handle.Velocity = Vector3.new(30, 0, 0)
-if hold == false then
-    char[hat].Handle.CFrame = fake.Handle.CFrame
-elseif hold == true then
-    char[hat].Handle.CFrame = handle.CFrame
-    end
-end)
-end)
-end
-end)
-Section:NewButton("hat giver", "I HATE MY LIFEEE", function()
-    local fakeadmin = true
----
-  loadstring(game:HttpGet(('https://pastebin.com/raw/DAg7Hnnd'),true))()
-end)
-Section:NewButton("Pet hat", "any hats you wear will become", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty56.lua"))()
 end)
 local Tab = Window:NewTab("Shades")
 local Section = Tab:NewSection("Beautiful and more realistic")
@@ -978,7 +858,7 @@ Section:NewButton("Script 3", "Esp bla bla", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
 end)
 local Tab = Window:NewTab("Grow a garden")
-local Section = Tab:NewSection("idk anything about ts game but ok")
+local Section = Tab:NewSection("Grow a tree simulator X")
 Section:NewButton("Script 1", "auto sell or smt", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/Grow-a-Garden/main/Grow_A_Garden.lua"))()
 end)
@@ -989,15 +869,15 @@ Section:NewButton("Script 3", "idk", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Skibidiking123/Fisch1/refs/heads/main/FischMain"))()
 end)
 local Tab = Window:NewTab("Obbies")
-local Section = Tab:NewSection("MEHAHAHAA")
+local Section = Tab:NewSection("YIPPIE")
 Section:NewButton("Obby free gamepass", "IT STILL WORKS FINE AFTER YEARS", function()
     for _,v in pairs(game:GetDescendants()) do if v.ClassName == "RemoteEvent" then if v.Parent.Name == "WeaponsRemotes" or v.Parent.Name == "VipRemotes" or v.Parent.Name == "Remotes" then v:FireServer() end end end
 end)
 Section:NewButton("Fake wallhop", "LOL SKILL ISSUES", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20WallHop%20V4%20script"))()
 end)
-local Tab = Window:NewTab("Make kids cries in brookheavem")
-local Section = Tab:NewSection("MUHEHEJE")
+local Tab = Window:NewTab("MAKE KIDS CRIES IN BROOKHEAVEM SIMULATOR")
+local Section = Tab:NewSection("MUHEHEHE")
 Section:NewButton("Brookheaven audio jumpscared", "OO they gonna cry", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa0/brookhaven/refs/heads/main/brookhaven%20script.txt"))()
 end)
