@@ -95,6 +95,12 @@ end)
 Section:NewButton("Script 3", "Esp bla bla", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
 end)
+Section:NewButton("Script 4", "Bond script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZusumeHub/ZusumeHub/refs/heads/main/V3%20deadrails"))()
+end)
+Section:NewButton("Script 5", "Bond script too XD", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1"))()
+end)
 local Tab = Window:NewTab("Grow a garden")
 local Section = Tab:NewSection("Grow a tree simulator X")
 Section:NewButton("Script 1", "auto sell or smt", function()
@@ -106,6 +112,12 @@ end)
 Section:NewButton("Script 3", "idk", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Skibidiking123/Fisch1/refs/heads/main/FischMain"))()
 end)
+Section:NewButton("Script 4", "Dark one edition", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/Other-Scripts/refs/heads/main/Grow%20A%20Garden'))()
+end)
+Section:NewButton("Script 5", "Spawner", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/iwantsom3/script/refs/heads/main/Gag"))()
+end)
 local Tab = Window:NewTab("Obbies")
 local Section = Tab:NewSection("YIPPIE")
 Section:NewButton("Obby free gamepass", "IT STILL WORKS FINE AFTER YEARS", function()
@@ -114,8 +126,69 @@ end)
 Section:NewButton("Fake wallhop", "LOL SKILL ISSUES", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20WallHop%20V4%20script"))()
 end)
-local Tab = Window:NewTab("MAKE KIDS CRIES IN BROOKHEAVEM SIMULATOR")
+Section:NewButton("Obby but you're on the bike unlock all bikes", "idk XD", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/DHBCommunity/DHBOfficialScript/main/Unlockbike"))()
+end)
+Section:NewButton("Obby but you're on a skateboard", "what's next? obby but you're on a toilet?", function()
+ local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local character = workspace:WaitForChild("Characters"):WaitForChild(player.Name)
+local hrp = character:WaitForChild("HumanoidRootPart")
+
+local checkpointFolder = workspace:WaitForChild("Map"):WaitForChild("Checkpoints")
+
+for i = 1, 100 do
+    local model = checkpointFolder:FindFirstChild(tostring(i))
+    if model and model:IsA("Model") and model.PrimaryPart then
+        hrp.CFrame = model.PrimaryPart.CFrame + Vector3.new(0, 3, 0)
+        wait(0)
+    end
+end
+end)
+Section:NewButton("Slap tower", "kinda broken in my opinion", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/Roblox-Scripts/refs/heads/main/Slap-Tower-Script"))()
+end)
+Section:NewButton("Slap hitbox", "OP", function()
+    loadstring(game:HttpGet("https://pastefy.app/JoTKWxA4/raw"))()
+end)
+local Tab = Window:NewTab("MAKE KIDS CRIES IN BROOKHAVEN")
 local Section = Tab:NewSection("MUHEHEHE")
 Section:NewButton("Brookheaven audio jumpscared", "OO they gonna cry", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa0/brookhaven/refs/heads/main/brookhaven%20script.txt"))()
+end)
+Section:NewButton("Dark one gui", "an gui that's can replace to icehub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/TheDarkoneMarcillisePex/Other-Scripts/main/Brook%20Haven%20Gui'))()
+end)
+Section:NewButton("Sp hub", "second best", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
+end)
+local Tab = Window:NewTab("Skinwalkers")
+local Section = Tab:NewSection("i luv ts game XD")
+Section:NewButton("Qiwil hub", "cool", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Qiwikox12/stubrawl/refs/heads/main/Skinwalkersspawn.txt"))()
+end)
+Section:NewButton("Skinwalkers esp", "make the game easier", function()
+    local ESP = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
+ESP:Toggle(true)
+
+ESP.Players = false
+ESP.Boxes = true
+ESP.Names = true
+
+ESP:AddObjectListener(workspace.Runners.Skinwalkers, {
+    Type = "Model",
+    PrimaryPart = "HumanoidRootPart",
+    CustomName = "Skinwalker",
+    Color = Color3.fromRGB(255, 0, 0),
+    IsEnabled = "SkinwalkerESPEnabled"
+})
+
+ESP.SkinwalkerESPEnabled = true
+end)
+Section:NewButton("Skinwalkers gui", "nu key", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/Skinwalkers"))()
+end)
+Section:NewButton("Skinwalkers op script", "SUPA OP", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/jogosutora/theSkinWalker/refs/heads/main/fluentUIVersion.lua"))()
 end)
