@@ -39,6 +39,117 @@ end)
 Section:NewButton("Goofy animations", "goofy balls", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/nutdestroyer172/goofy-experiment/refs/heads/main/goofy%20animations"))()
 end)
+Section:NewButton("Forsaken dog animation", "bro's creep", function()
+    local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local player = Players.LocalPlayer
+
+-- Animation IDs
+local defaultMoveAnimId = "rbxassetid://108287960442206"
+local altMoveAnimId = "rbxassetid://109671225388655"
+local idleAnimId = "rbxassetid://135419935358802"
+
+-- GUI Setup (one-time)
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "MoveAnimToggleGui"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = player:WaitForChild("PlayerGui")
+
+local toggleButton = Instance.new("TextButton")
+toggleButton.Name = "ToggleButton"
+toggleButton.Size = UDim2.new(0, 140, 0, 40)
+toggleButton.Position = UDim2.new(0, 10, 0, 10)
+toggleButton.Text = "Using Default Move"
+toggleButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+toggleButton.TextColor3 = Color3.new(1, 1, 1)
+toggleButton.Parent = screenGui
+
+-- Variables
+local moveTrack, idleTrack, heartbeatConnection, toggleConnection
+local useAltAnim = false
+
+-- Helper to clean up old animation state
+local function stopOldTracks()
+    if idleTrack then idleTrack:Stop() idleTrack:Destroy() end
+    if moveTrack then moveTrack:Stop() moveTrack:Destroy() end
+    if heartbeatConnection then heartbeatConnection:Disconnect() end
+    if toggleConnection then toggleConnection:Disconnect() end
+end
+
+-- Animation setup
+local function setupAnimations(character)
+    stopOldTracks()
+
+    local humanoid = character:WaitForChild("Humanoid")
+
+    -- Disable default Animate script
+    local animate = character:FindFirstChild("Animate")
+    if animate then animate.Disabled = true end
+
+    -- Idle animation
+    local idleAnim = Instance.new("Animation")
+    idleAnim.AnimationId = idleAnimId
+    idleTrack = humanoid:LoadAnimation(idleAnim)
+    idleTrack.Priority = Enum.AnimationPriority.Action
+    idleTrack:Play()
+
+    -- Function to load move animation based on current toggle
+    local function loadMoveTrack()
+        if moveTrack then moveTrack:Stop() moveTrack:Destroy() end
+        local moveAnim = Instance.new("Animation")
+        moveAnim.AnimationId = useAltAnim and altMoveAnimId or defaultMoveAnimId
+        moveTrack = humanoid:LoadAnimation(moveAnim)
+        moveTrack.Priority = Enum.AnimationPriority.Movement
+    end
+
+    loadMoveTrack()
+
+    -- Movement logic loop
+    heartbeatConnection = RunService.Heartbeat:Connect(function()
+        local speed = humanoid.MoveDirection.Magnitude
+
+        -- Clean default idle animations
+        for _, track in pairs(humanoid:GetPlayingAnimationTracks()) do
+            if track.Animation.AnimationId ~= idleAnimId
+                and track.Animation.AnimationId ~= moveTrack.Animation.AnimationId then
+                if track.Priority == Enum.AnimationPriority.Core
+                    or track.Name == "idle"
+                    or track.Animation.AnimationId:lower():find("idle") then
+                    track:Stop()
+                end
+            end
+        end
+
+        if speed > 0.01 then
+            if not moveTrack.IsPlaying then
+                idleTrack:Stop()
+                moveTrack:Play()
+            end
+        else
+            if not idleTrack.IsPlaying then
+                moveTrack:Stop()
+                idleTrack:Play()
+            end
+        end
+    end)
+
+    -- GUI toggle logic
+    toggleConnection = toggleButton.MouseButton1Click:Connect(function()
+        useAltAnim = not useAltAnim
+        toggleButton.Text = useAltAnim and "Using Alt Move" or "Using Default Move"
+        loadMoveTrack()
+    end)
+end
+
+-- Setup on current and future character loads
+if player.Character then
+    setupAnimations(player.Character)
+end
+
+player.CharacterAdded:Connect(function(char)
+    setupAnimations(char)
+end)
+end)
 Section:NewButton("Animation logger", "idk what to say", function()
     loadstring(game:HttpGet("https://pastefy.app/yw5RdVu3/raw"))()
 end)
@@ -491,6 +602,9 @@ Section:NewButton("Disbelief hub", "get hats at: https://www.roblox.com/games/15
     getgenv().Framework = "Hatless" -- Options: "Krypton", "Emperyean", "Hatless"
 loadstring(game:HttpGet("https://gist.githubusercontent.com/MelonsStuff/f61fc110c0dc167e263cec94518390a1/raw/f45ae28bdfd503af662214032432f7487c0ac419/DisbeliefHub.lua"))()
 end)
+Section:NewButton("Patchma hub", "one of the best hub with reanimating ever", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Apteronotidae/why/refs/heads/main/patchmaV46_by_MyWorld.txt"))()
+end)
 Section:NewButton("Steal bobuc hub-delta support", "idk lol btw watch tutorial in ytb", function()
     loadstring(game:HttpGet("https://pastefy.app/YJr8pZtC/raw"))()
 end)
@@ -499,6 +613,9 @@ Section:NewButton("Steal bobuc hub-other executor support", "bobic", function()
 end)
 Section:NewButton("LALOL backdoor hub", "VERY AWESOME", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
+end)
+Section:NewButton("Second troublemaker gui", "this is about games and trolling kids lmao", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Cool-troublemaker-gui/refs/heads/main/second%20gui"))();
 end)
 local Tab = Window:NewTab("weird and non fe stuff")
 local Section = Tab:NewSection("obviously for fun")
@@ -545,6 +662,9 @@ Section:NewButton("Keyboard", "for mobile users too", function()
 end)
 Section:NewButton("server finder", "yall lazy this much?", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/lumpiasallad/Roblox_ServerHop/refs/heads/main/ServerHopScript.lua"))()
+end)
+Section:NewButton("Game teleporter", "you need place id first", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/hiWAdBMa'))()
 end)
 Section:NewButton("Info spy", "Idk lol", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty31.lua"))()
@@ -653,7 +773,7 @@ end)
 Section:NewButton("Fe Genesis dragon sin", "like the other", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/refs/heads/main/Loadstrings/Sin%20Dragon"))();
 end)
-Section:NewButton("Fe dragon sin", "no hats version only anim fe", function()
+Section:NewButton("Fe dragon sin", "permadeath needed", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Fe-ProjectR/FE-Files/refs/heads/main/FE%20Void%20Dagon'))()
 end)
 Section:NewButton("Fe Genesis ban hammer", "dicorddd", function()
@@ -661,6 +781,9 @@ Section:NewButton("Fe Genesis ban hammer", "dicorddd", function()
 end)
 Section:NewButton("Fe Genesis krystal dance", "just join their discord for hats", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Krystal%20Dance"))();
+end)
+Section:NewButton("Fe krystal dance", "Permadeath needed", function()
+    loadstring(game:HttpGet('https://gist.githubusercontent.com/1BlueCat/e51327540d1ba5ede244c459dbdb5a0e/raw/6320fe344ac51a311ef7c9f8d5c3924b1a7c3969/Krystal%2520Dance'))()
 end)
 Section:NewButton("Fe Genesis good cop bad cop", "does i have to repeat again?", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Good%20Cop%20Bad%20Cop"))();
@@ -684,6 +807,9 @@ Section:NewButton("Fe server admin", "Best script ever(btw this one are 4 year o
 end)
 Section:NewButton("Pet hat", "any hats you wear will become a pet", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty56.lua"))()
+end)
+Section:NewButton("Fe hat orbit", "it no cool like before:(", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoserAlt/hatspin/refs/heads/main/hat"))()
 end)
 Section:NewButton("Netless", "use it when you need to ofc", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4E9UU5G6"))()
@@ -762,122 +888,4 @@ runService.Heartbeat:Connect(function()
  motionBlur.Size = math.abs(magnitude)*blurAmount*blurAmplifier/2
  lastVector = camera.CFrame.LookVector
 end)
-end)        
-local Tab = Window:NewTab("Work at a pizza place")
-local Section = Tab:NewSection("SPOOKY SCARY SKELETONS")
-Section:NewButton("Destroy kitchen", "Makes the kitchen twerking xd", function()
-    _G.cookroomfucker = true -- change to false and re execute if you wanna turn it off 
-local lp = game:GetService("Players").LocalPlayer
-local remote
-local ffc = game.FindFirstChild
- 
-do
-    local reg = (getreg or debug.getregistry)()
- for i=1,#reg do
-  local f = reg[i]
-  if type(f)=="table" and rawget(f,"FireServer") and rawget(f,"BindEvents") then
-   remote = f
-  end
- end
-end
- 
-function moveThing(bmd, location)
-    remote:FireServer("UpdateProperty", bmd, "CFrame", location)
-    wait()
-    remote:FireServer("SquishDough", bmd)
-end
- 
--- cook room fucker main script
- 
-for i,v in pairs(workspace.AllSupplyBoxes:GetChildren()) do
-    v.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
-end
-wait()
- 
- 
-spawn(function()
-    while _G.cookroomfucker and wait() do
-        spawn(function()
-            for i,v in pairs(workspace.AllDough:GetChildren()) do
-                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
-            end
-        end)
-        spawn(function()
-            for i,v in pairs(workspace.AllMountainDew:GetChildren()) do
-                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
-            end
-        end)
-        spawn(function()
-            for i,v in pairs(workspace.BoxingRoom:GetChildren()) do
-                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
-            end
-        end)
-        spawn(function()
-            for i,v in pairs(workspace.AllBox:GetChildren()) do
-                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
-            end
-        end)
-        spawn(function()
-            for i,v in pairs(workspace.AllSupplyBoxes:GetChildren()) do
-                moveThing(v, CFrame.new(Random.new():NextNumber(22.6,51.6),Random.new():NextNumber(3.6,14.6),Random.new():NextNumber(55.5,70.5)))
-            end
-        end)
-    end
-end)
- 
-spawn(function()
-    while _G.cookroomfucker and wait() do
-        for i,v in pairs(game:GetService("Workspace").Ovens:GetChildren()) do
-            v.Door.ClickDetector.Detector:FireServer()
-            wait(.15)
-        end
-    end
-end)
-end)
-Section:NewButton("Auto farm", "how's vro is this lazy?", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/xQTtE6D9"))()
-end)
-Section:NewButton("Auto farm 2", "will replace soon", function()
-    loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/49f02b0d8c1f60207c84ae76e12abc1e.lua'))()
-end)
-Section:NewButton("Car destroyer", "kinda laggy", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/D1R6RxKi"))();
-end)
-Section:NewButton("Instant become manager", "mama boss", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/incognitototo/sda/main/dwa.lua", true))()
-end)
-local Tab = Window:NewTab("Dead rails")
-local Section = Tab:NewSection("YEEEHAWWW")
-Section:NewButton("Script 1", "dunno the name XP", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Dead-Rails-Alpha-OP-KiciaHook-V2-Dead-Rails-Auto-Farm-And-More-38614"))()
-end)
-Section:NewButton("Script 2", "instant kill are op", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DeadRails", true))()
-end)
-Section:NewButton("Script 3", "Esp bla bla", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
-end)
-local Tab = Window:NewTab("Grow a garden")
-local Section = Tab:NewSection("Grow a tree simulator X")
-Section:NewButton("Script 1", "auto sell or smt", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa1/Grow-a-Garden/main/Grow_A_Garden.lua"))()
-end)
-Section:NewButton("Script 2", "Same features but diff gui XD", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/GrowaGarden", true))()
-end)
-Section:NewButton("Script 3", "idk", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Skibidiking123/Fisch1/refs/heads/main/FischMain"))()
-end)
-local Tab = Window:NewTab("Obbies")
-local Section = Tab:NewSection("YIPPIE")
-Section:NewButton("Obby free gamepass", "IT STILL WORKS FINE AFTER YEARS", function()
-    for _,v in pairs(game:GetDescendants()) do if v.ClassName == "RemoteEvent" then if v.Parent.Name == "WeaponsRemotes" or v.Parent.Name == "VipRemotes" or v.Parent.Name == "Remotes" then v:FireServer() end end end
-end)
-Section:NewButton("Fake wallhop", "LOL SKILL ISSUES", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20WallHop%20V4%20script"))()
-end)
-local Tab = Window:NewTab("MAKE KIDS CRIES IN BROOKHEAVEM SIMULATOR")
-local Section = Tab:NewSection("MUHEHEHE")
-Section:NewButton("Brookheaven audio jumpscared", "OO they gonna cry", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa0/brookhaven/refs/heads/main/brookhaven%20script.txt"))()
 end)
