@@ -346,7 +346,7 @@ end)
 local Tab = Window:NewTab("Tsb moveset")
 local Section = Tab:NewSection("Dude these scripts look beter than the devs do")
 Section:NewButton("Omni-man", "are you sure?", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/OmniManScript/refs/heads/main/Protected_4630876916309035.lua"))()
+    loadstring(game:HttpGet("https://github.com/Nova2ezz/OmniManRepost/raw/main/Protected_3415384434184056.lua"))()
 end)
 Section:NewButton("Gojo", "PURPLE HOLLOW", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/NTfJR4qv"))();
