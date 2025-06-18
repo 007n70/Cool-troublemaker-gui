@@ -859,7 +859,7 @@ Section:NewButton("Fe Genesis krystal dance", "just join their discord for hats"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Krystal%20Dance"))();
 end)
 Section:NewButton("Fe krystal dance", "Permadeath needed", function()
-    loadstring(game:HttpGet('https://gist.githubusercontent.com/1BlueCat/e51327540d1ba5ede244c459dbdb5a0e/raw/6320fe344ac51a311ef7c9f8d5c3924b1a7c3969/Krystal%2520Dance'))()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Client-Replication-Krystal-Dance-37987"))()
 end)
 Section:NewButton("Fe Genesis good cop bad cop", "does i have to repeat again?", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Good%20Cop%20Bad%20Cop"))();
@@ -889,6 +889,9 @@ Section:NewButton("Fe hat orbit", "it no cool like before:(", function()
 end)
 Section:NewButton("Netless", "use it when you need to ofc", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4E9UU5G6"))()
+end)
+Section:NewButton("Permadeath", "belong 2 me", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/CnLMAFji"))();
 end)
 local Tab = Window:NewTab("control bloc")
 local Section = Tab:NewSection("Stoopis blocc")
