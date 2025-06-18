@@ -379,7 +379,453 @@ Section:NewButton("Mafioso", "I love knocking out teeth", function()
     loadstring(game:HttpGet("https://paste.ee/r/EK90DCTy"))()
 end)
 Section:NewButton("Mafioso skin", "i don't feel pain can you say the same?", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/Qm2HD9iv"))();
+    local Players = game:GetService("Players")
+
+function morphToUser(userId)
+    local player = Players.LocalPlayer
+    local character = player.Character
+    if not character then return end
+    
+    local appearance = Players:GetCharacterAppearanceAsync(userId)
+    if not appearance then return end
+    
+    local toRemove = {
+        ["Accessory"] = true,
+        ["Shirt"] = true,
+        ["Pants"] = true,
+        ["CharacterMesh"] = true,
+        ["BodyColors"] = true
+    }
+    
+    for _, item in ipairs(character:GetChildren()) do
+        if toRemove[item.ClassName] then
+            item:Destroy()
+        end
+    end
+    
+    local face = character.Head:FindFirstChild("face")
+    if face then face:Destroy() end
+    
+    for _, item in ipairs(appearance:GetChildren()) do
+        if item:IsA("Shirt") or item:IsA("Pants") or item:IsA("BodyColors") then
+            item.Parent = character
+        elseif item:IsA("Accessory") then
+            character.Humanoid:AddAccessory(item)
+        elseif item.Name == character.Humanoid.RigType.Name then
+            local mesh = item:FindFirstChildOfClass("CharacterMesh")
+            if mesh then mesh.Parent = character end
+        end
+    end
+    
+    local newFace = appearance:FindFirstChild("face")
+    if newFace then
+        newFace.Parent = character.Head
+    else
+        local defaultFace = Instance.new("Decal")
+        defaultFace.Name = "face"
+        defaultFace.Face = "Front"
+        defaultFace.Texture = "rbxasset://textures/face.png"
+        defaultFace.Parent = character.Head
+    end
+    
+    character.Parent = nil
+    character.Parent = workspace
+end
+
+morphToUser(3461389772)
+
+
+-- toji
+local player = game.Players.LocalPlayer
+local char = player.Character
+local Humanoid = char.Humanoid
+local hot = player.PlayerGui:WaitForChild("Hotbar")
+local hotbar = hot:WaitForChild("Backpack"):WaitForChild("Hotbar")
+-- 14516273501
+
+local function cloneToolName(slot, text)
+    local toolName = slot.ToolName
+    if not slot:FindFirstChild("SkibidiGame") then
+        toolName.Visible = false
+        local clone = toolName:Clone()
+        clone.Name = "SkibidiGame"
+        clone.Parent = slot
+        clone.Text = text
+        clone.Visible = true
+    elseif slot:FindFirstChild("SkibidiGame") then
+        if slot:FindFirstChild("SkibidiGame").Text ~= text then
+            toolName.Visible = false
+            slot:FindFirstChild("SkibidiGame").Text = text
+        end
+    end
+end
+-- 10470104242
+local magichealth = player.PlayerGui:WaitForChild("ScreenGui"):WaitForChild("MagicHealth")
+local UltLabel = player.PlayerGui:WaitForChild("ScreenGui"):WaitForChild("MagicHealth"):WaitForChild("TextLabel")
+UltLabel.Visible = false
+local UltLabel = UltLabel:Clone()
+UltLabel.Visible = true
+UltLabel.Name = "SkibidiRizzlerGyattOhio"
+UltLabel.Parent = magichealth
+task.spawn(function()
+    while true do
+        UltLabel.Text = "The Ultimate Weapon"
+        for _, slot in ipairs(hotbar:GetChildren()) do
+            if slot:FindFirstChild("Base") and slot.Base:FindFirstChild("ToolName") then
+                local toolNameText = slot.Base.ToolName.Text
+                if toolNameText == "Normal Punch" then
+                    cloneToolName(slot.Base, "red")
+                elseif toolNameText == "Consecutive Punches" then
+                    cloneToolName(slot.Base,     "Blue flame")
+                elseif toolNameText == "Shove" then
+                    cloneToolName(slot.Base,   "gojoSlash")
+                elseif toolNameText == "Uppercut" then
+                    cloneToolName(slot.Base, "Soul Strike")
+                elseif toolNameText == "Death Counter" then
+                    cloneToolName(slot.Base, "Soul Strike")
+                elseif toolNameText == "Table Flip" then
+                    cloneToolName(slot.Base, "Solar Sky Eruption")
+                elseif toolNameText == "Serious Punch" then
+                    cloneToolName(slot.Base, "Blazing Arrow")
+                elseif toolNameText == "Omni Directional Punch" then
+                    cloneToolName(slot.Base, "Dragon's Inferal Wrath")
+                end
+            end
+        end
+        task.wait(1)
+    end
+end)
+
+--[[Animations]]
+
+
+
+
+local p = game.Players.LocalPlayer
+local Humanoid = p.Character:WaitForChild("Humanoid")
+
+-- Stop any playing animation immediately
+for _, animTrack in pairs(Humanoid:GetPlayingAnimationTracks()) do
+    animTrack:Stop()
+end
+
+-- Create and load new animation
+local AnimAnim = Instance.new("Animation")
+AnimAnim.AnimationId = "rbxassetid://16746843881" -- Your animation ID
+
+local Anim = Humanoid:LoadAnimation(AnimAnim)
+
+-- Play the animation
+Anim:Play()
+
+-- Adjust the speed
+Anim:AdjustSpeed(0.1) -- Initial speed (does nothing because of the next line)
+Anim.TimePosition = 0 -- Start time at 0
+Anim:AdjustSpeed(0.9) -- Adjust speed again (this is effective)
+
+
+
+getgenv().Time = 0.5
+
+getgenv().Head = {
+    94011727637185,  -- Accessory IDs for the head
+    94011727637185,
+    76301360455997,
+}
+
+getgenv().Torso = {
+    106152571535464,  -- Accessory IDs for the torso
+    88253083153072,
+}
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+-- Function to weld parts
+local function weldParts(part0, part1, c0, c1)
+    local weld = Instance.new("Weld")
+    weld.Part0 = part0
+    weld.Part1 = part1
+    weld.C0 = c0
+    weld.C1 = c1
+    weld.Parent = part0
+    return weld
+end
+
+-- Function to find an attachment by name
+local function findAttachment(rootPart, name)
+    for _, descendant in pairs(rootPart:GetDescendants()) do
+        if descendant:IsA("Attachment") and descendant.Name == name then
+            return descendant
+        end
+    end
+end
+
+-- Function to add an accessory to the character
+local function addAccessoryToCharacter(accessoryId, parentPart)
+    local accessory = game:GetObjects("rbxassetid://" .. tostring(accessoryId))[1]
+    local character = player.Character
+
+    -- Parent the accessory to Workspace first
+    accessory.Parent = game.Workspace
+
+    local handle = accessory:FindFirstChild("Handle")
+    if handle then
+        handle.CanCollide = false
+        local attachment = handle:FindFirstChildOfClass("Attachment")
+        if attachment then
+            local parentAttachment = findAttachment(parentPart, attachment.Name)
+            if parentAttachment then
+                weldParts(parentPart, handle, parentAttachment.CFrame, attachment.CFrame)
+            end
+        else
+            local parent = character:FindFirstChild(parentPart.Name)
+            if parent then
+                local attachmentPoint = accessory.AttachmentPoint
+                weldParts(parent, handle, CFrame.new(0, 0.5, 0), attachmentPoint.CFrame)
+            end
+        end
+    end
+
+    -- Parent the accessory to the character
+    accessory.Parent = character
+end
+
+-- Function to remove existing accessories
+local function removeExistingAccessories(character)
+    for _, accessory in ipairs(character:GetChildren()) do
+        if accessory:IsA("Accessory") then
+            accessory:Destroy()  -- Remove existing accessories
+        end
+    end
+end
+
+-- Function to set the skin color to white
+local function setSkinColor(character)
+    local bodyColors = character:FindFirstChildOfClass("BodyColors")
+    if bodyColors then
+        bodyColors.HeadColor = BrickColor.White()
+        bodyColors.TorsoColor = BrickColor.White()
+        bodyColors.LeftArmColor = BrickColor.White()
+        bodyColors.RightArmColor = BrickColor.White()
+        bodyColors.LeftLegColor = BrickColor.White()
+        bodyColors.RightLegColor = BrickColor.White()
+    end
+end
+
+-- Function to handle character respawn
+local function onCharacterAdded(character)
+    wait(getgenv().Time)
+
+    removeExistingAccessories(character)  -- Remove existing accessories
+    setSkinColor(character)  -- Set skin color to white
+
+    for _, accessoryId in ipairs(getgenv().Head) do
+        addAccessoryToCharacter(accessoryId, character.Head)
+    end
+
+    for _, accessoryId in ipairs(getgenv().Torso) do
+        addAccessoryToCharacter(accessoryId, character:FindFirstChild("UpperTorso") or character:FindFirstChild("Torso"))
+    end
+end
+
+-- Function to handle player death
+local function onCharacterDied()
+    local character = player.Character
+    if character then
+        -- Remove all accessories when the character dies
+        removeExistingAccessories(character)
+    end
+end
+
+-- Connect the death event to handle when the player dies
+local function onCharacterAddedDeath(character)
+    local humanoid = character:WaitForChild("Humanoid")
+    humanoid.Died:Connect(onCharacterDied)
+end
+
+-- Initial connection for when the script runs
+if player.Character then
+    onCharacterAdded(player.Character)
+    onCharacterAddedDeath(player.Character)
+end
+
+player.CharacterAdded:Connect(function(character)
+    onCharacterAdded(character)
+    onCharacterAddedDeath(character)
+end)
+
+
+
+wait(2)
+local Test = game.ReplicatedStorage.Resources.StoicBomb.HEAT.Part.Attachment.Effect
+
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+
+
+
+
+
+local assetId = 0 -- The Asset ID to use 
+local animationId = "10471336737" -- Place your new anim id here
+
+-- Function to create the effect at the bottom of the right arm
+local function createEffect()
+    local player = game.Players.LocalPlayer
+    local character = player and player.Character
+
+    if character then
+        -- Create and add the effect asset
+        local effect = game:GetObjects("rbxassetid://" .. assetId)[1]
+        if effect then
+            effect.Parent = character
+            
+            -- Set properties for the effect
+            effect.CanCollide = false -- No collision for the effect
+            effect.Anchored = false -- Make it unanchored
+
+            -- Position the effect at the bottom of the right arm
+            local rightArm = character:FindFirstChild("RightArm") or character:FindFirstChild("Right Arm")
+            if rightArm then
+                effect.CFrame = rightArm.CFrame * CFrame.new(0, -rightArm.Size.Y / 2, 0) -- Position at the bottom
+
+                -- Create a weld to keep the effect attached
+                local weld = Instance.new("Weld")
+                weld.Part0 = rightArm
+                weld.Part1 = effect
+                weld.C0 = CFrame.new(0, 0, 0) -- Adjust the offset if necessary
+                weld.Parent = rightArm -- Parent the weld to the right arm
+
+                -- change how much the vfx lasts for
+                wait(0.7)
+                effect:Destroy() -- Clean up the effect
+                weld:Destroy() -- Remove the weld
+            else
+                warn("Right arm not found!") -- Debugging information
+            end
+        else
+            warn("Effect asset could not be loaded!") -- Debugging information
+        end
+    else
+        warn("Character not found!") -- Debugging information
+    end
+end
+
+-- THE ACTUAL ANIMATION
+-- Function to handle animation with optional start time
+function onAnimation(id, func, startTime)
+    local id = tostring(id):gsub("rbxassetid://", "")
+    local char = game.Players.LocalPlayer.Character
+    local humanoid = char and char:WaitForChild("Humanoid", 1)
+
+    if char and humanoid then
+        humanoid.AnimationPlayed:Connect(function(v)
+            local vID = v.Animation.AnimationId:gsub("rbxassetid://", "")
+            if id == vID then
+                if startTime then
+                    -- Skip to the specific time in the animation
+                    v.TimePosition = startTime
+                end
+                func(v)
+            end
+        end)
+    end
+
+    game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+        local humanoid = char and char:WaitForChild("Humanoid", 1)
+        if char and humanoid then
+            humanoid.AnimationPlayed:Connect(function(v)
+                local vID = v.Animation.AnimationId:gsub("rbxassetid://", "")
+                if id == vID then
+                    if startTime then
+                        -- Skip to the specific time in the animation
+                        v.TimePosition = startTime
+                    end
+                    func(v)
+                end
+            end)
+        end
+    end)
+end
+
+-- Detect animation, stop the old animation, and replace it with the new one
+onAnimation("10471336737", function(animationTrack) -- place old anim here
+    local player = game.Players.LocalPlayer
+    local char = player.Character or player.CharacterAdded:Wait()
+    local humanoid = char:WaitForChild("Humanoid")
+
+    -- Stop the old animation
+    if animationTrack then
+        animationTrack:Stop() -- This will stop the old animation
+    end
+
+    -- Delay before playing the new animation
+    local delayBeforeNewAnim = 0 -- Change this value to adjust delay
+    wait(delayBeforeNewAnim)
+
+    -- Create the new animation instance
+    local newAnimation = Instance.new("Animation")
+    newAnimation.AnimationId = "rbxassetid://18896229321" -- place new anim here
+
+    -- Load and play the new animation
+    local newAnimTrack = humanoid:LoadAnimation(newAnimation)
+
+    -- Adjust the speed of the animation
+    newAnimTrack:Play()
+    newAnimTrack:AdjustSpeed(1) -- Adjust speed as needed
+
+    -- Set the starting point of the new animation (if desired)
+    local startTime = 0 -- Change this to skip to a specific second
+    newAnimTrack.TimePosition = startTime
+
+    -- Option to stop animation after a specific time in seconds
+    local animDurationInSeconds = 0.8 -- Set the duration (in seconds) to stop the animation
+    wait(animDurationInSeconds)
+    
+    newAnimTrack:Stop() -- Stop the animation after the specified duration
+end)
+
+-- Permanently disable the script on player death
+local char = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+local humanoid = char:WaitForChild("Humanoid")
+
+humanoid.Died:Connect(function()
+    script:Destroy() -- Permanently destroy the script on death
+end)
+
+-- Connect the VFX creation to the animation event
+local function onAnimation(animationTrack)
+    if animationTrack.Animation.AnimationId == "rbxassetid://" .. animationId then
+        createEffect() -- Create the effect when the specified animation plays
+    end
+end
+
+-- Connect the onAnimation function
+local function setupAnimationListener()
+    local player = game.Players.LocalPlayer
+    local character = player and player.Character
+    local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+
+    if humanoid then
+        humanoid.AnimationPlayed:Connect(onAnimation)
+    else
+        warn("Humanoid not found!") -- Debugging information
+    end
+end
+
+setupAnimationListener()
+
+-- Handle character respawn
+game.Players.LocalPlayer.CharacterAdded:Connect(setupAnimationListener)
 end)
 Section:NewButton("1egg", "ring around the rosies", function()
     loadstring(game:HttpGet("https://gist.githubusercontent.com/GoldenHeads2/900e87ffc32f3c740930ccb106dd6abf/raw/358c5bf0f0a6aa25946718288dab006e3ae7e1d4/gistfile1.txt"))()
