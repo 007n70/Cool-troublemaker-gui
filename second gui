@@ -376,8 +376,11 @@ Section:NewButton("Manga Sukuna", "SUPER DOMAIN EXPRESS", function()
     loadstring(game:HttpGet("https://pastefy.app/3dQB5Mv5/raw"))();
 end)
 Section:NewButton("Mafioso", "I love knocking out teeth", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/1uSFG2Mq"))();
+    loadstring(game:HttpGet("https://paste.ee/r/EK90DCTy"))()
 end)
 Section:NewButton("Mafioso skin", "i don't feel pain can you say the same?", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/Qm2HD9iv"))();
+end)
+Section:NewButton("1egg", "ring around the rosies", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/GoldenHeads2/900e87ffc32f3c740930ccb106dd6abf/raw/358c5bf0f0a6aa25946718288dab006e3ae7e1d4/gistfile1.txt"))()
 end)
