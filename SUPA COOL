@@ -861,8 +861,11 @@ end)
 Section:NewButton("Fe Genesis krystal dance", "just join their discord for hats", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Krystal%20Dance"))();
 end)
-Section:NewButton("Fe krystal dance", "Permadeath needed", function()
+Section:NewButton("Fe krystal dance v3 modded", "work perfectly in just a baseplate but if you use reanimation it'll be ruin", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Just-a-baseplate.-Keystal-Dance-V3-Modded-41995"))()
+end)
+Section:NewButton("Fe krystal dance cheap version", "in this one you don't need reanimation or permadeath but they look dumb", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/vT1URaRJ"))() 
 end)
 Section:NewButton("Fe Genesis good cop bad cop", "does i have to repeat again?", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Good%20Cop%20Bad%20Cop"))();
