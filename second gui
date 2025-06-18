@@ -375,3 +375,9 @@ end)
 Section:NewButton("Manga Sukuna", "SUPER DOMAIN EXPRESS", function()
     loadstring(game:HttpGet("https://pastefy.app/3dQB5Mv5/raw"))();
 end)
+Section:NewButton("Mafioso", "I love knocking out teeth", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/1uSFG2Mq"))();
+end)
+Section:NewButton("Mafioso skin", "i don't feel pain can you say the same?", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Qm2HD9iv"))();
+end)
