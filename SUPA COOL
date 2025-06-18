@@ -859,7 +859,7 @@ Section:NewButton("Fe Genesis krystal dance", "just join their discord for hats"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Krystal%20Dance"))();
 end)
 Section:NewButton("Fe krystal dance", "Permadeath needed", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Client-Replication-Krystal-Dance-37987"))()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Just-a-baseplate.-Keystal-Dance-V3-Modded-41995"))()
 end)
 Section:NewButton("Fe Genesis good cop bad cop", "does i have to repeat again?", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Good%20Cop%20Bad%20Cop"))();
