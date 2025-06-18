@@ -373,5 +373,5 @@ Section:NewButton("Sukuna", "DOMAIN EXPRESS", function()
     loadstring(game:HttpGet("https://pastefy.app/Ck2z0lcr/raw"))();
 end)
 Section:NewButton("Manga Sukuna", "SUPER DOMAIN EXPRESS", function()
-    print("Clicked")
+    loadstring(game:HttpGet("https://pastefy.app/3dQB5Mv5/raw"))();
 end)
