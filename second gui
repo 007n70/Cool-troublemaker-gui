@@ -3,6 +3,31 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("COOL TROUBLE MAKER SECOND GUI", "BloodTheme")
 local Tab = Window:NewTab("Work at a pizza place")
 local Section = Tab:NewSection("SPOOKY SCARY SKELETONS")
+---
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle 2"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Toggle gui 2"
+Toggle.TextColor3 = Color3.fromRGB(248, 248, 248)
+Toggle.TextSize = 28.000
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
+---
 Section:NewButton("Destroy kitchen", "Makes the kitchen twerking xd", function()
     _G.cookroomfucker = true -- change to false and re execute if you wanna turn it off 
 local lp = game:GetService("Players").LocalPlayer
@@ -317,9 +342,4 @@ Section:NewButton("Auto build and save", "my fav frfr", function()
 end)
 Section:NewButton("Lexus hub", "Woa free tools :0", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/2NjKRALJ", true))()
-end)
-local Tab = Window:NewTab("Go back to gui 1")
-local Section = Tab:NewSection("eternal return")
-Section:NewButton("Go back to gui 1", "Its not what you are its not what you do", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Cool-troublemaker-gui/refs/heads/main/SUPA%20COOL"))();
 end)
