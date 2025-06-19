@@ -646,7 +646,7 @@ Section:NewButton("LALOL backdoor hub", "VERY AWESOME", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
 end)
 Section:NewButton("Second troublemaker gui", "this is about games and trolling kids lmao", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Cool-troublemaker-gui/refs/heads/main/second%20gui"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/second%20gui"))();
 end)
 local Tab = Window:NewTab("weird and non fe stuff")
 local Section = Tab:NewSection("obviously for fun")
