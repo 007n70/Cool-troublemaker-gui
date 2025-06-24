@@ -2,6 +2,20 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Notificat
 local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
 local Library = DarkraiX:Window("SEVEN Z","Gaming hub","",Enum.KeyCode.RightControl);
 Tab1 = Library:Tab("Games")
+local UserInputService = game:GetService("UserInputService")
+local gui = script.Parent.MyFrame -- Assuming the script is in the same ScreenGui as MyFrame
+local isVisible = true
+
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+  if gameProcessed then
+    return
+  end
+
+  if input.KeyCode == Enum.KeyCode.P then
+    isVisible = not isVisible
+    gui.Visible = isVisible
+  end
+end)
 Tab1:Button("Prison admin",function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/devguy100/PrizzLife/main/Source/release_v0.8.1.lua'))()
 end)
