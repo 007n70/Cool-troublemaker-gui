@@ -28,3 +28,44 @@ local Corner = Instance.new("UICorner")
 Corner.Name = "Corner"
 Corner.Parent = Toggle
 ---
+Tab1:Button("Prison admin",function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+local overlay = check:FindFirstChild(name);
+end)
+Tab1:Button("Saitama gun",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/MpGLSap8"))();
+end)
+Tab1:Button("Gun giver",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/SVfvSsP1"))();
+end)
+Tab1:Button("Prison life admin tools giver",function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/AZVi2tuK"))()
+end)
+
+Tab1:Button("Prison breaker v1.5",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/7jyviSrA", true))()
+end)
+Tab1:Button("Prisonrunner V1",function()
+loadstring(game:HttpGet('https://pastebin.com/raw/KemzBTDp'))()
+end)
+Tab1:Button("Prison ware v1.3",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))();
+end)
+Tab1:Button("Prison Sword",function()
+local plr=game.Players.LocalPlayer;local tool=Instance.new("Tool",plr.Backpack)tool.GripPos=Vector3.new(0.1,-1,0)tool.Name="Sword"local k=Instance.new("Part",tool)k.Name="Handle"k.Size=Vector3.new(0.4,4,0.4)local l=Instance.new("Animation",tool)l.AnimationId="rbxassetid://218504594"local m=plr.Character.Humanoid:LoadAnimation(l)db=true;da=false;tool.Equipped:connect(function()tool.Activated:connect(function()if db==true then db=false;m:Play()wait()da=true;db=true;wait(0.1)da=false end end)end)k.Touched:connect(function(n)if da==true then local o=n.Parent.Humanoid;if o~=nil then local p=game.Players:FindFirstChild(n.Parent.Name)for j=1,10 do if p.Name~="RealAnimus"then game.ReplicatedStorage.meleeEvent:FireServer(p)end end end end end)
+end)
+Tab1:Button("Prison aimbot v2",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/JDe1sk3q"))()
+end)
+Tab1:Button("Crouch gui[MOBILE SUPPORT]",function()
+loadstring(game:HttpGet('https://pastebin.com/raw/2J0EBwbN'))();
+end)
+Tab1:Button("Prison life Fe bypass gui",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/g00lXploiter/g00lXploiter/main/Fe%20bypass", true))()
+end)
+Tab1:Button("Prison life corgiside guj",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CorgiSideExploits/OrionLib/refs/heads/main/Corgiside%20Prison%20Life", true))()
+end)
+Tab1:Button("Prison life weshky hub",function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/WeshkyPL/WehskyHub/refs/heads/main/WeshkyHubV1.12.lua'),true))()
+end)
