@@ -3,8 +3,13 @@ local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gami
 local Library = DarkraiX:Window("SEVEN Z","Gaming hub","",Enum.KeyCode.RightControl);
 Tab1 = Library:Tab("Games")
 Tab1:Button("Prison admin",function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
-local overlay = check:FindFirstChild(name);
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/devguy100/PrizzLife/main/Source/release_v0.8.1.lua'))()
+end)
+Tab1:Button("Prison admin 2",function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+end)
+Tab1:Button("Tiger admin",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/N17S3/Tiger-Admin/refs/heads/main/TigerAdmin"))()
 end)
 Tab1:Button("Saitama gun",function()
 loadstring(game:HttpGet("https://pastebin.com/raw/MpGLSap8"))();
@@ -29,7 +34,7 @@ Tab1:Button("Prison Sword",function()
 local plr=game.Players.LocalPlayer;local tool=Instance.new("Tool",plr.Backpack)tool.GripPos=Vector3.new(0.1,-1,0)tool.Name="Sword"local k=Instance.new("Part",tool)k.Name="Handle"k.Size=Vector3.new(0.4,4,0.4)local l=Instance.new("Animation",tool)l.AnimationId="rbxassetid://218504594"local m=plr.Character.Humanoid:LoadAnimation(l)db=true;da=false;tool.Equipped:connect(function()tool.Activated:connect(function()if db==true then db=false;m:Play()wait()da=true;db=true;wait(0.1)da=false end end)end)k.Touched:connect(function(n)if da==true then local o=n.Parent.Humanoid;if o~=nil then local p=game.Players:FindFirstChild(n.Parent.Name)for j=1,10 do if p.Name~="RealAnimus"then game.ReplicatedStorage.meleeEvent:FireServer(p)end end end end end)
 end)
 Tab1:Button("Prison aimbot v2",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/JDe1sk3q"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/L6nJMddF"))();
 end)
 Tab1:Button("Crouch gui[MOBILE SUPPORT]",function()
 loadstring(game:HttpGet('https://pastebin.com/raw/2J0EBwbN'))();
@@ -42,4 +47,7 @@ Tab1:Button("Prison life corgiside guj",function()
 end)
 Tab1:Button("Prison life weshky hub",function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/WeshkyPL/WehskyHub/refs/heads/main/WeshkyHubV1.12.lua'),true))()
+end)
+Tab1:Button("Tbao hub",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaohubPrisonLife"))()
 end)
