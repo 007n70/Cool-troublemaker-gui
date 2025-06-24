@@ -1,6 +1,7 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Notification-script-/refs/heads/main/just%20use%20it"))()
 local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
 local Library = DarkraiX:Window("SEVEN Z","Gaming hub","",Enum.KeyCode.RightControl);
+Tab1 = Library:Tab("Games")
 ---
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "ScreenGui"
@@ -26,7 +27,6 @@ local Corner = Instance.new("UICorner")
 Corner.Name = "Corner"
 Corner.Parent = Toggle
 ---
-Tab1 = Library:Tab("Games")
 Tab1:Button("Prison admin",function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
 local overlay = check:FindFirstChild(name);
