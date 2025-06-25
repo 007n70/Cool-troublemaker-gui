@@ -74,3 +74,20 @@ end)
 Section:NewButton("Op gui 2", "more like a hub?", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ToddyTheNoobDud/Meepstuff/refs/heads/main/RakingNuts.lua'))()
 end)
+local Tab = Window:NewTab("Survive area 51")
+local Section = Tab:NewSection("SCRIPTING BOOMBAZAA")
+Section:NewButton("Ghosthub's gui", "lul i just love his scripts <3", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/TtdvYAKU'))()
+end)
+Section:NewButton("Gui 2", "Dude can't believe most script of this game just died so fast", function()
+    _G.RedGUI = true
+_G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
+--Themes: Light, Dark, Mocha, Aqua and Jester
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/SurviveandKilltheKillersinArea51.lua"))()
+
+Source: https://cheater.fun/hacks_roblox/5634-survive-and-kill-the-killers-in-area-51-new-script-roblox.html
+end)
+Section:NewButton("Roxhub", "Ok i love this one ngl", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/HaxxV1/d7cfdb5090e819a84a8db22fb113f39d/raw"))()
+end)
