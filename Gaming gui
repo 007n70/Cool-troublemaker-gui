@@ -1,0 +1,59 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("SEV Z / GAMINGSCRIPTER GUI", "BloodTheme")
+local Tab = Window:NewTab("Prison life")
+local Section = Tab:NewSection("OS-OPENSCRIPTS")
+---
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.Position = UDim2.new(0, 0, 0.454, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Toggle gaming gui"
+Toggle.TextColor3 = Color3.fromRGB(248, 248, 248)
+Toggle.TextSize = 28.000
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
+---
+Section:NewButton("Proson life admin 1", "lm40<311!+", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/devguy100/PrizzLife/main/Source/release_v0.8.1.lua'))()
+end)
+Section:NewButton("Prison life admin 2", "Xd!!×+", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+end)
+Section:NewButton("Prison life admin 3", "LOL++!282", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/N17S3/Tiger-Admin/refs/heads/main/TigerAdmin"))()
+end)
+Section:NewButton("Prison life admin tools giver", "THIS IS SUPER OP FOR A REASONABLE", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/AZVi2tuK"))()
+end)
+Section:NewButton("Sword giver", "a single sword won't be that bad", function()
+    local plr=game.Players.LocalPlayer;local tool=Instance.new("Tool",plr.Backpack)tool.GripPos=Vector3.new(0.1,-1,0)tool.Name="Sword"local k=Instance.new("Part",tool)k.Name="Handle"k.Size=Vector3.new(0.4,4,0.4)local l=Instance.new("Animation",tool)l.AnimationId="rbxassetid://218504594"local m=plr.Character.Humanoid:LoadAnimation(l)db=true;da=false;tool.Equipped:connect(function()tool.Activated:connect(function()if db==true then db=false;m:Play()wait()da=true;db=true;wait(0.1)da=false end end)end)k.Touched:connect(function(n)if da==true then local o=n.Parent.Humanoid;if o~=nil then local p=game.Players:FindFirstChild(n.Parent.Name)for j=1,10 do if p.Name~="RealAnimus"then game.ReplicatedStorage.meleeEvent:FireServer(p)end end end end end)
+end)
+Section:NewButton("Aimbot v2 with cmds", "Idk lol", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/L6nJMddF"))();
+end)
+Section:NewButton("Fe bypass gui", "it broken :(", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/g00lXploiter/g00lXploiter/main/Fe%20bypass", true))()
+end)
+Section:NewButton("CorgiSide gui", "kinda mid... idk lol", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CorgiSideExploits/OrionLib/refs/heads/main/Corgiside%20Prison%20Life", true))()
+end)
+Section:NewButton("Weshky hub", "i love this one :)", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/WeshkyPL/WehskyHub/refs/heads/main/WeshkyHubV1.12.lua'),true))()
+end)
+Section:NewButton("Tbao hub", "this one is good XD", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaohubPrisonLife"))()
+end)
