@@ -1031,7 +1031,7 @@ end)
 local Tab = Window:NewTab("Other things that's made by this loser lmao")
 local Section = Tab:NewSection("VERY RANDOM")
 Section:NewButton("Sev Z", "Gaming gui", function()
-    print("Clicked")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/GAMING%20GUI"))();
 end)
 Section:NewButton("Second troublemaker gui", "this is about games and trolling kids lmao", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/second%20gui"))();
