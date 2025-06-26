@@ -1,67 +1,91 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Notification-script-/refs/heads/main/just%20use%20it"))()
-local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
-local Library = DarkraiX:Window("SEVEN Z","Gaming hub","",Enum.KeyCode.RightControl);
-Tab1 = Library:Tab("Games")
-local UserInputService = game:GetService("UserInputService")
-local gui = script.Parent.MyFrame -- Assuming the script is in the same ScreenGui as MyFrame
-local isVisible = true
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("SEV Z / GAMINGSCRIPTER GUI", "BloodTheme")
+local Tab = Window:NewTab("Prison life")
+local Section = Tab:NewSection("OS-OPENSCRIPTS")
+---
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
 
-UserInputService.InputBegan:Connect(function(input, gameProcessed)
-  if gameProcessed then
-    return
-  end
-
-  if input.KeyCode == Enum.KeyCode.P then
-    isVisible = not isVisible
-    gui.Visible = isVisible
-  end
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.Position = UDim2.new(0, 0, 0.454, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Toggle gaming gui"
+Toggle.TextColor3 = Color3.fromRGB(248, 248, 248)
+Toggle.TextSize = 28.000
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
 end)
-Tab1:Button("Prison admin",function()
+
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
+---
+Section:NewButton("Proson life admin 1", "lm40<311!+", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/devguy100/PrizzLife/main/Source/release_v0.8.1.lua'))()
 end)
-Tab1:Button("Prison admin 2",function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+Section:NewButton("Prison life admin 2", "Xd!!×+", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
 end)
-Tab1:Button("Tiger admin",function()
+Section:NewButton("Prison life admin 3", "LOL++!282", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/N17S3/Tiger-Admin/refs/heads/main/TigerAdmin"))()
 end)
-Tab1:Button("Saitama gun",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/MpGLSap8"))();
-end)
-Tab1:Button("Gun giver",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/SVfvSsP1"))();
-end)
-Tab1:Button("Prison life admin tools giver",function()
+Section:NewButton("Prison life admin tools giver", "THIS IS SUPER OP FOR A REASONABLE", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/AZVi2tuK"))()
 end)
-
-Tab1:Button("Prison breaker v1.5",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/7jyviSrA", true))()
+Section:NewButton("Sword giver", "a single sword won't be that bad", function()
+    local plr=game.Players.LocalPlayer;local tool=Instance.new("Tool",plr.Backpack)tool.GripPos=Vector3.new(0.1,-1,0)tool.Name="Sword"local k=Instance.new("Part",tool)k.Name="Handle"k.Size=Vector3.new(0.4,4,0.4)local l=Instance.new("Animation",tool)l.AnimationId="rbxassetid://218504594"local m=plr.Character.Humanoid:LoadAnimation(l)db=true;da=false;tool.Equipped:connect(function()tool.Activated:connect(function()if db==true then db=false;m:Play()wait()da=true;db=true;wait(0.1)da=false end end)end)k.Touched:connect(function(n)if da==true then local o=n.Parent.Humanoid;if o~=nil then local p=game.Players:FindFirstChild(n.Parent.Name)for j=1,10 do if p.Name~="RealAnimus"then game.ReplicatedStorage.meleeEvent:FireServer(p)end end end end end)
 end)
-Tab1:Button("Prisonrunner V1",function()
-loadstring(game:HttpGet('https://pastebin.com/raw/KemzBTDp'))()
+Section:NewButton("Gear giver", "super fun xd", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Pedro0239485y7/FE-Gear-Giver-Mod-PRison-Life-UnOb/refs/heads/main/Obfuscated', true))()
 end)
-Tab1:Button("Prison ware v1.3",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))();
+Section:NewButton("Aimbot v2 with cmds", "Idk lol", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/L6nJMddF"))();
 end)
-Tab1:Button("Prison Sword",function()
-local plr=game.Players.LocalPlayer;local tool=Instance.new("Tool",plr.Backpack)tool.GripPos=Vector3.new(0.1,-1,0)tool.Name="Sword"local k=Instance.new("Part",tool)k.Name="Handle"k.Size=Vector3.new(0.4,4,0.4)local l=Instance.new("Animation",tool)l.AnimationId="rbxassetid://218504594"local m=plr.Character.Humanoid:LoadAnimation(l)db=true;da=false;tool.Equipped:connect(function()tool.Activated:connect(function()if db==true then db=false;m:Play()wait()da=true;db=true;wait(0.1)da=false end end)end)k.Touched:connect(function(n)if da==true then local o=n.Parent.Humanoid;if o~=nil then local p=game.Players:FindFirstChild(n.Parent.Name)for j=1,10 do if p.Name~="RealAnimus"then game.ReplicatedStorage.meleeEvent:FireServer(p)end end end end end)
-end)
-Tab1:Button("Prison aimbot v2",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/L6nJMddF"))();
-end)
-Tab1:Button("Crouch gui[MOBILE SUPPORT]",function()
-loadstring(game:HttpGet('https://pastebin.com/raw/2J0EBwbN'))();
-end)
-Tab1:Button("Prison life Fe bypass gui",function()
+Section:NewButton("Fe bypass gui", "it broken :(", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/g00lXploiter/g00lXploiter/main/Fe%20bypass", true))()
 end)
-Tab1:Button("Prison life corgiside guj",function()
+Section:NewButton("CorgiSide gui", "kinda mid... idk lol", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CorgiSideExploits/OrionLib/refs/heads/main/Corgiside%20Prison%20Life", true))()
 end)
-Tab1:Button("Prison life weshky hub",function()
+Section:NewButton("Weshky hub", "i love this one :)", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/WeshkyPL/WehskyHub/refs/heads/main/WeshkyHubV1.12.lua'),true))()
 end)
-Tab1:Button("Tbao hub",function()
+Section:NewButton("Tbao hub", "this one is good XD", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaohubPrisonLife"))()
+end)
+local Tab = Window:NewTab("The rake remastered")
+local Section = Tab:NewSection("SCRIPTSBYVEUX")
+Section:NewButton("Toddy's hub", ":]", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ToddyTheNoobDud/Meepstuff/refs/heads/main/RakingNuts.lua'))()
+end)
+Section:NewButton("Skedzz hub", "it have key system lol", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Skedzz/ScriptHub/main/Loader"))()
+end)
+Section:NewButton("Op gui 1", "im so high lolz", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Djskinybinn/The-Rake-Remastered-Script-Keyless/refs/heads/main/ObfuscatedRakeScript.lua",true))()
+end)
+Section:NewButton("Op gui 2", "more like a hub?", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ToddyTheNoobDud/Meepstuff/refs/heads/main/RakingNuts.lua'))()
+end)
+local Tab = Window:NewTab("Survive area 51")
+local Section = Tab:NewSection("SCRIPTING BOOMBAZAA")
+Section:NewButton("Ghosthub's gui", "lul i just love his scripts <3", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/TtdvYAKU'))()
+end)
+Section:NewButton("Gui 2", "Dude can't believe most script of this game just died so fast", function()
+    _G.RedGUI = true
+_G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
+--Themes: Light, Dark, Mocha, Aqua and Jester
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/SurviveandKilltheKillersinArea51.lua"))()
+end)
+Section:NewButton("Roxhub", "Ok i love this one ngl", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/HaxxV1/d7cfdb5090e819a84a8db22fb113f39d/raw"))()
 end)
