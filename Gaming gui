@@ -85,8 +85,6 @@ _G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
 --Themes: Light, Dark, Mocha, Aqua and Jester
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/SurviveandKilltheKillersinArea51.lua"))()
-
-Source: https://cheater.fun/hacks_roblox/5634-survive-and-kill-the-killers-in-area-51-new-script-roblox.html
 end)
 Section:NewButton("Roxhub", "Ok i love this one ngl", function()
     loadstring(game:HttpGet("https://gist.githubusercontent.com/HaxxV1/d7cfdb5090e819a84a8db22fb113f39d/raw"))()
