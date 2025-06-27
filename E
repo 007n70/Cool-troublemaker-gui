@@ -3,6 +3,31 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("COOL TROUBLE MAKER", "BloodTheme")
 local Tab = Window:NewTab("TROLLIN")
 local Section = Tab:NewSection("BAILANDO BAILANDO AMIDO ADOS")
+---
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.Position = UDim2.new(0, 0, 0.454, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Toggle"
+Toggle.TextColor3 = Color3.fromRGB(248, 248, 248)
+Toggle.TextSize = 28.000
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
+---
 Section:NewButton("CHAT BYPASS (WARNING MUST READ INFO)", "USING ALT AND SET YOUR LANGUAGE INTO Қазақ Тілі", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua",true))()
 end)
@@ -14,6 +39,18 @@ Section:NewButton("Fake verified chat", "AMIDOS MAMA IM FAMOUS HO btw use vietna
 end)
 Section:NewButton("Rizz", "Wsp hot babe", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/pPMRh5YJ"))()
+end)
+Section:NewButton("Chat hax", "an very old method to troll kidz", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Chat-Hax-V3.5-3512"))()
+end)
+Section:NewButton("Chat admin", "Chat hax but better", function()
+    loadstring(game:HttpGet("https://pastefy.app/H6k8QmIp/raw"))();
+end)
+Section:NewButton("Chat bot", "You're not smart wake up", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Guerric9018/chatbothub/main/ChatbotHub.lua"))()
+end)
+Section:NewButton("Chat draw", "pixel :D", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Zmb2u7Pp"))();
 end)
 Section:NewButton("PUNCHING THE SILLIES", "I HATE DUMB PEOPLE", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
@@ -40,7 +77,7 @@ Section:NewButton("Goofy animations", "goofy balls", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoserAlt/fe/refs/heads/main/fdes"))()
 end)
 Section:NewButton("Forsaken dog animation", "bro's creep", function()
-    local Players = game:GetService("Players")
+local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local player = Players.LocalPlayer
 
@@ -150,11 +187,387 @@ player.CharacterAdded:Connect(function(char)
     setupAnimations(char)
 end)
 end)
+Section:NewButton("Forsaken Noli before Noli relz relz", "No bait XP", function()
+local Players = game:GetService("Players")
+
+local UserInputService = game:GetService("UserInputService")
+
+local RunService = game:GetService("RunService")
+
+local Debris = game:GetService("Debris")
+
+
+
+local player = Players.LocalPlayer
+
+local character = player.Character or player.CharacterAdded:Wait()
+
+local humanoid = character:WaitForChild("Humanoid")
+
+local HRP = character:WaitForChild("HumanoidRootPart")
+
+local mouse = player:GetMouse()
+
+
+
+-- Animation IDs
+
+local Animations = {
+
+    Idle = "rbxassetid://83465205704188",
+
+    Walk = "rbxassetid://103292185212679",
+
+    Click = "rbxassetid://109230267448394",
+
+    Q = "rbxassetid://139835501033932",
+
+    R = "rbxassetid://99465988880393",
+
+    T = "rbxassetid://128730974312965",
+
+    Intro = "rbxassetid://82002727792391",
+
+}
+
+
+
+-- Audio IDs
+
+local Audio = {
+
+    Intro = "rbxassetid://97041392946745",         -- Audio Intro
+
+    Main = "rbxassetid://79001697227075",           -- Background Music sau intro
+
+    Idle = "rbxassetid://73235255020546",           -- Audio cho khi đứng yên
+
+    Click = "rbxassetid://110759725172567",          -- Audio cho chuột trái
+
+    R = "rbxassetid://90768093259753",              -- Audio cho chiêu R
+
+    T = "rbxassetid://113926551867193",             -- Audio cho chiêu T
+
+}
+
+
+
+-- Table chứa các audio đang chạy để cleanup sau này
+
+local activeSounds = {}
+
+
+
+-- Helper: Play sound và theo dõi
+
+local function playSound(id, parent, volume, looped)
+
+    local s = Instance.new("Sound", parent)
+
+    s.SoundId = id
+
+    s.Volume = volume or 1
+
+    s.Looped = looped or false
+
+    s:Play()
+
+    table.insert(activeSounds, s)
+
+    return s
+
+end
+
+
+
+-- Helper: Cleanup tất cả audio
+
+local function clearAllSounds()
+
+    for _, s in ipairs(activeSounds) do
+
+        if s and s:IsA("Sound") then
+
+            s:Stop()
+
+            s:Destroy()
+
+        end
+
+    end
+
+    activeSounds = {}
+
+end
+
+
+
+-- Helper: Load Animation
+
+local function loadAnim(id)
+
+    local anim = Instance.new("Animation")
+
+    anim.AnimationId = id
+
+    return humanoid:LoadAnimation(anim)
+
+end
+
+
+
+-- Load Animations
+
+local idleTrack = loadAnim(Animations.Idle)
+
+local walkTrack = loadAnim(Animations.Walk)
+
+local clickTrack = loadAnim(Animations.Click)
+
+local qTrack = loadAnim(Animations.Q)
+
+local rTrack = loadAnim(Animations.R)
+
+local tTrack = loadAnim(Animations.T)
+
+local introTrack = loadAnim(Animations.Intro)
+
+
+
+-- Play Intro Animation + Audio
+
+local introSound = playSound(Audio.Intro, workspace, 1, false)
+
+introTrack:Play()
+
+local introPlaying = true
+
+
+
+task.delay(3, function()
+
+    introTrack:Stop()
+
+    if introSound then introSound:Stop() end
+
+    introPlaying = false
+
+    
+
+    -- Start background music
+
+    playSound(Audio.Main, workspace, 1, true)
+
+    
+
+    idleTrack:Play()
+
+end)
+
+
+
+-- Idle / Walk handling
+
+local idleAudio = nil
+
+RunService.RenderStepped:Connect(function()
+
+    if introPlaying then return end
+
+
+
+    if humanoid.MoveDirection.Magnitude > 0 then
+
+        if not walkTrack.IsPlaying then walkTrack:Play() end
+
+        if idleTrack.IsPlaying then idleTrack:Stop() end
+
+        if idleAudio then
+
+            idleAudio:Stop()
+
+            idleAudio:Destroy()
+
+            idleAudio = nil
+
+        end
+
+    else
+
+        if not idleTrack.IsPlaying then idleTrack:Play() end
+
+        if walkTrack.IsPlaying then walkTrack:Stop() end
+
+        if not idleAudio then
+
+            idleAudio = playSound(Audio.Idle, workspace, 0.6, true)
+
+        end
+
+    end
+
+end)
+
+
+
+-- Input handling
+
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+
+    if introPlaying or gameProcessed then return end
+
+
+
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+        local s = playSound(Audio.Click, workspace, 1, false)
+
+        clickTrack:Play()
+
+        clickTrack.Stopped:Connect(function()
+
+            s:Stop() 
+
+            s:Destroy()
+
+        end)
+
+
+
+    elseif input.KeyCode == Enum.KeyCode.Q then
+
+        qTrack:Play()
+
+local dash = Instance.new("BodyVelocity")
+
+dash.MaxForce = Vector3.new(1, 1, 1) * 100000
+
+dash.Velocity = HRP.CFrame.LookVector * 100
+
+dash.P = 1500
+
+dash.Parent = HRP
+
+
+
+local connection
+
+connection = HRP.Touched:Connect(function(hit)
+
+    if hit:IsA("BasePart") and hit.CanCollide and not hit:IsDescendantOf(char) then
+
+        dash:Destroy()
+
+        connection:Disconnect()
+
+    end
+
+end)
+
+
+
+Debris:AddItem(dash, 0.9)
+
+
+
+    elseif input.KeyCode == Enum.KeyCode.R then
+
+        -- Chiêu R: chỉ chạy animation và audio, không khóa chuyển động
+
+        rTrack:Play()
+
+        local rSound = playSound(Audio.R, workspace, 1, false)
+
+        rTrack.Stopped:Connect(function()
+
+            rSound:Stop() 
+
+            rSound:Destroy()
+
+        end)
+
+
+
+    elseif input.KeyCode == Enum.KeyCode.T then
+
+        -- Chiêu T: tương tự chiêu R
+
+        tTrack:Play()
+
+        local tSound = playSound(Audio.T, workspace, 1, false)
+
+        tTrack.Stopped:Connect(function()
+
+            tSound:Stop() 
+
+            tSound:Destroy()
+
+        end)
+
+    end
+
+end)
+
+
+
+-- Khi nhân vật chết, xoá hết âm thanh
+
+humanoid.Died:Connect(function()
+
+    if idleAudio then 
+
+        idleAudio:Stop() 
+
+        idleAudio:Destroy() 
+
+        idleAudio = nil 
+
+    end
+
+    clearAllSounds()
+
+    idleTrack:Stop()
+
+    walkTrack:Stop()
+
+    clickTrack:Stop()
+
+    qTrack:Stop()
+
+    rTrack:Stop()
+
+    tTrack:Stop()
+
+    introTrack:Stop()
+
+end)
+
+
+
+player.CharacterAdded:Connect(function(newChar)
+
+    newChar:WaitForChild("Humanoid").Died:Connect(function()
+
+        clearAllSounds()
+
+    end)
+
+end)
+end)
+Section:NewButton("Weird and funny af dog animation", "They weird tho but theyre funni too xd", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/WyqDmp0t"))();
+end)
 Section:NewButton("Animation logger", "idk what to say", function()
     loadstring(game:HttpGet("https://pastefy.app/yw5RdVu3/raw"))()
 end)
 Section:NewButton("Gay", "Gay... WAIT I THOUGHT YOU WERE", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/FWwdST5Y"))()
+end)
+Section:NewButton("Ultimate trollerz", "XD Lma0<3 supaz epik", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/3LD4D0/FE-TROLLING-PLAYER-R6-R15/6eff8792afed57458d5114478b453a6f6bce5799/Fe%20trolling%20Player%20R6%20AND%20R15"))()
+end)
+Section:NewButton("MEET UR GOD", "I DON'T NEED GOD BECAUSE I'M HIM", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/3LD4D0/Angelical-Anim-2.0/64db813d003c164d21d2aea146116e75ffeafbcd/Angelical%202.0"))()
 end)
 Section:NewButton("Tools giver", "works almost every game and you can pretend to be rich without paying hooray!", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub-Backup/main/gametoolgiver.lua"))()
@@ -167,6 +580,9 @@ Section:NewButton("Walk on walls", "vro is NOT a spider", function()
 end)
 Section:NewButton("Chillin", "Be chillin no dealing", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/Roblox-Scripts/refs/heads/main/0%20Graviy%20Trip%20Universal"))()
+end)
+Section:NewButton("Relaxin", "Lol", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Underssky/GravityLayScript/refs/heads/main/MainGravityLay.txt"))()
 end)
 Section:NewButton("Npc controller", "that cool", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty38.lua"))()
@@ -189,726 +605,4 @@ Section:NewButton("Reverse time", "TIME CONTROL", function()
 end)
 Section:NewButton("Supermanfly", "VROOM VROOM KABOM", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
-end)
-local Tab = Window:NewTab("Gui and hub stuff")
-local Section = Tab:NewSection("BRO WHY'S SO RARE TO FIND ANY GUI AND HUB NOW")
-Section:NewButton("Yeet gui", "TROLLFACE", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/fLwgx5c0"))();
-end)
-Section:NewButton("Fling gui", "WEWOO", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/OS-OpenScripts/FE-Fling-GUI/refs/heads/main/Source", true))()
-end)
-Section:NewButton("Auto fling gui", "REVENGE", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player'))()
-end)
-Section:NewButton("Bring gui", "BUT TONIGHT YOU'LL BELONG TO ME", function()
-    loadstring(game:HttpGet(('https://pastebin.com/raw/iThJgCAS'),true))()
-end)
-Section:NewButton("Kill player gui", "vro im out of scripts WHAT'S HAPPENING", function()
-    local lp = game:GetService("Players").LocalPlayer
- 
-local function gplr(String)
-	local Found = {}
-	local strl = String:lower()
-	if strl == "all" then
-		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-			table.insert(Found,v)
-		end
-	elseif strl == "others" then
-		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-			if v.Name ~= lp.Name then
-				table.insert(Found,v)
-			end
-		end 
-	elseif strl == "me" then
-		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-			if v.Name == lp.Name then
-				table.insert(Found,v)
-			end
-		end 
-	else
-		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-			if v.Name:lower():sub(1, #String) == String:lower() then
-				table.insert(Found,v)
-			end
-		end 
-	end
-	return Found 
-end
-
-local ScreenGui = Instance.new("ScreenGui")
-local ui = Instance.new("Frame")
-local title = Instance.new("TextLabel")
-local Frame = Instance.new("Frame")
-local Username = Instance.new("TextBox")
-local Kill = Instance.new("TextButton")
-local ced = Instance.new("TextLabel")
-
-ScreenGui.Parent = game:GetService("CoreGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-ui.Name = "ui"
-ui.Parent = ScreenGui
-ui.Active = true
-ui.BackgroundColor3 = Color3.new(0, 0, 0)
-ui.BackgroundTransparency = 0
-ui.BorderSizePixel = 3
-ui.Position = UDim2.new(0.254972845, 0, 0.419703096, 0)
-ui.Size = UDim2.new(0, 278, 0, 278)
-
-title.Name = "title"
-title.Parent = ui
-title.BackgroundColor3 = Color3.new(68, 68, 68)
-title.BackgroundTransparency = 1
-title.BorderSizePixel = 2
-title.Position = UDim2.new(0, 0, 0.0199999996, 0)
-title.Size = UDim2.new(1, 0, 0, 50)
-title.Font = Enum.Font.SourceSans
-title.Text = "KillPlayer"
-title.TextColor3 = Color3.new(1, 1, 1)
-title.TextScaled = true
-title.TextSize = 14
-title.TextWrapped = true
-
-Frame.Parent = title
-Frame.BackgroundColor3 = Color3.new(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.07, 0, 0.860000014, 0)
-Frame.Size = UDim2.new(0.85, 0, 0, 6)
-
-Username.Name = "F20 FR"
-Username.Parent = ui
-Username.BackgroundColor3 = Color3.new(1, 1, 1)
-Username.BorderSizePixel = 0
-Username.Position = UDim2.new(0.100000001, 0, 0.300000012, 0)
-Username.Size = UDim2.new(0.800000012, 0, 0, 50)
-Username.Font = Enum.Font.SourceSans
-Username.PlaceholderText = "Username"
-Username.Text = "Username"
-Username.TextColor3 = Color3.new(0, 0, 0)
-Username.TextScaled = true
-Username.TextSize = 14
-Username.TextWrapped = true
-
-Kill.Name = "Stick"
-Kill.Parent = ui
-Kill.BackgroundColor3 = Color3.new(0.25, 0.25, 0.25)
-Kill.BackgroundTransparency = 0
-Kill.BorderSizePixel = 2
-Kill.Position = UDim2.new(0.25, 0, 0.629999971, 0)
-Kill.Size = UDim2.new(0.5, 0, 0, 45)
-Kill.Font = Enum.Font.Gotham
-Kill.Text = "Kill"
-Kill.TextColor3 = Color3.new(0, 0, 0)
-Kill.TextScaled = true
-Kill.TextSize = 10
-Kill.TextWrapped = true
-ui.Draggable = true
-
-ced.Name = "made"
-ced.Parent = ui
-ced.BackgroundColor3 = Color3.new(68, 68, 68)
-ced.BackgroundTransparency = 1
-ced.BorderSizePixel = 2
-ced.Position = UDim2.new(0, 0, 0.769999981, 0)
-ced.Size = UDim2.new(1, 0, 0, 50)
-ced.Font = Enum.Font.SourceSans
-ced.Text = "Made by F20 FR"
-ced.TextColor3 = Color3.new(1, 1, 1)
-ced.TextScaled = true
-ced.TextSize = 14
-ced.TextWrapped = true
-
-local function notif(str,dur)
-	game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "SubscribeF20FR";
-    Text = str;})
-Duration = dur or 3;
-end
-
-Kill.MouseButton1Click:Connect(function()
-	local Player = gplr(Username.Text)
-	if Player[1] then
-		Player = Player[1]
-          LocalPlayer = game.Players.LocalPlayer
-          
-         if LocalPlayer.Character.PrimaryPart ~= nil then
-                local Character = LocalPlayer.Character
-                local previous = LocalPlayer.Character.PrimaryPart.CFrame
-                
-                Character.Archivable = true
-                local Clone = Character:Clone()
-                LocalPlayer.Character = Clone
-                wait(0.5)
-                LocalPlayer.Character = Character
-                wait(0.2)
-                
-                if LocalPlayer.Character and Player.Character and Player.Character.PrimaryPart ~= nil then
-                    if LocalPlayer.Character:FindFirstChildOfClass("Humanoid") then
-                        LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):Destroy()
-                    end
-    
-                    local Humanoid = Instance.new("Humanoid")
-                    Humanoid.Parent = LocalPlayer.Character
-    
-                    local Tool = nil
-    
-                    if LocalPlayer.Character:FindFirstChildOfClass("Tool") then
-                        Tool = LocalPlayer.Character:FindFirstChildOfClass("Tool")
-                    elseif LocalPlayer.Backpack and LocalPlayer.Backpack:FindFirstChildOfClass("Tool") then
-                        Tool = LocalPlayer.Backpack:FindFirstChildOfClass("Tool")
-                    end
-                    print(Tool)
-
-                    if Tool ~= nil then
-                        Tool.Parent = LocalPlayer.Backpack
-                        
-                        Player.Character.HumanoidRootPart.Anchored = true
-                        
-                        local Arm = game.Players.LocalPlayer.Character['Right Arm'].CFrame * CFrame.new(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, -1, 0)
-                        Tool.Grip = Arm:ToObjectSpace(Player.Character.PrimaryPart.CFrame):Inverse()
-                        
-                        Tool.Parent = LocalPlayer.Character
-                        Workspace.CurrentCamera.CameraSubject = Tool.Handle
-              
-                        repeat
-                            wait()
-                        until not Tool or Tool and (Tool.Parent == Workspace or Tool.Parent == Player.Character)
-                        Player.Character.HumanoidRootPart.Anchored = false
-                        wait(0.1)
-                        Humanoid.Health = 0
-                        LocalPlayer.Character = nil
-                    end
-                end
-     
-                spawn(function()
-                LocalPlayer.CharacterAdded:Wait()
-                Player.Character.HumanoidRootPart.Anchored = false
-                if Player.Character.Humanoid.Health <= 15 then
-                 notif("The requested user has been killed!")
-                repeat wait() until LocalPlayer.Character.PrimaryPart ~= nil
-                wait(0.4)
-                LocalPlayer.Character:SetPrimaryPartCFrame(previous)
-              end
-           end)
-       end
-    end
-end)
-
-local function MOQC_fake_script() -- HackFrame.RGB_Script 
-	local script = Instance.new('LocalScript', Kill)
-	
-	while wait() do
-		script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,0/255)
-		for i = 0,255,10 do
-			wait()
-			script.Parent.BackgroundColor3 = Color3.new(255/255,i/255,0/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script.Parent.BackgroundColor3 = Color3.new(i/255,255/255,0/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script.Parent.BackgroundColor3 = Color3.new(0/255,255/255,i/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script.Parent.BackgroundColor3 = Color3.new(0/255,i/255,255/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script.Parent.BackgroundColor3 = Color3.new(i/255,0/255,255/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script.Parent.BackgroundColor3 = Color3.new(255/255,0/255,i/255)
-		end
-	end
-end
-coroutine.wrap(MOQC_fake_script)()
-local function MOQC_fake_script() -- HackFrame.RGB_Script 
-	local script2 = Instance.new('LocalScript', title)
-	
-	while wait() do
-		script2.Parent.TextColor3 = Color3.new(255/255,0/255,0/255)
-		for i = 0,255,10 do
-			wait()
-			script2.Parent.TextColor3 = Color3.new(255/255,i/255,0/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script2.Parent.TextColor3 = Color3.new(i/255,255/255,0/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script2.Parent.TextColor3 = Color3.new(0/255,255/255,i/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script2.Parent.TextColor3 = Color3.new(0/255,i/255,255/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script2.Parent.TextColor3 = Color3.new(i/255,0/255,255/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script2.Parent.TextColor3 = Color3.new(255/255,0/255,i/255)
-		end
-	end
-end
-coroutine.wrap(MOQC_fake_script)()
-local function MOQC_fake_script() -- HackFrame.RGB_Script 
-	local script3 = Instance.new('LocalScript', Frame)
-	
-	while wait() do
-		script3.Parent.BackgroundColor3 = Color3.new(255/255,0/255,0/255)
-		for i = 0,255,10 do
-			wait()
-			script3.Parent.BackgroundColor3 = Color3.new(255/255,i/255,0/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script3.Parent.BackgroundColor3 = Color3.new(i/255,255/255,0/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script3.Parent.BackgroundColor3 = Color3.new(0/255,255/255,i/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script3.Parent.BackgroundColor3 = Color3.new(0/255,i/255,255/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script3.Parent.BackgroundColor3 = Color3.new(i/255,0/255,255/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script3.Parent.BackgroundColor3 = Color3.new(255/255,0/255,i/255)
-		end
-	end
-end
-coroutine.wrap(MOQC_fake_script)()
-local function MOQC_fake_script() -- HackFrame.RGB_Script 
-	local script4 = Instance.new('LocalScript', Frame)
-	
-	while wait() do
-		script4.Parent.BackgroundColor3 = Color3.new(255/255,0/255,0/255)
-		for i = 0,255,10 do
-			wait()
-			script4.Parent.BackgroundColor3 = Color3.new(255/255,i/255,0/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script4.Parent.BackgroundColor3 = Color3.new(i/255,255/255,0/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script4.Parent.BackgroundColor3 = Color3.new(0/255,255/255,i/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script4.Parent.BackgroundColor3 = Color3.new(0/255,i/255,255/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script4.Parent.BackgroundColor3 = Color3.new(i/255,0/255,255/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script4.Parent.BackgroundColor3 = Color3.new(255/255,0/255,i/255)
-		end
-	end
-end
-coroutine.wrap(MOQC_fake_script)()
-local function MOQC_fake_script() -- HackFrame.RGB_Script 
-	local script5 = Instance.new('LocalScript', ced)
-	
-	while wait() do
-		script5.Parent.TextColor3 = Color3.new(255/255,0/255,0/255)
-		for i = 0,255,10 do
-			wait()
-			script5.Parent.TextColor3 = Color3.new(255/255,i/255,0/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script5.Parent.TextColor3 = Color3.new(i/255,255/255,0/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script5.Parent.TextColor3 = Color3.new(0/255,255/255,i/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script5.Parent.TextColor3 = Color3.new(0/255,i/255,255/255)
-		end
-		for i = 0,255,10 do
-			wait()
-			script5.Parent.TextColor3 = Color3.new(i/255,0/255,255/255)
-		end
-		for i = 255,0,-10 do
-			wait()
-			script5.Parent.TextColor3 = Color3.new(255/255,0/255,i/255)
-		end
-	end
-end
-coroutine.wrap(MOQC_fake_script)()
-end)
-Section:NewButton("Spectate player gui", "weird stalker", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/7EAbhifj"))("t.me/ByteScripts")
-end)
-Section:NewButton("Save server gui", "Save save save", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/refs/heads/main/ScriptAuthorization%20Source"))()Ioad("6abc8c09bf8fdf096f4a1ed90ba1867b")
-end)
-Section:NewButton("Replication ui", "ts script older than most skibidi fans", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/VXMVHJKQ"))()
-end)
-Section:NewButton("C00lgui reborn", "I LUV 007N7 RAHHHH", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MiRw3b/c00lgui-v3rx/main/c00lguiv3rx.lua"))()
-end)
-Section:NewButton("CUSTOM SIT GUI", "dude why did i even added this", function()
-    loadstring(game:HttpGet(('https://pastefy.app/XKxQtK2K/raw'),true))()
-end)
-Section:NewButton("Audio gui", "ears fuckers", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/pkATeDp4"))();
-end)
-Section:NewButton("Audio gui 2", "scared kids iz realz XD", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa0/brookhaven/refs/heads/main/brookhaven%20script.txt"))()
-end)
-Section:NewButton("Player audio gui", "idk if it really fe but we can keep it for some music lel", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/pizza-place-audio-player/main/script"))();
-end)
-Section:NewButton("ESP gui", "i can see you", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/refs/heads/master/UnnamedESP.lua"))();
-end)
-Section:NewButton("ESP gui 2", "i can see you #2", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/cool83birdcarfly02six/UNIVERSALESPLTX/main/README.md'),true))()
-end)
-Section:NewButton("ReplicateSignalMethods gui", "permadeath", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/XsyhDuYh"))();
-end)
-Section:NewButton("C00l-ware", "IT BACKKKK", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/thatonestupidkid1/COOLKID-WARE/main/obfuscation"))()
-end)
-Section:NewButton("TROLL HUB", "YALL WEIRD THO WTF", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/blackheartedcurse/punkz-Scripts/main/SolaraVersionRagdoll.lua"))()
-end)
-Section:NewButton("Ghost hub", "nuh uh", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
-end)
-Section:NewButton("Crypton hub", "W", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/15qz/Crypton/main/FreeScript"))()
-end)
-Section:NewButton("Disbelief hub", "get hats at: https://www.roblox.com/games/15541318313/Melons-Testing-Melons-Baseplate", function()
-    getgenv().Framework = "Hatless" -- Options: "Krypton", "Emperyean", "Hatless"
-loadstring(game:HttpGet("https://gist.githubusercontent.com/MelonsStuff/f61fc110c0dc167e263cec94518390a1/raw/f45ae28bdfd503af662214032432f7487c0ac419/DisbeliefHub.lua"))()
-end)
-Section:NewButton("Patchma hub", "one of the best hub with reanimating ever", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Apteronotidae/why/refs/heads/main/patchmaV46_by_MyWorld.txt"))()
-end)
-Section:NewButton("Classic hub", "2020 era was the best", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty58.lua"))();
-end)
-Section:NewButton("Steal bobuc hub-delta support", "idk lol btw watch tutorial in ytb", function()
-    loadstring(game:HttpGet("https://pastefy.app/YJr8pZtC/raw"))()
-end)
-Section:NewButton("Steal bobuc hub-other executor support", "bobic", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/MozilOnTopp/MozilHub/refs/heads/main/PlsDonate"))()
-end)
-Section:NewButton("LALOL backdoor hub", "VERY AWESOME", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
-end)
-Section:NewButton("Second troublemaker gui", "this is about games and trolling kids lmao", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Cool-troublemaker-gui/refs/heads/main/second%20gui"))();
-end)
-local Tab = Window:NewTab("weird and non fe stuff")
-local Section = Tab:NewSection("obviously for fun")
-Section:NewButton("Math", "1+1=3", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/refs/heads/main/Math%20Problem'))()
-end)
-Section:NewButton("Tic tac toe", "Time waster", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/refs/heads/main/Tic%20Tac%20Toe'))()
-end)
-Section:NewButton("Free cam", "Wowzer", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Freecam'))()
-end)
-Section:NewButton("Music playlist", "Chilling w the music you like", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/refs/heads/main/ScriptAuthorization%20Source'))()Ioad('7208e39603889391caf77f6ff7d21e01')
-end)
-Section:NewButton("Accessories", "you're too poor to buy the exact one", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/refs/heads/main/Accessories%20Gui"))();
-end)
-Section:NewButton("Ambient", "idk either lol", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/refs/heads/main/ScriptAuthorization%20Source"))()Ioad("88e91557e59e811777971cf29c9766f5")
-end)
-Section:NewButton("Hide players", "Social anxiety ahh", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Hide%20Players'))()
-end)
-local Tab = Window:NewTab("basic, useful and fly stuff")
-local Section = Tab:NewSection("learn basics first")
-Section:NewButton("Fly gui", "most needed thing for a gui", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Gui-Fly-v3-37111"))()
-end)
-Section:NewButton("Fly gui 2", "if there's 2 vfly then why not?", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/9FvdknXN"))();
-end)
-Section:NewButton("Fly vehicle", "DRIVING WITH MY DARLING", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20Fe%20Vehicle%20Fly%20GUI%20script'))()
-end)
-Section:NewButton("Fly vehicle 2", "FASTER THAN I SHOULD", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/refs/heads/main/Vehicle%20Fly%20Gui'))()
-end)
-Section:NewButton("Keystroke", "for mobile users obviously", function()
-    loadstring(game:HttpGet(('https://pastefy.app/Te4dwSw2/raw'),true))()
-end)
-Section:NewButton("Keyboard", "for mobile users too", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true))()
-end)
-Section:NewButton("server finder", "yall lazy this much?", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/lumpiasallad/Roblox_ServerHop/refs/heads/main/ServerHopScript.lua"))()
-end)
-Section:NewButton("Game teleporter", "you need place id first", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/hiWAdBMa'))()
-end)
-Section:NewButton("Player snipe", "Spying isn't cool but alr", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LeymansGuz/playerTokens/main/Snipe"))();
-end)
-Section:NewButton("Info spy", "Idk lol", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty31.lua"))()
-end)
-Section:NewButton("inf yield", "yessir", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-end)
-Section:NewButton("Rochips universal", "best cmd script rn", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-new-rochips-emote-animation-universal-19440"))()
-end)
-Section:NewButton("Remote monitor", "remote spy but cheap shot version", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/EHvjE2sT"))()
-end)
-Section:NewButton("Shiftlock", "gud for mobile user", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/fsm2F3xF"))();
-end)
-Section:NewButton("Avatar changer", "it's very useful for lazy people XXD", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/refs/heads/main/ScriptAuthorization%20Source"))()Ioad("798d0bffa1239975b4740512fef38f6f")
-end)
-Section:NewButton("Tp tools", "Should be helpful somehow", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/CnrzahUZ"))();
-end)
-Section:NewButton("Noclip tools", "most basic thing", function()
-    loadstring(game:HttpGet("https://pastefy.app/HoSmO4NX/raw"))()
-end)
-Section:NewButton("Godmode", "I AM GOD OF WAR", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/Roblox-Scripts/refs/heads/main/God%20Mode%20Script%20Universal"))()
-end)
-local Tab = Window:NewTab("Fe stuff")
-local Section = Tab:NewSection("does i even need to add netless?")
-Section:NewButton("Fe seraphic blade", "cool and awesome", function()
-    loadstring(game:HttpGet("https://pastefy.app/59mJGQGe/raw"))() --Anim
-end)
-Section:NewButton("Fe zombie", "I eat brain but you're safe", function()
-    loadstring(game:HttpGet("https://pastefy.app/JOWniO6o/raw"))()
-end)
-Section:NewButton("Fe fighter", "vro that's so tuff", function()
-    loadstring(game:HttpGet("https://pastefy.app/wxVAgZpT/raw"))()
-end)
-Section:NewButton("Fe KJ limited flex works 1", "nu cutscene", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LolnotaKid/SCRIPTSBYVEUX/main/UFWboo.txt"))()
-end)
-Section:NewButton("Fe KJ limited flex works 2", "With cutscene", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LolnotaKid/SCRIPTSBYVEUX/main/UFWboo.txt"))()
-end)
-Section:NewButton("Fe relax", "Relaxing and stay away from gangster", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/wLnNYffV"))();
-end)
-Section:NewButton("Daash", "holy speed", function()
-    loadstring(game:HttpGet("https://pastefy.app/ZhKVgCK3/raw"))()
-end)
-Section:NewButton("Fe Wooble", "you look dumb vro wtf..", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/yxYn6rPA"))()
-end)
-Section:NewButton("Fe crawl", "DOWN BOY!! ARF!!!", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_vZDX8j5ggfAf58QhdJ59BVEmF6nmZgq4Mcjt2l8wn16CiStIW2P6EkNc605qv9K4.lua.txt'))()
-end)
-Section:NewButton("classic", "Dynablocks", function()
-    loadstring(game:HttpGet(('https://pastebin.com/raw/6GNkQUu6'),true))()
-end)
-Section:NewButton("Drift cart", "man i luv mario kart :)", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/fjPy7vtH"))();
-end) 
-Section:NewButton("Fe holiday feel", "it's not holiday but yeah", function()
-    if not game:GetService("ReplicatedStorage"):FindFirstChild("01_server") then return game:GetService("TeleportService"):Teleport(17574618959, game:GetService("Players").LocalPlayer) end
-loadstring(game:HttpGet(('https://pastefy.app/aKxgjklw/raw'),true))()
-end)
-Section:NewButton("Fe G-man fighter", "this is very cool", function()
-    _G.clientsidedeffect = true --set it to false if you don't want the effect
-loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty18.lua"))()
-end)
-Section:NewButton("Fe gale man", "LOL", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty48.lua"))();
-end)
-Section:NewButton("Archromatic v2", "edit it with rspy", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/14auMbe3"))();
-end)
-Section:NewButton("Archomatic", "poland,indonesia,japan,peru and they has keybind ui", function()
-    loadstring(game:HttpGet("https://gist.githubusercontent.com/MelonsStuff/1e606bc885a3c12fd50bc8f29ae6ac49/raw/6f2e187cc59818d2a308bdd055ae2a93bf2fcb64/Achromatic.lua"))()
-end)
-Section:NewButton("Animation man", "bro reminded me of nameless one", function()
-    loadstring(game:HttpGet("https://pastefy.app/ZWgckZdU/raw"))()
-end)
-Section:NewButton("Ink monster", "has mobile support", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty50.lua"))();
-end)
-Section:NewButton("Fe caducus", "yeah it has fling", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/GQDddhRm"))();
-end)
-Section:NewButton("Fe glios", "boogie man", function()
-    writefile(".nonecing", "white")
-loadstring(game:HttpGet(('https://glot.io/snippets/gua2ntmbdm/raw/main.lua'),true))()
-end)
-Section:NewButton("Fe scp stuff", "i don'r really care about scp.. sorry guys", function()
-    loadstring(game:HttpGet("https://pastefy.app/YsJgITXR/raw"))()
-end)
-Section:NewButton("T pose", "T pose in the big 25", function()
-    loadstring(game:HttpGet(('https://pastefy.app/oCKLmRRo/raw'),true))()
-end)
-Section:NewButton("Fe dropkick", "need touch fling for better experience", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LolnotaKid/JkDropKuck/refs/heads/main/Protected_3923618848403366.txt"));
-end)
-Section:NewButton("Fe emo boy", "AHH ME SO SAD", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-end)
-Section:NewButton("Glitcher v2", "keyboard needed for mobile", function()
-    loadstring(game:HttpGet("https://gist.githubusercontent.com/Onlyscripts1/83ae1c8af7b6878dbe6d63aaee5a3cc5/raw/2eb7e94cbee00c933c85fadea8713879027652b1/Spectrum%2520Glitcher%2520V2%2520Remake"))()
-end)
-Section:NewButton("Glitch v2", "not glitcher or idk whatever", function()
-    loadstring(game:HttpGet(('https://pastefy.ga/qqTUbyGK/raw'),true))()
-end)
-Section:NewButton("Fe Genesis neptunian", "join their discord for more information", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/refs/heads/main/Loadstrings/Neptunian%20V"))();
-end)
-Section:NewButton("Fe Genesis dragon sin", "like the other", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/refs/heads/main/Loadstrings/Sin%20Dragon"))();
-end)
-Section:NewButton("Fe dragon sin", "permadeath needed", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Fe-ProjectR/FE-Files/refs/heads/main/FE%20Void%20Dagon'))()
-end)
-Section:NewButton("Fe Genesis ban hammer", "dicorddd", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Ban%20Hammer"))();
-end)
-Section:NewButton("Fe Genesis krystal dance", "just join their discord for hats", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Krystal%20Dance"))();
-end)
-Section:NewButton("Fe krystal dance", "Permadeath needed", function()
-    loadstring(game:HttpGet('https://gist.githubusercontent.com/1BlueCat/e51327540d1ba5ede244c459dbdb5a0e/raw/6320fe344ac51a311ef7c9f8d5c3924b1a7c3969/Krystal%2520Dance'))()
-end)
-Section:NewButton("Fe Genesis good cop bad cop", "does i have to repeat again?", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Good%20Cop%20Bad%20Cop"))();
-end)
-Section:NewButton("Fe Genesis goner", "veri col", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Goner"))();
-end)
-Section:NewButton("Fe Genesis lighting cannon v4", "BOOM BOOM BOOMM", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Lightning%20Cannon"))()
-end)
-Section:NewButton("Fe Genesis linked swors", "sword fight since 2008", function()
-    DisableFlingHealthBar = false
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Linked%20Sword"))()
-end)
-Section:NewButton("Fe Genesis glitcher star", ":)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Loadstrings/Star%20Glitcher"));
-end)
-Section:NewButton("Fe server admin", "Best script ever(btw this one are 4 year old or older XD)", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ONEReverseCard/My-Scripts/main/Netless%20Server%20Admin.md"))()
-end)
-Section:NewButton("Pet hat", "any hats you wear will become a pet", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty56.lua"))()
-end)
-Section:NewButton("Fe hat orbit", "it no cool like before:(", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoserAlt/hatspin/refs/heads/main/hat"))()
-end)
-Section:NewButton("Netless", "use it when you need to ofc", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/4E9UU5G6"))()
-end)
-local Tab = Window:NewTab("control bloc")
-local Section = Tab:NewSection("Stoopis blocc")
-Section:NewButton("bloc control", "idk lol XD", function()
-  loadstring(game:HttpGet("https://pastebin.com/raw/WkZwcGjf", true))()
-game:GetService("RunService").RenderStepped:Connect(function()
-sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
-end)
-end)
-Section:NewButton("control bloc v2", "did yall actually in love with blocks? ", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/v0c0n1337/scripts/refs/heads/main/Unachored_parts_controller_v2.lua.txt"))()
-end)
-Section:NewButton("ring", "vro is not main character", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/mxx3x/Fe-Ring/refs/heads/main/Fe%20Ring'))()
-end)
-Section:NewButton("ring v6", "look tuff but not really", function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/JR7RBh2a'))()
-end)
-Section:NewButton("Blackhole", "Vro is NOT Thanos tbh", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/QsvmVBr1"))();
-end)
-Section:NewButton("grab bloc", "IT MINE NOW >:)))", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/Da2RAkmA"))();
-end)
-Section:NewButton("Telekinesis", "we look cool with it lmao", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty1.lua"))()
-end)
-Section:NewButton("Bring parts", "annoying ppl is not cool but it fun if we do a lil", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-black-hole-18879"))();
-end)
-Section:NewButton("Gravity", "Newton was lucky", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/96XzjEiK"))()
-end)
-Section:NewButton("Part aura", "Really good one", function()
-    pcall(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/KAWAII-AURA/main/kawaii_aura.lua", true))()
-end)
-end)
-local Tab = Window:NewTab("Shades")
-local Section = Tab:NewSection("Beautiful and more realistic")
-Section:NewButton("Shade 1", "they look soft as well lol", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/randomstring0/pshade-ultimate/refs/heads/main/src/cd.lua'))()
-end)
-Section:NewButton("Shade gui", "look chill and lofi", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/p0e1/1/refs/heads/main/SimpleShader.lua"))()
-end)
-Section:NewButton("RTX", "more realistic", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/Cd76B8Lh"))();
-end)
-Section:NewButton("Blur motion", "make your camera blur XD", function()
-    local camera = workspace.CurrentCamera
-local blurAmount = 10
-local blurAmplifier = 5
-local lastVector = camera.CFrame.LookVector
-
-local motionBlur = Instance.new("BlurEffect", camera)
-
-local runService = game:GetService("RunService")
-
-workspace.Changed:Connect(function(property)
- if property == "CurrentCamera" then
-  print("Changed")
-  local camera = workspace.CurrentCamera
-  if motionBlur and motionBlur.Parent then
-   motionBlur.Parent = camera
-  else
-   motionBlur = Instance.new("BlurEffect", camera)
-  end
- end
-end)
-
-runService.Heartbeat:Connect(function()
- if not motionBlur or motionBlur.Parent == nil then
-  motionBlur = Instance.new("BlurEffect", camera)
- end
- 
- local magnitude = (camera.CFrame.LookVector - lastVector).magnitude
- motionBlur.Size = math.abs(magnitude)*blurAmount*blurAmplifier/2
- lastVector = camera.CFrame.LookVector
-end)
 end)
