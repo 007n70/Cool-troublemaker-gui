@@ -554,6 +554,9 @@ player.CharacterAdded:Connect(function(newChar)
 
 end)
 end)
+Section:NewButton("Noli changer", "idk if its was actually fe but nah", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Qw26i9CC"))()
+end)
 Section:NewButton("Weird and funny af dog animation", "They weird tho but theyre funni too xd", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/WyqDmp0t"))();
 end)
