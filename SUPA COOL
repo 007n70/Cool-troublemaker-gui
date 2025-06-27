@@ -1002,8 +1002,8 @@ end)
 Section:NewButton("Audio gui 2", "scared kids iz realz XD", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ameicaa0/brookhaven/refs/heads/main/brookhaven%20script.txt"))()
 end)
-Section:NewButton("Player audio gui", "idk if it really fe but we can keep it for some music lel", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/zephyr10101/pizza-place-audio-player/main/script"))();
+Section:NewButton("Player audio gui (NOT ALL GAMES WORKS LOL)", "go find it by urself", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoserAlt/sound/refs/heads/main/soundfe"))()
 end)
 Section:NewButton("ESP gui", "i can see you", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/refs/heads/master/UnnamedESP.lua"))();
