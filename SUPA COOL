@@ -1331,6 +1331,9 @@ end)
 Section:NewButton("Blackhole", "Vro is NOT Thanos tbh", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/QsvmVBr1"))();
 end)
+Section:NewButton("Blackhole but more simple", "so tuff fym", function()
+    loadstring(game:HttpGet("https://pastefy.app/pYhER1z4/raw"))()
+end)
 Section:NewButton("grab bloc", "IT MINE NOW >:)))", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/Da2RAkmA"))();
 end)
@@ -1404,7 +1407,7 @@ end)
 Section:NewButton("Auto guitar", "I FEEL SO NUMB", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/zAnsrrmi"))()
 end)
-local Tab = Window:NewTab("Other things that's made by this loser lmao")
+local Tab = Window:NewTab("made by this loser lmao")
 local Section = Tab:NewSection("VERY RANDOM")
 Section:NewButton("Sev Z", "Gaming gui", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/GAMING%20GUI"))();
