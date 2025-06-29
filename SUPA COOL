@@ -635,6 +635,9 @@ end)
 Section:NewButton("Bring gui", "BUT TONIGHT YOU'LL BELONG TO ME", function()
     loadstring(game:HttpGet(('https://pastebin.com/raw/iThJgCAS'),true))()
 end)
+Section:NewButton("Kidnap player gui", "LOL btw tools required", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Kidnap%20again"))()
+end)
 Section:NewButton("Kill player gui", "vro im out of scripts WHAT'S HAPPENING", function()
     local lp = game:GetService("Players").LocalPlayer
  
