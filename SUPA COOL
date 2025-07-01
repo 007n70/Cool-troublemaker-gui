@@ -1,7 +1,7 @@
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Loading MAIN_TROUBLE_MAKER_GUI...")
-task.wait(3)
+task.wait(0.3)
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Gui made by 007n70, aka the_secondblueman.. he's a loser...XD! DONE!")
-task.wait(3)
+task.wait(0.7)
 ---
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Notification-script-/refs/heads/main/just%20use%20it"))()
 ---
