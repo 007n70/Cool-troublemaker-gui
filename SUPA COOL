@@ -1306,7 +1306,7 @@ Section:NewButton("Ink monster", "has mobile support", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty50.lua"))();
 end)
 Section:NewButton("Fe Temu noli", "silly noli feel so haxxor", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Epik-R6-Dancezz-42246"))()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Temu-Noli-Script-broken-idle-38315"))()
 end)
 Section:NewButton("Fe caducus", "yeah it has fling", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/GQDddhRm"))();
