@@ -1258,6 +1258,12 @@ end)
 Section:NewButton("Fe zombie", "I eat brain but you're safe", function()
     loadstring(game:HttpGet("https://pastefy.app/JOWniO6o/raw"))()
 end)
+Section:NewButton("Fe star glitcher super rework", "you need ribs ig", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Star-Glitcher-Super-Rework-FE-27183"))()
+end)
+Section:NewButton("Fe reality orb", "ribs needed wowzers", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Reality-Orb-Glitcher-FE-27182"))()
+end)
 Section:NewButton("Fe fighter", "vro that's so tuff", function()
     loadstring(game:HttpGet("https://pastefy.app/wxVAgZpT/raw"))()
 end)
@@ -1427,6 +1433,40 @@ Section:NewButton("Oxide reanimation", "second best", function()
 end)
 Section:NewButton("Netless", "Smoother and best using it with disbelief hub", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-NETLESS-2025-29619"))()
+end)
+Section:NewButton("Permadeath 1", "use it when use hats scripts", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+
+local Player = Players.LocalPlayer
+
+StarterGui:SetCore("SendNotification",{Title = "Permadeath",Text = "Please wait "..Players.RespawnTime.." seconds"})
+
+replicatesignal(Player.ConnectDiedSignalBackend)
+task.wait(Players.RespawnTime + 0.20)
+replicatesignal(Player.Kill)
+
+local RespawnEvent = Instance.new("BindableEvent")
+
+RespawnEvent.Event:Once(function()
+    StarterGui:SetCore("SendNotification",{Title = "Respawning",Text = "Please wait "..Players.RespawnTime.." seconds"})
+    StarterGui:SetCore("ResetButtonCallback", true)    
+
+    replicatesignal(Player.ConnectDiedSignalBackend)
+end)
+
+StarterGui:SetCore("ResetButtonCallback", RespawnEvent)
+end)
+Section:NewButton("Permadeath 2", "MORE PERMADEATH", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+firesignal(game.Players.LocalPlayer.ConnectDiedSignalBackend)
+wait(game.Players.RespawnTime + .1)
+game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState(15)
 end)
 local Tab = Window:NewTab("control bloc")
 local Section = Tab:NewSection("Stoopis blocc")
