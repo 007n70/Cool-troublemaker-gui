@@ -220,3 +220,115 @@ end)
 Section:NewButton("Auto farm", "finally", function()
     loadstring(game:HttpGet('https://gist.githubusercontent.com/S0MEONEuKnow/90911f080b9ce7f64cb1e2bbb855aa01/raw/64dbe4d34a38f3a6c3b8fe0d81dbeeebababe9f0/sewh3.luau'))()
 end)
+local Tab = Window:NewTab("Natural disaster")
+local Section = Tab:NewSection("SPOOKYSCARYSKELETONS")
+Section:NewButton("Godmode 1", "Work for any games but i like to put it here XD", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character
+ 
+function GodMode()
+    character.Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+        if character.Humanoid.Health < 100 then
+            character.Humanoid.Health = 100
+        end
+    end)
+end
+ 
+ 
+GodMode()
+end)
+Section:NewButton("Godmode 2", "Same but better execute both at same time", function()
+    local Player = game:GetService("Players").LocalPlayer
+local RunService = game:GetService("RunService")
+
+local function GodMod()
+    for _, v in pairs(getgc(true)) do
+        if type(v) == "table" and rawget(v, "Health") then
+            rawset(v, "Health", math.huge)
+            rawset(v, "MaxHealth", math.huge)
+        end
+    end
+
+    if Player.Character then
+        for _, part in pairs(Player.Character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CustomPhysicalProperties = PhysicalProperties.new(1, 0.3, 0.5)
+                part.CanCollide = true
+            end
+        end
+    end
+
+    local heartbeat
+    heartbeat = RunService.Heartbeat:Connect(function()
+        if Player.Character then
+            local humanoid = Player.Character:FindFirstChildOfClass("Humanoid")
+            if humanoid then
+                humanoid.Health = humanoid.MaxHealth
+                humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+            end
+        end
+    end)
+
+    Player.CharacterAdded:Connect(function()
+        heartbeat:Disconnect()
+        task.wait(1)
+        GodMod()
+    end)
+end
+
+GodMod()
+
+debug.setmemorycategory(3)
+getrenv().warn = function() end
+end)
+Section:NewButton("Gui 1", "lalala", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main'))()
+end)
+Section:NewButton("Gui 2", "LOLOLOLO", function()
+    loadstring(game:HttpGet('https://weinzspace.com/cata/hub.lua'))()
+end)
+Section:NewButton("Gui 3", "YOOOO", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringUjHI6RQpz2o8", true))()
+end)
+Section:NewButton("Null fire", "Im so lazy", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Null-Fire/main/Loader"))()
+end)
+Section:NewButton("NDS hub", "Wowzers", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KaterHub-Inc/NaturalDisasterSurvival/refs/heads/main/main.lua"))()
+end)
+Section:NewButton("Gamepass giver", "Lol poor(but srsly who the fuck gonna buy a ballon for 80)", function()
+    local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+
+
+StarterGui:SetCore("SendNotification", {
+	Title = "IMPORTANT!";
+	Text = "THIS SCRIPT IS FE, SO SOME OF THE TOOLS WILL NOT WORK. YOU ALSO WONT GET THE TOOLS IF SOMEBODY DOESNT ALREADY OWN THEM";
+	Duration = 15;
+})
+
+
+StarterGui:SetCore("SendNotification", {
+	Title = "hey sisters";
+	Text = "script made by placehold0r";
+	Icon = "rbxassetid://108841980072551";
+	Duration = 5;
+})
+
+local LocalPlayer = Players.LocalPlayer
+local backpack = LocalPlayer:FindFirstChild("Backpack")
+
+if backpack then
+	for i, player in Players:GetPlayers() do
+		if player ~= LocalPlayer then
+			local playerBackpack = player:FindFirstChild("Backpack")
+			if playerBackpack then
+				for j, tool in playerBackpack:GetChildren() do
+					local clone = tool:Clone()
+					clone.Parent = backpack
+				end
+			end
+		end
+	end
+end
+end)
