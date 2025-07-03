@@ -44,7 +44,7 @@ Section:NewButton("Fake verified chat", "AMIDOS MAMA IM FAMOUS HO btw use vietna
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-fake-verified-29311"))();
 end)
 Section:NewButton("Rizz", "Wsp hot babe", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/pPMRh5YJ"))()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rizz-Line-30631"))()
 end)
 Section:NewButton("Chat hax", "an very old method to troll kidz", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Chat-Hax-V3.5-3512"))()
