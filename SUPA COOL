@@ -1441,7 +1441,7 @@ Section:NewButton("Drinkz", "you need hat thats on ur hand and it was a can or s
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoser/ferobloxscriptdrink/refs/heads/main/fedrinkscriptroblox2025", true))()
 end)
 Section:NewButton("CurrentAngel reanimation", "belong 2 me", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/CnLMAFji"))();
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-CurrentAngle-V2-Full-axis-reanimate-43351"))();
 end)
 Section:NewButton("Oxide reanimation", "second best", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Oxide-Reanimation-40379"))()
