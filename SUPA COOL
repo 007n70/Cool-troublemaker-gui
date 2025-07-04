@@ -1340,7 +1340,7 @@ Section:NewButton("Fe scp stuff", "i don'r really care about scp.. sorry guys", 
     loadstring(game:HttpGet("https://pastefy.app/YsJgITXR/raw"))()
 end)
 Section:NewButton("T pose", "T pose in the big 25", function()
-    loadstring(game:HttpGet(('https://pastefy.app/oCKLmRRo/raw'),true))()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Universal-FE-TPose-43491"))()
 end)
 Section:NewButton("Fe dropkick", "need touch fling for better experience", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LolnotaKid/JkDropKuck/refs/heads/main/Protected_3923618848403366.txt"));
