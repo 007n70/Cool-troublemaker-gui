@@ -690,7 +690,7 @@ Section:NewButton("Relaxin", "Lol", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Underssky/GravityLayScript/refs/heads/main/MainGravityLay.txt"))()
 end)
 Section:NewButton("Npc controller", "that cool", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty38.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/fe-source/refs/heads/main/NPC/source/main.Luau"))()
 end)
 Section:NewButton("Lift player", "Click 'em", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/ABTJ2sgD"))();
