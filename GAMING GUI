@@ -332,3 +332,13 @@ if backpack then
 	end
 end
 end)
+local Tab = Window:NewTab("Flee the facility")
+local Section = Tab:NewSection("Our roman empire <3")
+Section:NewButton("Ftf hax", "Op esp", function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/LeviTheOtaku/roblox-scripts/main/FTFHAX.lua",true))()
+end)
+local Tab = Window:NewTab("Epik minigames")
+local Section = Tab:NewSection("EPIKKK")
+Section:NewButton("Gui 1", "Cool :]", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI"))()
+end)
