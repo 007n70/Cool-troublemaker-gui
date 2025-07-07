@@ -1330,8 +1330,13 @@ end)
 Section:NewButton("R6 dances (ONLY R6)", "FE btw only works when the game fully r6 not any games will works", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Epik-R6-Dancezz-42246"))()
 end)
-Section:NewButton("Fake vr (R6 ONLY)", "Use fly script to fix float bug", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Test-ahhh-script-/refs/heads/main/Fake%20vr"))();
+Section:NewButton("Fake vr (R6 ONLY/Mobile ver)", "Need ribs", function()
+    control = "mobile" -- pc / mobile
+loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty45.lua"))()
+end)
+Section:NewButton("Fake vr (R6 ONLY/Pc ver)", "Need ribs as well XD", function()
+    control = "pc" -- pc / mobile
+loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty45.lua"))()
 end)
 Section:NewButton("Pet hat", "any hats you wear will become a pet", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty56.lua"))()
