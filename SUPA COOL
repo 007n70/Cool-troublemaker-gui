@@ -1223,7 +1223,7 @@ Section:NewButton("Fe r6 silly animations (ONLY R6)", "Nameless animation but ch
     loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Fe-Silly-animation-V4-16636"))()
 end)
 Section:NewButton("Ink monster", "has mobile support", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty50.lua"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty49.lua"))()
 end)
 Section:NewButton("Fe Temu noli", "silly noli feel so haxxor", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-Temu-Noli-Script-broken-idle-38315"))()
