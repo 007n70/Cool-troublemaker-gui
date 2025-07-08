@@ -1451,7 +1451,7 @@ Section:NewButton("Shade gui v2", "My eyes are teary", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rtx-menu-v2-42616"))()
 end)
 Section:NewButton("RTX", "more realistic", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/Cd76B8Lh"))();
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Just-a-baseplate.-Script-de-RTX-43523"))()
 end)
 Section:NewButton("RTX 2", "look chill and lofi but with blur and more light", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/The-Ascended-One-RTX-43823"))()
