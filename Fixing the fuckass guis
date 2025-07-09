@@ -1,0 +1,340 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guest028374/Notification-script-/refs/heads/main/just%20use%20it"))()
+---
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("SEV Z / GAMINGSCRIPTER GUI", "BloodTheme")
+local Tab = Window:NewTab("Prison life")
+local Section = Tab:NewSection("OS-OPENSCRIPTS")
+---
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+local Toggle = Instance.new("TextButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.Position = UDim2.new(0, 0, 0.454, 0)
+Toggle.Size = UDim2.new(0, 90, 0, 38)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Toggle gaming gui"
+Toggle.TextColor3 = Color3.fromRGB(248, 248, 248)
+Toggle.TextSize = 28.000
+Toggle.Draggable = true
+Toggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+
+local Corner = Instance.new("UICorner")
+Corner.Name = "Corner"
+Corner.Parent = Toggle
+---
+Section:NewButton("Prison life admin 1", "lm40<311!+", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/devguy100/PrizzLife/main/Source/release_v0.8.1.lua'))()
+end)
+Section:NewButton("Prison life admin 2", "Xd!!×+", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+end)
+Section:NewButton("Prison life admin 3", "LOL++!282", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/N17S3/Tiger-Admin/refs/heads/main/TigerAdmin"))()
+end)
+Section:NewButton("Prison life admin tools giver", "THIS IS SUPER OP FOR A REASONABLE", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/AZVi2tuK"))()
+end)
+Section:NewButton("Sword giver", "a single sword won't be that bad", function()
+    local plr=game.Players.LocalPlayer;local tool=Instance.new("Tool",plr.Backpack)tool.GripPos=Vector3.new(0.1,-1,0)tool.Name="Sword"local k=Instance.new("Part",tool)k.Name="Handle"k.Size=Vector3.new(0.4,4,0.4)local l=Instance.new("Animation",tool)l.AnimationId="rbxassetid://218504594"local m=plr.Character.Humanoid:LoadAnimation(l)db=true;da=false;tool.Equipped:connect(function()tool.Activated:connect(function()if db==true then db=false;m:Play()wait()da=true;db=true;wait(0.1)da=false end end)end)k.Touched:connect(function(n)if da==true then local o=n.Parent.Humanoid;if o~=nil then local p=game.Players:FindFirstChild(n.Parent.Name)for j=1,10 do if p.Name~="RealAnimus"then game.ReplicatedStorage.meleeEvent:FireServer(p)end end end end end)
+end)
+Section:NewButton("Gear giver", "super fun xd", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Pedro0239485y7/FE-Gear-Giver-Mod-PRison-Life-UnOb/refs/heads/main/Obfuscated', true))()
+end)
+Section:NewButton("Aimbot v2 with cmds", "Idk lol", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/L6nJMddF"))();
+end)
+Section:NewButton("Fe bypass gui", "it broken :(", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/g00lXploiter/g00lXploiter/main/Fe%20bypass", true))()
+end)
+Section:NewButton("CorgiSide gui", "kinda mid... idk lol", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CorgiSideExploits/OrionLib/refs/heads/main/Corgiside%20Prison%20Life", true))()
+end)
+Section:NewButton("Weshky hub", "i love this one :)", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/WeshkyPL/WehskyHub/refs/heads/main/WeshkyHubV1.12.lua'),true))()
+end)
+Section:NewButton("Tbao hub", "this one is good XD", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaohubPrisonLife"))()
+end)
+local Tab = Window:NewTab("The rake remastered")
+local Section = Tab:NewSection("SCRIPTSBYVEUX")
+Section:NewButton("Toddy's hub", ":]", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ToddyTheNoobDud/Meepstuff/refs/heads/main/RakingNuts.lua'))()
+end)
+Section:NewButton("Skedzz hub", "it have key system lol", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Skedzz/ScriptHub/main/Loader"))()
+end)
+Section:NewButton("Op gui 1", "im so high lolz", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Djskinybinn/The-Rake-Remastered-Script-Keyless/refs/heads/main/ObfuscatedRakeScript.lua",true))()
+end)
+Section:NewButton("Op gui 2", "more like a hub?", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ToddyTheNoobDud/Meepstuff/refs/heads/main/RakingNuts.lua'))()
+end)
+local Tab = Window:NewTab("Survive area 51")
+local Section = Tab:NewSection("SCRIPTING BOOMBAZAA")
+Section:NewButton("Ghosthub's gui", "lul i just love his scripts <3", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/TtdvYAKU'))()
+end)
+Section:NewButton("Gui 2", "Dude can't believe most script of this game just died so fast", function()
+    _G.RedGUI = true
+_G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
+--Themes: Light, Dark, Mocha, Aqua and Jester
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/SurviveandKilltheKillersinArea51.lua"))()
+end)
+Section:NewButton("Roxhub", "Ok i love this one ngl", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/HaxxV1/d7cfdb5090e819a84a8db22fb113f39d/raw"))()
+end)
+local Tab = Window:NewTab("S.E.W.H")
+local Section = Tab:NewSection("PRETTY EVIL")
+Section:NewButton("Gui 1", "inf health are op lol", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/refs/heads/main/SEWH.lua"))()
+end)
+Section:NewButton("Op gui 1", "Password reset everyday", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ArchIsAlive/Arch-Hub/refs/heads/main/8577035715f13ebd.lua.txt"))()
+end)
+Section:NewButton("Godmode", "the web was disgusting..", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/refs/heads/main/SEWH.lua"))()
+end)
+Section:NewButton("Semi god gui", "idk the name lol i name it by myself", function()
+    -- Passive Adonis Anti-Cheat Bypass (always enabled, no UI)
+local getinfo = getinfo or debug.getinfo
+local DEBUG = false
+local Hooked = {}
+
+local Detected, Kill
+
+if setthreadidentity then setthreadidentity(2) end
+
+for i, v in getgc(true) do
+    if typeof(v) == "table" then
+        local DetectFunc = rawget(v, "Detected")
+        local KillFunc = rawget(v, "Kill")
+
+        if typeof(DetectFunc) == "function" and not Detected then
+            Detected = DetectFunc
+            local Old; Old = hookfunction(Detected, function(Action, Info, NoCrash)
+                if Action ~= "_" then
+                    if DEBUG then
+                        warn(`Adonis AntiCheat flagged\nMethod: {Action}\nInfo: {Info}`)
+                    end
+                end
+                return true
+            end)
+            table.insert(Hooked, Detected)
+        end
+
+        if rawget(v, "Variables") and rawget(v, "Process") and typeof(KillFunc) == "function" and not Kill then
+            Kill = KillFunc
+            local Old; Old = hookfunction(Kill, function(Info)
+                if DEBUG then
+                    warn(`Adonis AntiCheat tried to kill (fallback): {Info}`)
+                end
+            end)
+            table.insert(Hooked, Kill)
+        end
+    end
+end
+
+local Old; Old = hookfunction(getrenv().debug.info, newcclosure(function(...)
+    local LevelOrFunc, Info = ...
+    if Detected and LevelOrFunc == Detected then
+        if DEBUG then
+            warn(`zins | adonis bypassed`)
+        end
+        return coroutine.yield(coroutine.running())
+    end
+    return Old(...)
+end))
+
+if setthreadidentity then setthreadidentity(7) end
+
+-- UI with title "S.E.W.H"
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/random%202"))()
+local win = library:Window("S.E.W.H")
+
+-- Infinite Stamina dependencies
+local aux = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Upbolt/Hydroxide/revision/ohaux.lua"))()
+local scriptPath = game:GetService("ReplicatedStorage").Resources.Client.SprintHandler
+local closureName = "startSprint"
+local closureConstants = {
+    [1] = "MoveDirection",
+    [2] = "Magnitude",
+    [3] = 0.2,
+    [4] = "Play",
+    [5] = "DestroyIdentifier",
+    [6] = "BaseRegen"
+}
+local closure1 = aux.searchClosure(scriptPath, closureName, 10, closureConstants)
+local closure2 = aux.searchClosure(scriptPath, closureName, 4, closureConstants)
+
+-- Infinite Stamina toggle
+win:Toggle("Infinite Stamina", function(state)
+    if closure1 then
+        debug.getupvalue(closure1, 10)["MaxStamina"] = state and 1e308 or 100
+    end
+    if closure2 then
+        debug.setupvalue(closure2, 4, state and 1e308 or 100)
+    end
+end)
+
+-- Semi God Mode (toggle)
+local semiGodActive = false
+local semiGodHook
+win:Toggle("Semi God Mode", function(state)
+    if state and not semiGodActive then
+        if hookmetamethod then
+            semiGodHook = hookmetamethod(game, "__namecall", function(self, ...)
+                local args = {...}
+                local method = getnamecallmethod()
+                if method == "FireServer" and self.Name == "Asynchronous" then
+                    if args[1] == "HurtSelf" then
+                        args[3] = 0.001 -- nearly zero damage
+                    elseif args[1] == "CharHit" then
+                        args[4] = "Humanoid"
+                    end
+                    return semiGodHook(self, unpack(args))
+                end
+                return semiGodHook(self, ...)
+            end)
+            semiGodActive = true
+        else
+            game:GetService("Players").LocalPlayer:Kick("Exploit not supported!")
+        end
+    elseif not state and semiGodActive then
+        -- Can't unhook in Roblox Lua; tell user to rejoin to disable
+        print("You must rejoin to fully disable Semi God Mode.")
+        semiGodActive = false
+    end
+end)
+end)
+Section:NewButton("Auto farm", "finally", function()
+    loadstring(game:HttpGet('https://gist.githubusercontent.com/S0MEONEuKnow/90911f080b9ce7f64cb1e2bbb855aa01/raw/64dbe4d34a38f3a6c3b8fe0d81dbeeebababe9f0/sewh3.luau'))()
+end)
+local Tab = Window:NewTab("Natural disaster")
+local Section = Tab:NewSection("SPOOKYSCARYSKELETONS")
+Section:NewButton("Godmode 1", "Work for any games but i like to put it here XD", function()
+    local player = game.Players.LocalPlayer
+local character = player.Character
+ 
+function GodMode()
+    character.Humanoid:GetPropertyChangedSignal("Health"):Connect(function()
+        if character.Humanoid.Health < 100 then
+            character.Humanoid.Health = 100
+        end
+    end)
+end
+ 
+ 
+GodMode()
+end)
+Section:NewButton("Godmode 2", "Same but better execute both at same time", function()
+    local Player = game:GetService("Players").LocalPlayer
+local RunService = game:GetService("RunService")
+
+local function GodMod()
+    for _, v in pairs(getgc(true)) do
+        if type(v) == "table" and rawget(v, "Health") then
+            rawset(v, "Health", math.huge)
+            rawset(v, "MaxHealth", math.huge)
+        end
+    end
+
+    if Player.Character then
+        for _, part in pairs(Player.Character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CustomPhysicalProperties = PhysicalProperties.new(1, 0.3, 0.5)
+                part.CanCollide = true
+            end
+        end
+    end
+
+    local heartbeat
+    heartbeat = RunService.Heartbeat:Connect(function()
+        if Player.Character then
+            local humanoid = Player.Character:FindFirstChildOfClass("Humanoid")
+            if humanoid then
+                humanoid.Health = humanoid.MaxHealth
+                humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+            end
+        end
+    end)
+
+    Player.CharacterAdded:Connect(function()
+        heartbeat:Disconnect()
+        task.wait(1)
+        GodMod()
+    end)
+end
+
+GodMod()
+
+debug.setmemorycategory(3)
+getrenv().warn = function() end
+end)
+Section:NewButton("Anti fling parts", "i hate fling skiddie >:(", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Natural-Disaster-Survival-Anti-part-fling-31406"))();
+end)
+Section:NewButton("Op gui 1", ":0", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Codexxscripts/Script/refs/heads/main/Protected_7867058958573066.lua.txt
+end)
+Section:NewButton("Gui 1", "lalala", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main'))()
+end)
+Section:NewButton("Gui 2", "LOLOLOLO", function()
+    loadstring(game:HttpGet('https://weinzspace.com/cata/hub.lua'))()
+end)
+Section:NewButton("Gui 3", "YOOOO", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringUjHI6RQpz2o8", true))()
+end)
+Section:NewButton("I was here", "I was here", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Natural-Disaster-Survival-I-was-here-3355"))()
+end)
+Section:NewButton("Null fire", "Im so lazy", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Null-Fire/main/Loader"))()
+end)
+Section:NewButton("NDS hub", "Wowzers", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KaterHub-Inc/NaturalDisasterSurvival/refs/heads/main/main.lua"))()
+end)
+Section:NewButton("Gamepass giver", "Lol poor(but srsly who the fuck gonna buy a ballon for 80)", function()
+    local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+
+
+StarterGui:SetCore("SendNotification", {
+	Title = "IMPORTANT!";
+	Text = "THIS SCRIPT IS FE, SO SOME OF THE TOOLS WILL NOT WORK. YOU ALSO WONT GET THE TOOLS IF SOMEBODY DOESNT ALREADY OWN THEM";
+	Duration = 15;
+})
+
+
+StarterGui:SetCore("SendNotification", {
+	Title = "hey sisters";
+	Text = "script made by placehold0r";
+	Icon = "rbxassetid://108841980072551";
+	Duration = 5;
+})
+
+local LocalPlayer = Players.LocalPlayer
+local backpack = LocalPlayer:FindFirstChild("Backpack")
+
+if backpack then
+	for i, player in Players:GetPlayers() do
+		if player ~= LocalPlayer then
+			local playerBackpack = player:FindFirstChild("Backpack")
+			if playerBackpack then
+				for j, tool in playerBackpack:GetChildren() do
+					local clone = tool:Clone()
+					clone.Parent = backpack
+				end
+			end
+		end
+	end
+end
+end)
