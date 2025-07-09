@@ -294,7 +294,7 @@ Section:NewButton("Gui 3", "YOOOO", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringUjHI6RQpz2o8", true))()
 end)
 Section:NewButton("I was here", "I was here", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Natural-Disaster-Survival-I-was-here-3355"))()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Natural-Disaster-Survival-I-was-here-3355"))();
 end)
 Section:NewButton("Null fire", "Im so lazy", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/InfernusScripts/Null-Fire/main/Loader"))()
