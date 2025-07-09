@@ -27,7 +27,7 @@ local Corner = Instance.new("UICorner")
 Corner.Name = "Corner"
 Corner.Parent = Toggle
 ---
-Section:NewButton("Proson life admin 1", "lm40<311!+", function()
+Section:NewButton("Prison life admin 1", "lm40<311!+", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/devguy100/PrizzLife/main/Source/release_v0.8.1.lua'))()
 end)
 Section:NewButton("Prison life admin 2", "Xd!!×+", function()
