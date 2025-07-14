@@ -373,6 +373,3 @@ local Section = Tab:NewSection("Lmao")
 Section:NewButton("Warp hub", "Super op with auto grab", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Forkion2dev/Warp-hub-3/refs/heads/main/Warp%20hub(main)"))()
 end)
-Section:NewButton("Bounty farm", "idk tho", function()
-    
-end)
