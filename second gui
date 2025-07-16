@@ -293,6 +293,9 @@ end)
 Section:NewButton("La hub", "All my friends are gay asshole (me 2)", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Execute666j/TESTE/refs/heads/main/zinac%20luraph.txt"))();
 end)
+Section:NewButton("UWU hub", "it's just the name-", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Execute666j/TESTE/refs/heads/main/zinac%20luraph.txt"))();
+end)
 local Tab = Window:NewTab("Skinwalkers")
 local Section = Tab:NewSection("i luv ts game XD")
 Section:NewButton("Qiwil hub", "cool", function()
