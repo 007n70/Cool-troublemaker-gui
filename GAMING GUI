@@ -381,27 +381,17 @@ end)
 Section:NewButton("Venom x", "idk lol", function()
     oadstring(game:HttpGet("https://raw.githubusercontent.com/fratelevostru9999/src/refs/heads/main/VenomX%20Fling%20Things%20And%20People",true))()
 end)
-Section:NewButton("Ruhub ftap (Mobile ver)", "i cant spell it", function()
-    getgenv().unlockmouse = false -- set to false if youre on android and dont have a mouse!
-getgenv().mousekeybind = "L" -- keybind to unlock and relock your mouse!
-getgenv().saveconfig = false -- set to true  if you want your configurations saved!
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/cooldawg123/RuHubFTAPrelease/refs/heads/main/official.lua",true))()
+Section:NewButton("Nerfhub", "i cant spell it", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Range0xE4/NerHub/main/main.lua"))();
 end)
-Section:NewButton("Ruhub ftap (Pc ver)", "ts is pc ger", function()
-    getgenv().unlockmouse = true -- set to false if youre on android and dont have a mouse!
-getgenv().mousekeybind = "L" -- keybind to unlock and relock your mouse!
-getgenv().saveconfig = false -- set to true  if you want your configurations saved!
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/cooldawg123/RuHubFTAPrelease/refs/heads/main/official.lua",true))()
+Section:NewButton("Mobile hub", "I hate it when almost hub not working so i have to rework", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlizTBr/scripts/main/FTAP.lua"))()
 end)
 Section:NewButton("Faldes hub", "bro i can't spell", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Artss1/Flades_Hub/refs/heads/main/We%20Are%20Arts.lua"))()
 end)
-Section:NewButton("Unknow ftap", "out of idea what to say", function()
-    loadstring(game:HttpGet(("https://pastebin.com/raw/Skn3Aa1Q"), true))()
+Section:NewButton("Simple ftap", "out of idea what to say", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/spacexrandom/Lua/main/FlingThingsAndPeople"))()
 end)
 Section:NewButton("Super strength and anti grab /w no gui", "yuh", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/fgdergewrgegr/SVH/refs/heads/main/VHSVF"))()
