@@ -1222,7 +1222,7 @@ Section:NewButton("classic (ONLY R6)", "Dynablocks", function()
     loadstring(game:HttpGet(('https://pastebin.com/raw/6GNkQUu6'),true))()
 end)
 Section:NewButton("Drift cart", "man i luv mario kart :)", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/fjPy7vtH"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AstraOutlight/my-scripts/refs/heads/main/fe%20car%20v3"))()
 end) 
 Section:NewButton("Fe holiday feel", "it's not holiday but yeah", function()
     if not game:GetService("ReplicatedStorage"):FindFirstChild("01_server") then return game:GetService("TeleportService"):Teleport(17574618959, game:GetService("Players").LocalPlayer) end
