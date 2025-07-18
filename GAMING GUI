@@ -415,6 +415,3 @@ end)
 Section:NewButton("Friendly fire", "Lmao", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Brovaky/Friendly/refs/heads/main/Friendly'))()
 end)
-Section:NewButton("Super throw", "only sup strength no anti grab", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Fling-Things-and-People-super-throw-open-source-43154"))();
-end)
