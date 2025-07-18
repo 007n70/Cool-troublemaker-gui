@@ -61,6 +61,9 @@ end)
 Section:NewButton("Chat draw", "pixel :D", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/Zmb2u7Pp"))();
 end)
+Section:NewButton("chat spy", "what if they talk bad about u?", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Dan41/Roblox-Scripts/refs/heads/main/CHAT%20SPY%20-%202025/ChatSpy2025.lua'))();
+end)
 Section:NewButton("PUNCHING THE SILLIES", "I HATE DUMB PEOPLE", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
 end)
