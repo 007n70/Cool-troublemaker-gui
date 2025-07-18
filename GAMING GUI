@@ -375,16 +375,17 @@ Section:NewButton("Warp hub", "Super op with auto grab", function()
 end)
 local Tab = Window:NewTab("Fling things and people")
 local Section = Tab:NewSection("i feel tingling when they grab me >:( pissed up")
-Section:NewButton("Venom x", "gah", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/fratelevostru9999/src/refs/heads/main/VenomX%20Fling%20Things%20And%20People",true))()
+Section:NewButton("Blitz hub", "gah", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Fling-Things-and-People-FTAP-BiltZ-43503"))()
 end)
-Section:NewButton("Random gui thats idk the name", "idk lol", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlizTBr/scripts/refs/heads/main/FTAP.lua"))()
+Section:NewButton("Venom x", "idk lol", function()
+    oadstring(game:HttpGet("https://raw.githubusercontent.com/fratelevostru9999/src/refs/heads/main/VenomX%20Fling%20Things%20And%20People",true))()
 end)
 Section:NewButton("Ruhub ftap (Mobile ver)", "i cant spell it", function()
     getgenv().unlockmouse = false -- set to false if youre on android and dont have a mouse!
 getgenv().mousekeybind = "L" -- keybind to unlock and relock your mouse!
 getgenv().saveconfig = false -- set to true  if you want your configurations saved!
+
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/cooldawg123/RuHubFTAPrelease/refs/heads/main/official.lua",true))()
 end)
@@ -392,6 +393,7 @@ Section:NewButton("Ruhub ftap (Pc ver)", "ts is pc ger", function()
     getgenv().unlockmouse = true -- set to false if youre on android and dont have a mouse!
 getgenv().mousekeybind = "L" -- keybind to unlock and relock your mouse!
 getgenv().saveconfig = false -- set to true  if you want your configurations saved!
+
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/cooldawg123/RuHubFTAPrelease/refs/heads/main/official.lua",true))()
 end)
@@ -403,4 +405,16 @@ Section:NewButton("Unknow ftap", "out of idea what to say", function()
 end)
 Section:NewButton("Super strength and anti grab /w no gui", "yuh", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/fgdergewrgegr/SVH/refs/heads/main/VHSVF"))()
+end)
+Section:NewButton("The choosen one hub", "Op", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blueEa1532/thechosenone/refs/heads/main/The_Chosen_One_Lite"))()
+end)
+Section:NewButton("Name hub", "weird name", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NameHubScript/_/refs/heads/main/f"))()
+end)
+Section:NewButton("Friendly fire", "Lmao", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Brovaky/Friendly/refs/heads/main/Friendly'))()
+end)
+Section:NewButton("Super throw", "only sup strength no anti grab", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Fling-Things-and-People-super-throw-open-source-43154"))();
 end)
