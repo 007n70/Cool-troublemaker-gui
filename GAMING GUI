@@ -399,3 +399,14 @@ end)
 Section:NewButton("Friendly fire", "Lmao", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/Brovaky/Friendly/refs/heads/main/Friendly'))()
 end)
+local Tab = Window:NewTab("Ink game")
+local Section = Tab:NewSection("lol")
+Section:NewButton("Gui 1", "op", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/wefwef127382/inkgames.github.io/refs/heads/main/ringta.lua"))();
+end)
+Section:NewButton("Gui 2", "Op but better", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexScriptX/Ink-Game-Script/refs/heads/main/Ink%20Game%20by%20AlexScriptX.lua"))();
+end)
+Section:NewButton("Voidware", "Yummy", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/inkgame.lua"))();
+end)
