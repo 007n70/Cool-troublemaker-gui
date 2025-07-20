@@ -58,6 +58,9 @@ end)
 Section:NewButton("Quiz bot", "ARE U ARE GENIUS?", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Quiz-Bot-36390"))()
 end)
+Section:NewButton("Humans or not", "Humans or not", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/Player_Or_AI.lua'))()
+end)
 Section:NewButton("Chat draw", "pixel :D", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/Zmb2u7Pp"))();
 end)
@@ -96,376 +99,6 @@ Section:NewButton("Goofy animations", "goofy balls", function()
 end)
 Section:NewButton("Forsaken dog animation", "WOOF WE WANT IT!! MEOW COME AND GET IT BABY!", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/UPD-Forsaken-Stalker-anims-38113"))();
-end)
-Section:NewButton("Forsaken Noli before Noli relz relz", "No bait XP", function()
-    local Players = game:GetService("Players")
-
-local UserInputService = game:GetService("UserInputService")
-
-local RunService = game:GetService("RunService")
-
-local Debris = game:GetService("Debris")
-
-
-
-local player = Players.LocalPlayer
-
-local character = player.Character or player.CharacterAdded:Wait()
-
-local humanoid = character:WaitForChild("Humanoid")
-
-local HRP = character:WaitForChild("HumanoidRootPart")
-
-local mouse = player:GetMouse()
-
-
-
--- Animation IDs
-
-local Animations = {
-
-    Idle = "rbxassetid://83465205704188",
-
-    Walk = "rbxassetid://103292185212679",
-
-    Click = "rbxassetid://109230267448394",
-
-    Q = "rbxassetid://139835501033932",
-
-    R = "rbxassetid://99465988880393",
-
-    T = "rbxassetid://128730974312965",
-
-    Intro = "rbxassetid://82002727792391",
-
-}
-
-
-
--- Audio IDs
-
-local Audio = {
-
-    Intro = "rbxassetid://97041392946745",         -- Audio Intro
-
-    Main = "rbxassetid://79001697227075",           -- Background Music sau intro
-
-    Idle = "rbxassetid://73235255020546",           -- Audio cho khi đứng yên
-
-    Click = "rbxassetid://110759725172567",          -- Audio cho chuột trái
-
-    R = "rbxassetid://90768093259753",              -- Audio cho chiêu R
-
-    T = "rbxassetid://113926551867193",             -- Audio cho chiêu T
-
-}
-
-
-
--- Table chứa các audio đang chạy để cleanup sau này
-
-local activeSounds = {}
-
-
-
--- Helper: Play sound và theo dõi
-
-local function playSound(id, parent, volume, looped)
-
-    local s = Instance.new("Sound", parent)
-
-    s.SoundId = id
-
-    s.Volume = volume or 1
-
-    s.Looped = looped or false
-
-    s:Play()
-
-    table.insert(activeSounds, s)
-
-    return s
-
-end
-
-
-
--- Helper: Cleanup tất cả audio
-
-local function clearAllSounds()
-
-    for _, s in ipairs(activeSounds) do
-
-        if s and s:IsA("Sound") then
-
-            s:Stop()
-
-            s:Destroy()
-
-        end
-
-    end
-
-    activeSounds = {}
-
-end
-
-
-
--- Helper: Load Animation
-
-local function loadAnim(id)
-
-    local anim = Instance.new("Animation")
-
-    anim.AnimationId = id
-
-    return humanoid:LoadAnimation(anim)
-
-end
-
-
-
--- Load Animations
-
-local idleTrack = loadAnim(Animations.Idle)
-
-local walkTrack = loadAnim(Animations.Walk)
-
-local clickTrack = loadAnim(Animations.Click)
-
-local qTrack = loadAnim(Animations.Q)
-
-local rTrack = loadAnim(Animations.R)
-
-local tTrack = loadAnim(Animations.T)
-
-local introTrack = loadAnim(Animations.Intro)
-
-
-
--- Play Intro Animation + Audio
-
-local introSound = playSound(Audio.Intro, workspace, 1, false)
-
-introTrack:Play()
-
-local introPlaying = true
-
-
-
-task.delay(3, function()
-
-    introTrack:Stop()
-
-    if introSound then introSound:Stop() end
-
-    introPlaying = false
-
-    
-
-    -- Start background music
-
-    playSound(Audio.Main, workspace, 1, true)
-
-    
-
-    idleTrack:Play()
-
-end)
-
-
-
--- Idle / Walk handling
-
-local idleAudio = nil
-
-RunService.RenderStepped:Connect(function()
-
-    if introPlaying then return end
-
-
-
-    if humanoid.MoveDirection.Magnitude > 0 then
-
-        if not walkTrack.IsPlaying then walkTrack:Play() end
-
-        if idleTrack.IsPlaying then idleTrack:Stop() end
-
-        if idleAudio then
-
-            idleAudio:Stop()
-
-            idleAudio:Destroy()
-
-            idleAudio = nil
-
-        end
-
-    else
-
-        if not idleTrack.IsPlaying then idleTrack:Play() end
-
-        if walkTrack.IsPlaying then walkTrack:Stop() end
-
-        if not idleAudio then
-
-            idleAudio = playSound(Audio.Idle, workspace, 0.6, true)
-
-        end
-
-    end
-
-end)
-
-
-
--- Input handling
-
-UserInputService.InputBegan:Connect(function(input, gameProcessed)
-
-    if introPlaying or gameProcessed then return end
-
-
-
-    if input.UserInputType == Enum.UserInputType.MouseButton1 then
-
-        local s = playSound(Audio.Click, workspace, 1, false)
-
-        clickTrack:Play()
-
-        clickTrack.Stopped:Connect(function()
-
-            s:Stop() 
-
-            s:Destroy()
-
-        end)
-
-
-
-    elseif input.KeyCode == Enum.KeyCode.Q then
-
-        qTrack:Play()
-
-local dash = Instance.new("BodyVelocity")
-
-dash.MaxForce = Vector3.new(1, 1, 1) * 100000
-
-dash.Velocity = HRP.CFrame.LookVector * 100
-
-dash.P = 1500
-
-dash.Parent = HRP
-
-
-
-local connection
-
-connection = HRP.Touched:Connect(function(hit)
-
-    if hit:IsA("BasePart") and hit.CanCollide and not hit:IsDescendantOf(char) then
-
-        dash:Destroy()
-
-        connection:Disconnect()
-
-    end
-
-end)
-
-
-
-Debris:AddItem(dash, 0.9)
-
-
-
-    elseif input.KeyCode == Enum.KeyCode.R then
-
-        -- Chiêu R: chỉ chạy animation và audio, không khóa chuyển động
-
-        rTrack:Play()
-
-        local rSound = playSound(Audio.R, workspace, 1, false)
-
-        rTrack.Stopped:Connect(function()
-
-            rSound:Stop() 
-
-            rSound:Destroy()
-
-        end)
-
-
-
-    elseif input.KeyCode == Enum.KeyCode.T then
-
-        -- Chiêu T: tương tự chiêu R
-
-        tTrack:Play()
-
-        local tSound = playSound(Audio.T, workspace, 1, false)
-
-        tTrack.Stopped:Connect(function()
-
-            tSound:Stop() 
-
-            tSound:Destroy()
-
-        end)
-
-    end
-
-end)
-
-
-
--- Khi nhân vật chết, xoá hết âm thanh
-
-humanoid.Died:Connect(function()
-
-    if idleAudio then 
-
-        idleAudio:Stop() 
-
-        idleAudio:Destroy() 
-
-        idleAudio = nil 
-
-    end
-
-    clearAllSounds()
-
-    idleTrack:Stop()
-
-    walkTrack:Stop()
-
-    clickTrack:Stop()
-
-    qTrack:Stop()
-
-    rTrack:Stop()
-
-    tTrack:Stop()
-
-    introTrack:Stop()
-
-end)
-
-
-
-player.CharacterAdded:Connect(function(newChar)
-
-    newChar:WaitForChild("Humanoid").Died:Connect(function()
-
-        clearAllSounds()
-
-    end)
-
-end)
-end)
-Section:NewButton("Noli changer", "idk if its was actually fe but nah", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/Qw26i9CC"))()
 end)
 Section:NewButton("Forsaken destroyer", ":3", function()
     loadstring(game:HttpGet"https://raw.githubusercontent.com/charlieomg/forsaken-clone-stuff/refs/heads/main/beta3earlyaccess")()
@@ -620,9 +253,6 @@ Section:NewButton("Flip", "DO A FLIP", function()
 end)
 Section:NewButton("Reverse time", "TIME CONTROL", function()
     loadstring(game:HttpGet("https://mscripts.vercel.app/scfiles/reverse-script.lua"))()
-end)
-Section:NewButton("Supermanfly", "VROOM VROOM KABOM", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
 end)
 local Tab = Window:NewTab("Gui and hub stuff")
 local Section = Tab:NewSection("BRO WHY'S SO RARE TO FIND ANY GUI AND HUB NOW")
@@ -1080,6 +710,9 @@ end)
 Section:NewButton("Sixhub (KEY IN INFORMATION)", "sixhub_key2025lol", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ySixxNz/Natural-Desastre/SIX-MENU/SIX-HUB-NATURAL-DESASTRE"))();
 end)
+Section:NewButton("C9 hub v2", "idk", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Ccjc2q7H"))()
+end)
 Section:NewButton("LALOL backdoor hub", "VERY AWESOME", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
 end)
@@ -1132,8 +765,14 @@ end)
 Section:NewButton("Smooth animated fly gui (r15)", "i should've add it in trolling tab but nah", function()
     loadstring(game:HttpGet("https://github.com/Sinister-Scripts/Roblox-Exploits/raw/refs/heads/main/FE-Animated-Mobile-Fly"))()
 end)
+Section:NewButton("Supermanfly (r15)", "VROOM VROOM KABOM", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
+end)
 Section:NewButton("Smooth animated fly gui (r6)", "Not actually a gui-", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/396abc/Script/refs/heads/main/Fly.lua'))()
+end)
+Section:NewButton("Invicible fly (r6)", "too much but idc", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/XyR6izYv"))();
 end)
 Section:NewButton("Fly vehicle", "DRIVING WITH MY DARLING", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20Fe%20Vehicle%20Fly%20GUI%20script'))()
