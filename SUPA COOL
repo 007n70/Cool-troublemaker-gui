@@ -850,7 +850,7 @@ Section:NewButton("Invisible", "very basic", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/UniversalInvis.lua"))();
 end)
 Section:NewButton("Anti bang", "not work properly but ok lol", function()
-    print("Clicked")
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/jdihdzzzhack/a61a34b9080f599b6f20c72469283f1e/raw/725dd668cb169b19c7b14312fcdb2593716fbb0f/gistfile1.txt"))()
 end)
 Section:NewButton("Dupe tools", "Any tools kinda working", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Spam%20Tools'))()
