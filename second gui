@@ -299,6 +299,9 @@ end)
 Section:NewButton("UWU hub", "it's just the name-", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Execute666j/TESTE/refs/heads/main/zinac%20luraph.txt"))();
 end)
+Section:NewButton("Chaos hub", "these hub are so fucking mid i want icehub back", function()
+    loadstring(game:HttpGet("https://pastefy.app/blWHnlyI/raw"))();
+end)
 local Tab = Window:NewTab("Skinwalkers")
 local Section = Tab:NewSection("i luv ts game XD")
 Section:NewButton("Qiwil hub", "cool", function()
