@@ -421,6 +421,9 @@ end)
 Section:NewButton("Gui 2", "tbh idk the name xd", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/wJw57ccR"))();
 end)
+Section:NewButton("gui 3", "the script was 5 years ago or even more xd", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/izEaLFUi"))();
+end)
 Section:NewButton("Pro bacon hub v2", "Proz epikz supa colz", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ProBaconHub/ProBaconHubV2/refs/heads/main/LOADER.lua"))()
 end)
