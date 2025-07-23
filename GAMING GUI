@@ -413,3 +413,14 @@ end)
 Section:NewButton("Voidware", "Yummy", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/inkgame.lua"))();
 end)
+local Tab = Window:NewTab("Blox hunt")
+local Section = Tab:NewSection("Our diva")
+Section:NewButton("Gui 1", "Esp and stuff", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Hospital-Map!-or-Blox-Hunt-v3.2.0-ESP-and-Safe-Spot-37442"))();
+end)
+Section:NewButton("Gui 2", "tbh idk the name xd", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/wJw57ccR"))();
+end)
+Section:NewButton("Pro bacon hub v2", "Proz epikz supa colz", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ProBaconHub/ProBaconHubV2/refs/heads/main/LOADER.lua"))()
+end)
