@@ -37,7 +37,6 @@ local MainWindow = Rayfield:CreateWindow({
 })
 
 local Tab = Window:CreateTab("Blox hunt", 4483362458)
-local Section = Tab:CreateSection("run..r-r-run.. i like it when you hide! I've been looking at you for time")
 local Button = Tab:CreateButton({
    Name = "Gui 1",
    Callback = function()
