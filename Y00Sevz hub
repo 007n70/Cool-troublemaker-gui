@@ -1,5 +1,5 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-local MainWindow = Rayfield:CreateWindow({
+local Window = Rayfield:CreateWindow({
    Name = "Y00Sevz hub",
    Icon = 0,
    LoadingTitle = "Y00Sevz hub is a hub that's collecting every scripts then skidding XD.. loading....",
