@@ -36,7 +36,7 @@ local MainWindow = Rayfield:CreateWindow({
    }
 })
 
-local MainTab = Window:CreateTab("Blox hunt", 4483362458)
+local Tab = Window:CreateTab("Blox hunt", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Gui 1",
    Callback = function()
