@@ -5,7 +5,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "Y00Sevz hub is a hub that's collecting every scripts then skidding XD.. loading....",
    LoadingSubtitle = "by 007n70 (the_secondblueman)",
    ShowText = "7n70",
-   Theme = "Dark Blue",
+   Theme = "DarkBlue",
 
    ToggleUIKeybind = "K",
 
