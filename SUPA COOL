@@ -1236,6 +1236,9 @@ end)
 Section:NewButton("Second troublemaker gui", "this is about games and trolling kids lmao", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/second%20gui"))();
 end)
+Section:NewButton("Y00Sevz hub", "More about games and stuff", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/Y00Sevz%20hub"))();
+end)
 Section:NewButton("Not made by me but noli is", "He's a good scripter omg :0", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/MY-FRIEND-S-GUI/refs/heads/main/NOLI"))();
 end)
