@@ -844,7 +844,7 @@ Section:NewButton("Remote abuser", "XD", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/v0c0n1337/scripts/refs/heads/main/remote%20event%20abuse.txt"))()
 end)
 Section:NewButton("Shiftlock", "gud for mobile user", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/fsm2F3xF"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/minhReal/mainS/refs/heads/main/Other_Script/Shiftlock.lua"))()
 end)
 Section:NewButton("Avatar changer", "it's very useful for lazy people XXD", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/refs/heads/main/ScriptAuthorization%20Source"))()Ioad("798d0bffa1239975b4740512fef38f6f")
