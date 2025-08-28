@@ -309,7 +309,7 @@ Section:NewButton("Fhub", "idk anymore", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/OpenSourceEngine/Script/refs/heads/main/Brookhaven.lua"))()
 end)
 Section:NewButton("Zizwar hub", "idk how to spell random things", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-ZIZWAR-HUB-50371"));
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-ZIZWAR-HUB-50371"))();
 end)
 Section:NewButton("particle giver", "idk if it fe cuz im dumdum", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Gazer-Ha/Gaze-stuff/refs/heads/main/Fe%20Particle%20Giver"))()
