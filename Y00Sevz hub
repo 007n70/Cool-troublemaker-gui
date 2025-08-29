@@ -248,3 +248,9 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/OfficerStyle"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Tiger saejima style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/SaejimaTigerStyle"))();
+   end,
+})
