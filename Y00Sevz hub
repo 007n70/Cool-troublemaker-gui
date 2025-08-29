@@ -296,3 +296,9 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Noob-x-pot-style-22671"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Karate style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Karate-Style-22512"))()
+   end,
+})
