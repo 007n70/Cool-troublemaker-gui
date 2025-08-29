@@ -1350,7 +1350,7 @@ Section:NewButton("Ring reploud", "op but has key system ofc lol", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Super-Ring-Reploud-Cracked-35060"))();
 end)
 Section:NewButton("Blackhole", "Vro is NOT Thanos tbh", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/QsvmVBr1"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/deprivationist/Sypher-Hub-NDS/refs/heads/main/Sypher%20Hub%20NDS.txt"))()
 end)
 Section:NewButton("Blackhole but more simple", "so tuff fym", function()
     loadstring(game:HttpGet("https://pastefy.app/pYhER1z4/raw"))()
