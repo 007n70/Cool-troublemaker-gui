@@ -166,6 +166,12 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
+   Name = "Tiger with brute edition style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Tiger-style-Replaces-brute-not-fisticuffs-21014"))()
+   end,
+})
+local Button = Tab:CreateButton({
    Name = "Boxer style",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Boxer-Style-41626"))();
