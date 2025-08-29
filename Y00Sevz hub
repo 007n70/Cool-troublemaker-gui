@@ -189,3 +189,9 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/DragonofTosaStyle"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Footwork style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/FootworkerStyle"))()
+   end,
+})
