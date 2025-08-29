@@ -165,3 +165,9 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Aizawa-style-40762"))();
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Komainu style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Shishido-style-40025"))();
+   end,
+})
