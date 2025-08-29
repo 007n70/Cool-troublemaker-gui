@@ -260,3 +260,9 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-The-Dragon-of-Dojima-Version-23288"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Combat god style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Combat-god-style-22769"))()
+   end,
+})
