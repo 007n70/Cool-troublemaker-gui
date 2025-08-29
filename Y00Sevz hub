@@ -153,3 +153,9 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Boxer-Style-41626"))();
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Dragon of steel and legendary style (Keybind: L)",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-Of-Steel-41612"))()
+   end,
+})
