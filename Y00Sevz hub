@@ -230,3 +230,9 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Yakuza-0-to-gaiden-styles-28250"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Crane style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/CraneStyle"))()
+   end,
+})
