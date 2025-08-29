@@ -134,3 +134,16 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/bot'))()
    end,
 })
+local Tab = Window:CreateTab("Right 2 fight", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "Dragon of mark gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-of-mark-49598"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Legacy tiger style",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/McMusty/McMusty/refs/heads/main/TigerLegacyStyleV2"))()
+   end,
+})
