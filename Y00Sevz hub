@@ -91,20 +91,22 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/LynXzl/Scripts/main/Blox%20Hunt/Script.lua"))()
    end,
 })
-local Tab = Window:CreateTab("sword fight", 4483362458)
+local Tab = Window:CreateTab("Sword fight", 4483362458)
 local Button = Tab:CreateButton({
-   Name = "Reach",
+   Name = "Reacher",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Mobile-Sword-Fight-Killaura-44174"))();
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "SFOTH reforge Space hub",
+   Name = "Space hub",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/ago106/SpaceHub/refs/heads/main/loader.lua"))()
    end,
 })
 local Button = Tab:CreateButton({
+   Name = "Auto collect sword",
+   Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Sword-Fights-on-the-Heights-IV-Sword-Fights-On-The-Heights-42404"))()
    end,
 })
@@ -115,22 +117,20 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "SwordBlox",
+   Name = "Auto farm",
    Callback = function()
-   pcall(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hm5650/SwordBlox/refs/heads/main/SB", true))()
-end)
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Any-sword-fight-game-script-adjustable-and-for-learning-37774"))();
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Auto farn",
+   Name = "Kill all",
    Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Any-sword-fight-game-script-adjustable-and-for-learning-37774"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/noritery/msf-killall/refs/heads/main/main.lua"))()
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Sword fight bot (Keybind: R,T)",
+   Name = "Bot (Keybind : X)",
    Callback = function()
-   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Sword-fight-bot-universal-modded-by-me-37677"))();
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/bot'))()
    end,
 })
