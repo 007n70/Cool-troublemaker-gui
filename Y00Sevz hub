@@ -344,3 +344,9 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Derek-Style-8102"))();
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Leopard style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Leopard-Style-8101"))();
+   end,
+})
