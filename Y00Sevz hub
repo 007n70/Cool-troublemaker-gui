@@ -4,7 +4,7 @@ local Window = Rayfield:CreateWindow({
    Icon = 0,
    LoadingTitle = "Y00Sevz hub is a hub that's collecting every scripts then skidding XD.. loading....",
    LoadingSubtitle = "by 007n70 (the_secondblueman)",
-   ShowText = "7n70",
+   ShowText = "show 7n70",
    Theme = "DarkBlue",
 
    ToggleUIKeybind = "K",
@@ -187,6 +187,12 @@ local Button = Tab:CreateButton({
    Name = "Dragon of steel and legendary style (Keybind: L)",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-Of-Steel-41612"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Legendary dragon style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-Style-7061"))()
    end,
 })
 local Button = Tab:CreateButton({
