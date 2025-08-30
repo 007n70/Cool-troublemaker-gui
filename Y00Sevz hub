@@ -1,11 +1,11 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Y00Sevz hub",
-   Icon = 74878620693041,
+   Icon = 100286482535250,
    LoadingTitle = "Y00Sevz hub is a hub that's collecting every scripts then skidding XD.. loading....",
    LoadingSubtitle = "by 007n70 (the_secondblueman)",
    ShowText = "show 7n70",
-   Theme = "Serenity",
+   Theme = "Amethyst",
 
    ToggleUIKeybind = "K",
 
