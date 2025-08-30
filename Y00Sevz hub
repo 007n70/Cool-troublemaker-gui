@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Y00Sevz hub",
-   Icon = 0,
+   Icon = 74878620693041,
    LoadingTitle = "Y00Sevz hub is a hub that's collecting every scripts then skidding XD.. loading....",
    LoadingSubtitle = "by 007n70 (the_secondblueman)",
    ShowText = "show 7n70",
@@ -367,5 +367,11 @@ local Button = Tab:CreateButton({
    Name = "rolezeay hub",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/rolezeay/meepcityhmm/refs/heads/main/hmmmm"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Synolope gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/synolope/mpcity/main/loader.lua",true))()
    end,
 })
