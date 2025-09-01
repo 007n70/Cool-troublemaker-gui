@@ -413,7 +413,7 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Chess ai but weaker",
+   Name = "Chess club gui",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/riglette/GUMANAKANAPLSLNG/refs/heads/main/MaawaKaPls"))()
    end,
