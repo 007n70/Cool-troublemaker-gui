@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Y00Sevz hub",
-   Icon = 100286482535250,
+   Icon = 0,
    LoadingTitle = "Y00Sevz hub is a hub that's collecting every scripts then skidding XD.. loading....",
    LoadingSubtitle = "by 007n70 (the_secondblueman)",
    ShowText = "7n70",
@@ -36,7 +36,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("Blox hunt", 1031965637)
+local Tab = Window:CreateTab("Blox hunt", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Gui 1",
    Callback = function()
@@ -91,7 +91,7 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/LynXzl/Scripts/main/Blox%20Hunt/Script.lua"))()
    end,
 })
-local Tab = Window:CreateTab("Sword fight", 534533609)
+local Tab = Window:CreateTab("Sword fight", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Reacher",
    Callback = function()
@@ -134,7 +134,7 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/bot'))()
    end,
 })
-local Tab = Window:CreateTab("Right 2 fight", 13050670483)
+local Tab = Window:CreateTab("Right 2 fight", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Dragon of mark gui",
    Callback = function()
@@ -362,7 +362,7 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Blade-Style-REUPLOADED-8006"))()
    end,
 })
-local Tab = Window:CreateTab("Meepcity", 75195714401783)
+local Tab = Window:CreateTab("Meepcity", 4483362458)
 local Button = Tab:CreateButton({
    Name = "rolezeay hub",
    Callback = function()
@@ -397,5 +397,24 @@ local Button = Tab:CreateButton({
    Name = "Meephub",
    Callback = function()
    loadstring(game:HttpGet("https://pastebin.com/raw/2G3vuyFT"))()
+   end,
+})
+local Tab = Window:CreateTab("Chess club", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "Chess ai",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SchizoCore/chessBot/refs/heads/main/main.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto chess/best move",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Chess-Club-Best-move-and-auto-move-41131"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Chess ai but weaker",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/riglette/GUMANAKANAPLSLNG/refs/heads/main/MaawaKaPls"))()
    end,
 })
