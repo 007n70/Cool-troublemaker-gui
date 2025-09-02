@@ -418,3 +418,40 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/riglette/GUMANAKANAPLSLNG/refs/heads/main/MaawaKaPls"))()
    end,
 })
+local Tab = Window:CreateTab("Break in 1", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "Proxima hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Crusty hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/platinww/CrustyMain/refs/heads/main/break-in-story/breakinstory.lua"))(
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "X hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/XHub/main/HubLoader.lua", true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Open source",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Break-In-(Story)-Open-Source-3527"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Levi4chan hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Levi4Chan/Rblx-Scripts/main/Break-In.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "DP hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/COOLXPLO/DP-HUB-coolxplo/refs/heads/main/BreakInStory.lua"))()
+   end,
+})
