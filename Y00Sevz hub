@@ -329,7 +329,7 @@ local Button = Tab:CreateButton({
 local Button = Tab:CreateButton({
    Name = "Street style",
    Callback = function()
-   -- The function that takes place when the button is pressed
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Street-ing-style-22468"))()
    end,
 })
 local Button = Tab:CreateButton({
@@ -418,7 +418,7 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/riglette/GUMANAKANAPLSLNG/refs/heads/main/MaawaKaPls"))()
    end,
 })
-local Tab = Window:CreateTab("Break in 1", 4483362458)
+local Tab = Window:CreateTab("Break in", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Proxima hub",
    Callback = function()
@@ -428,7 +428,7 @@ local Button = Tab:CreateButton({
 local Button = Tab:CreateButton({
    Name = "Crusty hub",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/platinww/CrustyMain/refs/heads/main/break-in-story/breakinstory.lua"))(
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/platinww/CrustyMain/refs/heads/main/break-in-story/breakinstory.lua"))()
    end,
 })
 local Button = Tab:CreateButton({
