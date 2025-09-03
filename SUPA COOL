@@ -1056,6 +1056,9 @@ end)
 Section:NewButton("Orca admin", "best cmd script rn", function()
     loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
 end)
+Section:NewButton("Sirius menu", "very useful", function()
+    loadstring(game:HttpGet('https://sirius.menu/script'))();
+end)
 Section:NewButton("Admin cmds", "Useful", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/cmd/main/main.lua"))();
 end)
