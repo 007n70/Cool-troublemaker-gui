@@ -5,10 +5,10 @@ MainTab:CreateSection("Main gaying")
 MainTab:CreateLabel("Welcome to Super gay club!")
 ---
 MainTab:CreateButton("Jerkin", function()
-    loadstring("https://rawscripts.net/raw/Universal-Script-Jerk-off-slow-mode-38379"))();
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Jerk-off-slow-mode-38379"))();
 end)
 MainTab:CreateButton("Horny bitch", function()
-    loadstring(game:HttpGet"https://rawscripts.net/raw/Universal-Script-The-script-super-sus-animation-49976"))();
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-The-script-super-sus-animation-49976"))();
 end)
 MainTab:CreateButton("Slur", function()
     loadstring(game:HttpGet("https://paste.ee/r/BHYlcswO/0", true))()
