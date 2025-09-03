@@ -17,3 +17,21 @@ Tab1:AddButton({
         loadstring("https://rawscripts.net/raw/Universal-Script-The-script-super-sus-animation-49976"))();
     end
 })
+Tab1:AddButton({
+    Text = "Slur",
+    Callback = function()
+        loadstring(game:HttpGet("https://paste.ee/r/BHYlcswO/0", true))()
+    end
+})
+Tab1:AddButton({
+    Text = "Twink",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoserAlt/fes/refs/heads/main/e"))()
+    end
+})
+Tab1:AddButton({
+    Text = "Twerking",
+    Callback = function()
+        
+    end
+})
