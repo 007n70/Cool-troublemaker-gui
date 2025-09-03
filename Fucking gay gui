@@ -2,8 +2,6 @@ local Library = loadstring(game:HttpGet("https://pastefy.app/LykT6C8f/raw"))()
 
 local Window = Library:CreateWindow("Rainbow yoai Ui")
 local Tab1 = Window:AddTab("Main")
-local Tab2 = Window:AddTab("Visual")
-local Tab3 = Window:AddTab("New")
 
 Tab1:AddButton({
     Text = "Jerkin",
@@ -11,30 +9,35 @@ Tab1:AddButton({
         loadstring("https://rawscripts.net/raw/Universal-Script-Jerk-off-slow-mode-38379"))();
     end
 })
+
 Tab1:AddButton({
     Text = "Horny bitch",
     Callback = function()
         loadstring("https://rawscripts.net/raw/Universal-Script-The-script-super-sus-animation-49976"))();
     end
 })
+
 Tab1:AddButton({
     Text = "Slur",
     Callback = function()
         loadstring(game:HttpGet("https://paste.ee/r/BHYlcswO/0", true))()
     end
 })
+
 Tab1:AddButton({
     Text = "Twink",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoserAlt/fes/refs/heads/main/e"))()
     end
 })
+
 Tab1:AddButton({
     Text = "Twerking",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/88ngjvrb"))();
     end
 })
+
 Tab1:AddButton({
     Text = "Show us ur ass",
     Callback = function()
