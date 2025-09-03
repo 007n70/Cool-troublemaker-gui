@@ -32,6 +32,6 @@ Tab1:AddButton({
 Tab1:AddButton({
     Text = "Twerking",
     Callback = function()
-        
+        loadstring(game:HttpGet("https://pastebin.com/raw/88ngjvrb"))();
     end
 })
