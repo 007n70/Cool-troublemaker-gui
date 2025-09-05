@@ -37,37 +37,38 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
 local Button = Tab:CreateButton({
-   Name = "Jerking",
+   Name = "Jerking [r6, r15]",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Jerk-off-slow-mode-38379"))();
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Hormy bitch",
+   Name = "Horny bitch [r6]",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-The-script-super-sus-animation-49976"))();
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Slur",
+   Name = "Slur [r6]",
    Callback = function()
    loadstring(game:HttpGet("https://paste.ee/r/BHYlcswO/0", true))()
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Twink",
+   Name = "Twink [r6]",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoserAlt/fes/refs/heads/main/e"))()
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Twerking",
+   Name = "Twerking [r15] [only works on mic up]",
    Callback = function()
-   loadstring(game:HttpGet("https://pastebin.com/raw/88ngjvrb"))();
+   repeat task.wait() until game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0riginalWarrior/Stalkie/refs/heads/main/roblox.lua"))()
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Im oming it",
+   Name = "Im oming it [r15]",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-oniman-twerk-emote-from-invicble-49537"))();
    end,
