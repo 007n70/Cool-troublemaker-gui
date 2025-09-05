@@ -468,3 +468,51 @@ local Button = Tab:CreateButton({
    Window.ModifyTheme("Default")
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Change theme [Amber glow]",
+   Callback = function()
+   Window.ModifyTheme("AmberGlow")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Amethyst]",
+   Callback = function()
+   Window.ModifyTheme("Amethyst")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Bloom]",
+   Callback = function()
+   Window.ModifyTheme("Bloom")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [DarkBlue]",
+   Callback = function()
+   Window.ModifyTheme("DarkBlue")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Green]",
+   Callback = function()
+   Window.ModifyTheme("Green")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Light]",
+   Callback = function()
+   Window.ModifyTheme("Light")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Ocean]",
+   Callback = function()
+   Window.ModifyTheme("Ocean")
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change theme [Serenity]",
+   Callback = function()
+   Window.ModifyTheme("Serenity")
+   end,
+})
