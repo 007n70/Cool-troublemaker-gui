@@ -462,3 +462,9 @@ local Button = Tab:CreateButton({
    Rayfield:Destroy()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Change theme [Default]",
+   Callback = function()
+   Window.ModifyTheme('Default')
+   end,
+})
