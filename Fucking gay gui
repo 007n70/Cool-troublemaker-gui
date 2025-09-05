@@ -10,12 +10,12 @@ local Window = Rayfield:CreateWindow({
    ToggleUIKeybind = "E",
 
    DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+   DisableBuildWarnings = false,
 
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
+      FolderName = nil,
+      FileName = "Gay Hub"
    },
 
    Discord = {
