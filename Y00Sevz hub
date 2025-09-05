@@ -465,6 +465,6 @@ local Button = Tab:CreateButton({
 local Button = Tab:CreateButton({
    Name = "Change theme [Default]",
    Callback = function()
-   Window.ModifyTheme('Default')
+   Window.ModifyTheme("Default")
    end,
 })
