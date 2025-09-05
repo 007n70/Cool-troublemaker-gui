@@ -455,3 +455,10 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/COOLXPLO/DP-HUB-coolxplo/refs/heads/main/BreakInStory.lua"))()
    end,
 })
+local Tab = Window:CreateTab("System", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "Destroy the ui",
+   Callback = function()
+   Rayfield:Destroy()
+   end,
+})
