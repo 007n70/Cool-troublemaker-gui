@@ -43,6 +43,12 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
+   Name = "Backshot the slaves",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Markklol/aw/refs/heads/main/Protected/BangScript.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
    Name = "Horny bitch [r6, r15]",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-The-script-super-sus-animation-49976"))();
