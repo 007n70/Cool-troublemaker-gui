@@ -1,24 +1,74 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/jeffScripts-dev/jeffScripts-dev/main/IceHubUILibrary"))()
-local Window = Library:CreateWindow("Gay yaoi hub")
-local NameTab = Window:CreateTab("Everyone is gay with their bff. They're just hiding it")
-MainTab:CreateSection("Main gaying")
-MainTab:CreateLabel("Welcome to Super gay club!")
----
-MainTab:CreateButton("Jerkin", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Jerk-off-slow-mode-38379"))();
-end)
-MainTab:CreateButton("Horny bitch", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-The-script-super-sus-animation-49976"))();
-end)
-MainTab:CreateButton("Slur", function()
-    loadstring(game:HttpGet("https://paste.ee/r/BHYlcswO/0", true))()
-end)
-MainTab:CreateButton("Twink", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoserAlt/fes/refs/heads/main/e"))()
-end)
-MainTab:CreateButton("Twerking", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/88ngjvrb"))();
-end)
-MainTab:CreateButton("Show us ur ass", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-oniman-twerk-emote-from-invicble-49537"))();
-end)
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Gay hub v1.1.0",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Gay hub Interface Suite",
+   LoadingSubtitle = "by 007n7",
+   ShowText = "Yaoi", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   ToggleUIKeybind = "E", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "Jerking",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Jerk-off-slow-mode-38379"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Hormy bitch",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-The-script-super-sus-animation-49976"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Slur",
+   Callback = function()
+   loadstring(game:HttpGet("https://paste.ee/r/BHYlcswO/0", true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Twink",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ShutUpJamesTheLoserAlt/fes/refs/heads/main/e"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Twerking",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/88ngjvrb"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Im oming it",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-oniman-twerk-emote-from-invicble-49537"))();
+   end,
+})
