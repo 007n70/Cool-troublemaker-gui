@@ -86,7 +86,13 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Professional gay",
+   Name = "Fe femboy [r6]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/Cheap-shot/FE%20FEMBOY"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Professional gay [r6]",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/AlgariBot/lua/refs/heads/Lua-Script-Executor/SexMachine.lua"))()
    end,
