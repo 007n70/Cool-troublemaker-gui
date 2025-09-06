@@ -164,3 +164,9 @@ local Button = Tab:CreateButton({
    Window.ModifyTheme("Serenity")
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Lil slut [r6] [not fe only for fun or idk lemme test lol]",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/UnknowingNSFW/Roblox-Exploit/main/RoClothes.lua'))()
+   end,
+})
