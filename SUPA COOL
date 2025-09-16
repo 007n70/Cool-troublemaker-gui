@@ -1475,6 +1475,6 @@ end)
 Section:NewButton("Y00Sevz hub", "More about games and stuff", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/Cool-troublemaker-gui/refs/heads/main/Y00Sevz%20hub"))();
 end)
-Section:NewButton("Not made by me but noli is", "He's a good scripter omg :0", function()
+Section:NewButton("Fucking gay gui", "Im gay lets fuck", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/007n70/MY-FRIEND-S-GUI/refs/heads/main/NOLI"))();
 end)
