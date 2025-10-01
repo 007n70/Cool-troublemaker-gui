@@ -505,13 +505,13 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Inf stamina [for losers who's doesn't know how to stamina manage lmao",
+   Name = "Inf stamina [for losers who's doesn't know how to stamina manage lmao]",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Inf-stamina-universal-For-forsaken-and-forsaken-game-clone-54983"))()
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Frontflip (a copied version lol",
+   Name = "Frontflip [a copied version lol]",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/SHRTRYScriptMANhere/stolenahhfrotflip/refs/heads/main/Flip",true))()
    end,
@@ -542,6 +542,18 @@ local Button = Tab:CreateButton({
 end
 
 loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/ivannetta/ShitScripts/refs/heads/main/forsaken.lua")))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "SNT hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Snowt69/SNT-HUB/refs/heads/main/Forsaken"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Random hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/dream77239/kanl/refs/heads/main/kanl%E8%84%9A%E6%9C%AC%E8%8B%B1%E6%96%8"))();
    end,
 })
 local Tab = Window:CreateTab("System", 4483362458)
