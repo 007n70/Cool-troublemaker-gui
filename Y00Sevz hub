@@ -504,6 +504,24 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/lexioi/EmotesForsaken/refs/heads/main/Script"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Inf stamina [for losers who's doesn't know how to stamina manage lmao",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Inf-stamina-universal-For-forsaken-and-forsaken-game-clone-54983"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Frontflip (a copied version lol",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SHRTRYScriptMANhere/stolenahhfrotflip/refs/heads/main/Flip",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Device stuff idk",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Universal-Forsaken-Device-Spoofer-53644"))();
+   end,
+})
 local Tab = Window:CreateTab("System", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Destroy the ui",
