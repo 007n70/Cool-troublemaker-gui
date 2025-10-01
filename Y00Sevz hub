@@ -461,6 +461,49 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/COOLXPLO/DP-HUB-coolxplo/refs/heads/main/BreakInStory.lua"))()
    end,
 })
+local Tab = Window:CreateTab("Forsaken", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "Walkspeed over and void rush auto control",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/XQZ-official/XQZscripts/refs/heads/main/VroomVroom.txt"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Chance's aimbot",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Chance-aimbot/refs/heads/main/Chance%20aimbot%20v2"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Guest's auto block",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Auto-block-script/refs/heads/main/FINAL%20AUTO%20BLOCK"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Twotime's auto backstab",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Auto-backstab-two-time/refs/heads/main/Auto%20backstab%20v2"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Fat John's auto error 404",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/John-doe-auto-parry-404/refs/heads/main/Script"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Slasher's auto raging",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Auto-raging-pace/refs/heads/main/Da%20scripr"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Silly fuck animations",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/lexioi/EmotesForsaken/refs/heads/main/Script"))()
+   end,
+})
 local Tab = Window:CreateTab("System", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Destroy the ui",
