@@ -553,7 +553,7 @@ local Button = Tab:CreateButton({
     getgenv().DebugNotifications = false -- Use this only if you need to
 end
 
-loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/ivannetta/ShitScripts/refs/heads/main/forsaken.lua")))()
+loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/ivannetta/ShitScripts/refs/heads/main/forsaken.lua"))()
    end,
 })
 local Button = Tab:CreateButton({
@@ -578,7 +578,7 @@ local Button = Tab:CreateButton({
    Name = "Aether hub",
    Callback = function()
    script_key = "Add key here to auto verify"
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua"))()))();
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua"))();
    end,
 })
 local Tab = Window:CreateTab("System", 4483362458)
