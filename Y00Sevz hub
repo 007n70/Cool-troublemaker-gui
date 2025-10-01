@@ -522,6 +522,12 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Universal-Forsaken-Device-Spoofer-53644"))();
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Nyansaken hub [key: nyan]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/NyansakenHub/NyansakenHub/refs/heads/main/forsakenupdate"))()
+   end,
+})
 local Tab = Window:CreateTab("System", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Destroy the ui",
