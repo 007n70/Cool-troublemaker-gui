@@ -469,6 +469,12 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
+   Name = "Noli's anti slip",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/NOLI-Forsaken-Noli-Void-Rush-Anti-Slippery-48647"))();
+   end,
+})
+local Button = Tab:CreateButton({
    Name = "Chance's aimbot",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Chance-aimbot/refs/heads/main/Chance%20aimbot%20v2"))();
@@ -484,6 +490,12 @@ local Button = Tab:CreateButton({
    Name = "Twotime's auto backstab",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Auto-backstab-two-time/refs/heads/main/Auto%20backstab%20v2"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Dueskhar's protect sheild pass wall",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Dusekkar-protection-goes-thru-walls-51812"))();
    end,
 })
 local Button = Tab:CreateButton({
@@ -554,6 +566,19 @@ local Button = Tab:CreateButton({
    Name = "Random hub",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/dream77239/kanl/refs/heads/main/kanl%E8%84%9A%E6%9C%AC%E8%8B%B1%E6%96%8"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Rif hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Aether hub",
+   Callback = function()
+   script_key = "Add key here to auto verify"
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua"))()))();
    end,
 })
 local Tab = Window:CreateTab("System", 4483362458)
