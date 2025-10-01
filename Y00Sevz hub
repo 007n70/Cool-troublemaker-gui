@@ -535,25 +535,15 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Nyansaken hub [key: nyan]",
+   Name = "Nyansaken [key: NYAN]",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/NyansakenHub/NyansakenHub/refs/heads/main/forsakenupdate"))()
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "B0bby hub",
+   Name = "Fartsaken",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/BobJunior1/ForsakenBoi/refs/heads/main/B0bbyHub"))()
-   end,
-})
-local Button = Tab:CreateButton({
-   Name = "Fartsaken hub",
-   Callback = function()
-   if getgenv then
-    getgenv().DebugNotifications = false -- Use this only if you need to
-end
-
-loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/ivannetta/ShitScripts/refs/heads/main/forsaken.lua"))()
+   loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/ivannetta/ShitScripts/refs/heads/main/forsaken.lua")))()
    end,
 })
 local Button = Tab:CreateButton({
@@ -565,13 +555,20 @@ local Button = Tab:CreateButton({
 local Button = Tab:CreateButton({
    Name = "Random hub",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/dream77239/kanl/refs/heads/main/kanl%E8%84%9A%E6%9C%AC%E8%8B%B1%E6%96%8"))();
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/dream77239/kanl/refs/heads/main/kanl%E8%84%9A%E6%9C%AC%E8%8B%B1%E6%96%8"))()
    end,
 })
 local Button = Tab:CreateButton({
    Name = "Rif hub",
    Callback = function()
    loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Aether hub",
+   Callback = function()
+   script_key = "Add key here to auto verify"
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua"))()
    end,
 })
 local Tab = Window:CreateTab("System", 4483362458)
