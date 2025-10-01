@@ -528,6 +528,22 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/NyansakenHub/NyansakenHub/refs/heads/main/forsakenupdate"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "B0bby hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/BobJunior1/ForsakenBoi/refs/heads/main/B0bbyHub"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Fartsaken hub",
+   Callback = function()
+   if getgenv then
+    getgenv().DebugNotifications = false -- Use this only if you need to
+end
+
+loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/ivannetta/ShitScripts/refs/heads/main/forsaken.lua")))()
+   end,
+})
 local Tab = Window:CreateTab("System", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Destroy the ui",
