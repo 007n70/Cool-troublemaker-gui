@@ -574,13 +574,6 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rifton.top/loader.lua"))()
    end,
 })
-local Button = Tab:CreateButton({
-   Name = "Aether hub",
-   Callback = function()
-   script_key = "Add key here to auto verify"
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua"))();
-   end,
-})
 local Tab = Window:CreateTab("System", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Destroy the ui",
