@@ -559,7 +559,7 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Nyansaken [key: NYAN]",
+   Name = "Nyansaken [key: NYAN] [patching rn might rework soon]",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/NyansakenHub/NyansakenHub/refs/heads/main/forsakenupdate"))()
    end,
