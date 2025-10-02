@@ -481,6 +481,24 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
+   Name = "The son skin [shed]",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/7QA57erM"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Artful skin [shed]",
+   Callback = function()
+   loadstring(game:HttpGet('https://gist.githubusercontent.com/totallynotflowers/8fe71c3be3ee2e080cf51fd982e12c17/raw/74f0c7daca90189b7e6f722fa52874bc93a41a9c/gistfile1.txt'))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Change guest's animation",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/yLywOuKd/raw", true))()
+   end,
+})
+local Button = Tab:CreateButton({
    Name = "Chance's aimbot",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/skibidi399/Chance-aimbot/refs/heads/main/Chance%20aimbot%20v2"))();
@@ -559,9 +577,15 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Random hub",
+   Name = "ZscriptX hub",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/dream77239/kanl/refs/heads/main/kanl%E8%84%9A%E6%9C%AC%E8%8B%B1%E6%96%8"))()
+   loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fc6607930f2b0b3d792cb7486ddc8137.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Sigmasaken hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/sigmaboy-sigma-boy/Sigmasaken/refs/heads/main/sigmasakenmain"))()
    end,
 })
 local Button = Tab:CreateButton({
@@ -608,9 +632,21 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
+   Name = "Kryorion hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ehrerlikesteto/KryOnionrep/refs/heads/main/OnionIsForsaken"))()
+   end,
+})
+local Button = Tab:CreateButton({
    Name = "MX gui",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/FemWareDevelper/Forsaken/refs/heads/main/A1"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Hitbox expander gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/nL596gUR"))()
    end,
 })
 local Tab = Window:CreateTab("System", 4483362458)
