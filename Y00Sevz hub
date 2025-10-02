@@ -626,6 +626,19 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
+   Name = "Moonlight hub",
+   Callback = function()
+   shared.key = "";
+loadstring(game:HttpGet("https://api.moonlight.uno/cdn/loader"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Voidware",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Slasher-Forsaken-Forsaken-voidware-keyless-OP11i111i1i1ii1i1i1-53150"))();
+   end,
+})
+local Button = Tab:CreateButton({
    Name = "RX gui",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Redexe19/RXGUIV1/refs/heads/main/RX%20Forsaken/RX_Forsakened"))()
