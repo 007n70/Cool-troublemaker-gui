@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Y00Sevz hub",
    Icon = 0,
-   LoadingTitle = "Y00Sevz hub is a hub that's collecting every scripts then skidding XD.. loading....",
+   LoadingTitle = "Y00Sevz hub is a hub that's",
    LoadingSubtitle = "by 007n70 (the_secondblueman)",
    ShowText = "7n70",
    Theme = "Amethyst",
@@ -642,6 +642,12 @@ local Button = Tab:CreateButton({
    Name = "Voidware",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Slasher-Forsaken-Forsaken-voidware-keyless-OP11i111i1i1ii1i1i1-53150"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Kani hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/dream77239/kanl/refs/heads/main/kanl%E8%84%9A%E6%9C%AC%E8%8B%B1%E6%96%87.txt"))()
    end,
 })
 local Button = Tab:CreateButton({
