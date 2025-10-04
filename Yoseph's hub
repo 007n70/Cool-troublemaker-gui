@@ -645,7 +645,7 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Kani hub",
+   Name = "Kanl hub",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/dream77239/kanl/refs/heads/main/kanl%E8%84%9A%E6%9C%AC%E8%8B%B1%E6%96%87.txt"))()
    end,
@@ -660,6 +660,12 @@ local Button = Tab:CreateButton({
    Name = "DY hub",
    Callback = function()
    loadstring(game:HttpGet("https://pastefy.app/upuGGVpP/raw"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "RBBHS hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code"))()
    end,
 })
 local Button = Tab:CreateButton({
