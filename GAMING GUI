@@ -103,119 +103,19 @@ Section:NewButton("Op gui 1", "Password reset everyday", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ArchIsAlive/Arch-Hub/refs/heads/main/8577035715f13ebd.lua.txt"))()
 end)
 Section:NewButton("Godmode", "the web was disgusting..", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/refs/heads/main/SEWH.lua"))()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/something-evil-will-happen-Almost-full-godmode-and-ragdoll-disabler-63905"))();
 end)
-Section:NewButton("Semi god gui", "idk the name lol i name it by myself", function()
-    -- Passive Adonis Anti-Cheat Bypass (always enabled, no UI)
-local getinfo = getinfo or debug.getinfo
-local DEBUG = false
-local Hooked = {}
-
-local Detected, Kill
-
-if setthreadidentity then setthreadidentity(2) end
-
-for i, v in getgc(true) do
-    if typeof(v) == "table" then
-        local DetectFunc = rawget(v, "Detected")
-        local KillFunc = rawget(v, "Kill")
-
-        if typeof(DetectFunc) == "function" and not Detected then
-            Detected = DetectFunc
-            local Old; Old = hookfunction(Detected, function(Action, Info, NoCrash)
-                if Action ~= "_" then
-                    if DEBUG then
-                        warn(`Adonis AntiCheat flagged\nMethod: {Action}\nInfo: {Info}`)
-                    end
-                end
-                return true
-            end)
-            table.insert(Hooked, Detected)
-        end
-
-        if rawget(v, "Variables") and rawget(v, "Process") and typeof(KillFunc) == "function" and not Kill then
-            Kill = KillFunc
-            local Old; Old = hookfunction(Kill, function(Info)
-                if DEBUG then
-                    warn(`Adonis AntiCheat tried to kill (fallback): {Info}`)
-                end
-            end)
-            table.insert(Hooked, Kill)
-        end
-    end
-end
-
-local Old; Old = hookfunction(getrenv().debug.info, newcclosure(function(...)
-    local LevelOrFunc, Info = ...
-    if Detected and LevelOrFunc == Detected then
-        if DEBUG then
-            warn(`zins | adonis bypassed`)
-        end
-        return coroutine.yield(coroutine.running())
-    end
-    return Old(...)
-end))
-
-if setthreadidentity then setthreadidentity(7) end
-
--- UI with title "S.E.W.H"
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/random%202"))()
-local win = library:Window("S.E.W.H")
-
--- Infinite Stamina dependencies
-local aux = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Upbolt/Hydroxide/revision/ohaux.lua"))()
-local scriptPath = game:GetService("ReplicatedStorage").Resources.Client.SprintHandler
-local closureName = "startSprint"
-local closureConstants = {
-    [1] = "MoveDirection",
-    [2] = "Magnitude",
-    [3] = 0.2,
-    [4] = "Play",
-    [5] = "DestroyIdentifier",
-    [6] = "BaseRegen"
-}
-local closure1 = aux.searchClosure(scriptPath, closureName, 10, closureConstants)
-local closure2 = aux.searchClosure(scriptPath, closureName, 4, closureConstants)
-
--- Infinite Stamina toggle
-win:Toggle("Infinite Stamina", function(state)
-    if closure1 then
-        debug.getupvalue(closure1, 10)["MaxStamina"] = state and 1e308 or 100
-    end
-    if closure2 then
-        debug.setupvalue(closure2, 4, state and 1e308 or 100)
-    end
+Section:NewButton("inf stamina", "have no words", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/UPD-something-evil-will-happen-Inf-stamina-57438"))();
 end)
-
--- Semi God Mode (toggle)
-local semiGodActive = false
-local semiGodHook
-win:Toggle("Semi God Mode", function(state)
-    if state and not semiGodActive then
-        if hookmetamethod then
-            semiGodHook = hookmetamethod(game, "__namecall", function(self, ...)
-                local args = {...}
-                local method = getnamecallmethod()
-                if method == "FireServer" and self.Name == "Asynchronous" then
-                    if args[1] == "HurtSelf" then
-                        args[3] = 0.001 -- nearly zero damage
-                    elseif args[1] == "CharHit" then
-                        args[4] = "Humanoid"
-                    end
-                    return semiGodHook(self, unpack(args))
-                end
-                return semiGodHook(self, ...)
-            end)
-            semiGodActive = true
-        else
-            game:GetService("Players").LocalPlayer:Kick("Exploit not supported!")
-        end
-    elseif not state and semiGodActive then
-        -- Can't unhook in Roblox Lua; tell user to rejoin to disable
-        print("You must rejoin to fully disable Semi God Mode.")
-        semiGodActive = false
-    end
+Section:NewButton("Anti ragdoll", "idk the name lol i name it by myself", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/something-evil-will-happen-ragdoll-disabler-63911"))();
 end)
+Section:NewButton("Blackhole", "idk", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/something-evil-will-happen-BLACK-HOLE-SCRIPT-V3-ZXYP-HUB-61650"))();
+end)
+Section:NewButton("kill players", "idfk either", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/something-evil-will-happen-kill-people-64053"))();
 end)
 Section:NewButton("Auto farm", "finally", function()
     loadstring(game:HttpGet('https://gist.githubusercontent.com/S0MEONEuKnow/90911f080b9ce7f64cb1e2bbb855aa01/raw/64dbe4d34a38f3a6c3b8fe0d81dbeeebababe9f0/sewh3.luau'))()
