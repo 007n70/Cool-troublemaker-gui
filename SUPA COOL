@@ -1389,6 +1389,9 @@ end)
 Section:NewButton("Bring parts", "annoying ppl is not cool but it fun if we do a lil", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-black-hole-18879"))();
 end)
+Section:NewButton("NdsRing V2", "Super powerful", function()
+    loadstring(game:HttpGet("https://incorbxlua.onrender.com/raw/ef1db7fc-7b2a-418e-8bf5-6955bebc759a"))()
+end) 
 Section:NewButton("Bring parts to ppl 2", "the same but simple xd'", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/BringFlingPlayers"));
 end)
