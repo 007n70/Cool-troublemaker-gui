@@ -1143,9 +1143,9 @@ end)
 Section:NewButton("Fe vehicle [r15]", "better version but r15", function()
     loadstring(game:HttpGet("https://pastefy.app/UqDEIOpO/raw"))()
 end)
-Section:NewButton("Fe goofy ass cars [r15]", "lmao", function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-SILLY-CAR-V1-48227"))()
-end)
+Section:NewButton("Fe fuckass cars", "ok", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FE-SILLY-CAR-V1-48227"))()
+
 Section:NewButton("Fe holiday feel", "it's not holiday but yeah", function()
     if not game:GetService("ReplicatedStorage"):FindFirstChild("01_server") then return game:GetService("TeleportService"):Teleport(17574618959, game:GetService("Players").LocalPlayer) end
 loadstring(game:HttpGet(('https://pastefy.app/aKxgjklw/raw'),true))()
@@ -1630,8 +1630,14 @@ end)
 Section:NewButton("Shade gui v2", "My eyes are teary", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-rtx-menu-v2-42616"))()
 end)
-Section:NewButton("RTX", "first edition furry ahh", function()
-loadstring(game:HttpGet("https://rawscripts.net/raw/Just-a-baseplate.-Script-de-RTX-43523"))()
+Section:NewButton("Bodycam", "good for horror and action games", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Azizanzz0/Scripts/refs/heads/main/VHS%20or%20BodyCam%20without%20Shader.txt"))()
+end)
+Section:NewButton("better first person", "ok", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Better-First-Person-and-Smooth-Camera-Movement-54062"))()
+end)
+Section:NewButton("RTX", "cool", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Just-a-baseplate.-Script-de-RTX-43523"))()
 end)
 Section:NewButton("RTX 2", "look chill and lofi but with blur and more light", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/The-Ascended-One-RTX-43823"))()
@@ -1640,7 +1646,9 @@ Section:NewButton("Blur motion", "make your camera blur XD", function()
     local camera = workspace.CurrentCamera
 local blurAmount = 10
 local blurAmplifier = 5
-local lastVector = camera.CFrame.LookVector
+e.CurrentCamera
+local blurAmount = 10
+local
 
 local motionBlur = Instance.new("BlurEffect", camera)
 
