@@ -181,6 +181,8 @@ GodMod()
 debug.setmemorycategory(3)
 getrenv().warn = function() end
 end)
+Section:NewButton("Anti fall dmg", "super good", function()oloadstring(game:HttpGet("https://gist.githubusercontent.com/IZILOL728/d97f9141838b543760e3d352485e911b/raw/7069ad1fb6787f77c0aaa3c3f87a8cbd3ac0dba7/wha"))()
+end)
 Section:NewButton("Anti fling parts", "i hate fling skiddie >:(", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Natural-Disaster-Survival-Anti-part-fling-31406"))();
 end)
