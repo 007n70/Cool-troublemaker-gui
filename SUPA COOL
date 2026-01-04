@@ -63,7 +63,7 @@ Section:NewButton("HUG THE SILLES 2", "WHY USING PUNCH WHEN YOU CAN MARRY AND HA
     loadstring(game: HttpGet("https://raw.githubusercontent.com/ExploiterGuy/Animations/refs/heads/main/Hug%20Machine%20v2.txt"))()
 end)
 Section:NewButton("BOL", "YOU SPIN ME RIGHT ROUND BABY RIGHT ROUND", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/mV3qERKw"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KaterHub-Inc/scripts/refs/heads/main/unofficial-Projects/FEHamsterBall.lua"))()
 end)
 Section:NewButton("Seizure", "Z to work", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/my-back'))()
@@ -379,6 +379,12 @@ Section:NewButton("hat orbit classic version [VERY BROKEN]", "Yall may wonder wh
 end)
 Section:NewButton("Lol no friend", "LOSERZ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/sigmaboy123z/MYFRIENDSCRIPT/refs/heads/main/MYNEWFRIENDSPAWNER"))();
+end)
+Section:NewButton("Phonk edit", "fuckass script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/9s2dyhcgwm-svg/Troll-phonk-meme/refs/heads/main/The%20Script"))()
+end)
+Section:NewButton("Spongebob war", "patties thrower", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/mR1605fF"))()
 end)
 local Tab = Window:NewTab("basic, useful and fly stuff")
 local Section = Tab:NewSection("learn basics first")
