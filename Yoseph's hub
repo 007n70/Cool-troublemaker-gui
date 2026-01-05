@@ -461,6 +461,73 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/COOLXPLO/DP-HUB-coolxplo/refs/heads/main/BreakInStory.lua"))()
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Spectravax hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/deedlemcdoodledeedlemcdoodle-creator/SpectravaxHub/refs/heads/main/newestkeylessscript.lua"))()
+   end,
+})
+local Tab = Window:CreateTab("Break in 2", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "LKF hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/4H5Vb2in/raw"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Actual hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Iptxt/ActualHub/refs/heads/main/Loader"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Blayze hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/OfficialBlayze/BreakIn2Script/refs/heads/main/Blayze/Hub/V1.lua", true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Hutao hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Break-In-2-(Story)-Hutao-Hub-reak-In-2-56988"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Harlen hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastee.dev/r/pr5mH9tc"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "FH hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/Hide/main/Break%20in%202"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "PlayerZN hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/PlayerZN-Gaming/PlayerVN-Hub-Lua/refs/heads/main/PlayerVN-Hub-BreakIn2--AdminMenu'))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "KRT hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastefy.app/0Olk15yd/raw"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "BI2",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Iceware-RBLX/Roblox/refs/heads/main/loader.lua",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "BI hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://freenote.biz/raw/80jXm2Q0a7",true))()
+   end,
+})
 local Tab = Window:CreateTab("Forsaken", 4483362458)
 local Button = Tab:CreateButton({
    Name = "Walkspeed over and void rush auto control",
@@ -684,6 +751,55 @@ local Button = Tab:CreateButton({
    Name = "Hitbox expander gui",
    Callback = function()
    loadstring(game:HttpGet("https://pastebin.com/raw/nL596gUR"))()
+   end,
+})
+local Tab = Window:CreateTab("Piggy", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "UNKNOW hub [key: ALUKSX]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Veno hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/totallynothimplayz/Jd/refs/heads/main/Veno%20Hub", true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Galactic hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/GalacticScripts/Galactic-Hub/refs/heads/main/WindUI"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Tiger x hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/BalintTheDevXBack/Games/refs/heads/main/Piggy"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Starhack hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/StarHackScripts/StarHack-Hub-Deepstar-Hub/refs/heads/main/StarHack%20Hub%20-%20Piggy%20Pro%20Hub.txt"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Plushie collector",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/AcelestuZ/PiggyPlushieCollector/main/script.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Godmode and esp",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Iliankytb/Iliankytb/main/CheatPiggy"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Godmode and esp [fixed version]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptBloxUniversal/piggy-roblox/refs/heads/main/Piggy.lua"))()
    end,
 })
 local Tab = Window:CreateTab("System", 4483362458)
