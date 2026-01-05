@@ -781,7 +781,7 @@ local Button = Tab:CreateButton({
 local Button = Tab:CreateButton({
    Name = "Starhack hub",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/StarHackScripts/StarHack-Hub-Deepstar-Hub/refs/heads/main/StarHack%20Hub%20-%20Piggy%20Pro%20Hub.txt"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/StarHackScripts/StarHack-Hub-Deepstar-Hub/refs/heads/main/StarHackHub_PiggyV2release"))()
    end,
 })
 local Button = Tab:CreateButton({
