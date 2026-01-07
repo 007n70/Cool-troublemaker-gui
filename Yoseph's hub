@@ -1,8 +1,8 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "Y00Sevz hub",
+   Name = "Yosheph's hub",
    Icon = 0,
-   LoadingTitle = "Y00Sevz hub is a hub that's",
+   LoadingTitle = "Yosheph's collection",
    LoadingSubtitle = "by 007n70 (the_secondblueman)",
    ShowText = "7n70",
    Theme = "Amethyst",
@@ -129,9 +129,40 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
-   Name = "Bot (Keybind : X)",
+   Name = "Bot [Keybind : X]",
    Callback = function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/bot'))()
+   end,
+})
+local Tab = Window:CreateTab("UBG", 4483362458)
+local Button = Tab:CreateButton({
+   Name = "Mirage hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e84aac149960efeddc83453e4a856d9d.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Pathos hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/th3-osc/Pathos/main/Pathos%20Key%20System.lua"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Beanz hub [key: deffendersboxing]",
+   Callback = function()
+   loadstring(game:HttpGet('https://pastefy.app/KtsF3Wq7/raw'))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Siff hub [Key tut: you must join their discord server and verify ur own key!]",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/NysaDanielle/loader/refs/heads/main/auth"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Auto redeem codes",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/SUPERNOVA-untitled-boxing-game-Auto-Redeem-Codes-79233"))()
    end,
 })
 local Tab = Window:CreateTab("Right 2 fight", 4483362458)
@@ -157,6 +188,12 @@ local Button = Tab:CreateButton({
    Name = "Dragon morph",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Dragon-style-morph-mod-21063"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Akiyama morph",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Crepscule/R2F-MODDED-STYLES/refs/heads/main/AkiyamaMorph.lua"))();
    end,
 })
 local Button = Tab:CreateButton({
@@ -241,6 +278,12 @@ local Button = Tab:CreateButton({
    Name = "Reverse style",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Revsre-style-29492"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Mixed style",
+   Callback = function()
+   loafstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Mixed-style-70198"))()
    end,
 })
 local Button = Tab:CreateButton({
@@ -345,6 +388,18 @@ local Button = Tab:CreateButton({
    end,
 })
 local Button = Tab:CreateButton({
+   Name = "Vulcan style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Vulcan-Villian-style-70207"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Daigo dojima style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Daigo-dojima-moveset-style-58951"))()
+   end,
+})
+local Button = Tab:CreateButton({
    Name = "Devil style",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/CollinMiller123/demonlitemode1.2/main/demonlitemode1.2"))();
@@ -366,6 +421,12 @@ local Button = Tab:CreateButton({
    Name = "Blade style",
    Callback = function()
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Blade-Style-REUPLOADED-8006"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Egor style",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-egor-Style-55436"))()
    end,
 })
 local Tab = Window:CreateTab("Meepcity", 4483362458)
