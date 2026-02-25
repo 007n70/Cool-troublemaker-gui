@@ -1,7 +1,18 @@
+local SoundService = game:GetService("SoundService")
+
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://132234673148955"
+sound.Volume = 2
+sound.PlayOnRemove = false
+sound.Parent = SoundService
+
+sound:Play()
+---custom sound when execute lmao
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Yosheph's hub",
-   Icon = 0,
+   Icon = "home",
    LoadingTitle = "Yosheph's collection",
    LoadingSubtitle = "by 007n70 (the_secondblueman)",
    ShowText = "7n70",
@@ -36,7 +47,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("Blox hunt", 4483362458)
+local Tab = Window:CreateTab("Blox hunt", "eye-off")
 local Button = Tab:CreateButton({
    Name = "Gui 1",
    Callback = function()
@@ -91,7 +102,8 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/LynXzl/Scripts/main/Blox%20Hunt/Script.lua"))()
    end,
 })
-local Tab = Window:CreateTab("Sword fight", 4483362458)
+
+local Tab = Window:CreateTab("Sword fight", "swords")
 local Button = Tab:CreateButton({
    Name = "Reacher",
    Callback = function()
@@ -134,7 +146,8 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/1/main/bot'))()
    end,
 })
-local Tab = Window:CreateTab("UBG", 4483362458)
+
+local Tab = Window:CreateTab("UBG", "hand")
 local Button = Tab:CreateButton({
    Name = "Mirage hub",
    Callback = function()
@@ -177,7 +190,7 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/SUPERNOVA-untitled-boxing-game-Auto-Redeem-Codes-79233"))()
    end,
 })
-local Tab = Window:CreateTab("Right 2 fight", 4483362458)
+local Tab = Window:CreateTab("Right 2 fight", "flame")
 local Button = Tab:CreateButton({
    Name = "Dragon of mark gui",
    Callback = function()
@@ -295,7 +308,7 @@ local Button = Tab:CreateButton({
 local Button = Tab:CreateButton({
    Name = "Mixed style",
    Callback = function()
-   loafstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Mixed-style-70198"))()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-Mixed-style-70198"))()
    end,
 })
 local Button = Tab:CreateButton({
@@ -441,7 +454,7 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Right-2-Fight-V0.4.0-egor-Style-55436"))()
    end,
 })
-local Tab = Window:CreateTab("Meepcity", 4483362458)
+local Tab = Window:CreateTab("Meepcity", "home")
 local Button = Tab:CreateButton({
    Name = "rolezeay hub",
    Callback = function()
@@ -478,7 +491,8 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://pastebin.com/raw/2G3vuyFT"))()
    end,
 })
-local Tab = Window:CreateTab("Chess club", 4483362458)
+
+local Tab = Window:CreateTab("Chess club", "lightbulb")
 local Button = Tab:CreateButton({
    Name = "Chess ai",
    Callback = function()
@@ -497,7 +511,8 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/riglette/GUMANAKANAPLSLNG/refs/heads/main/MaawaKaPls"))()
    end,
 })
-local Tab = Window:CreateTab("Break in", 4483362458)
+
+local Tab = Window:CreateTab("Break in", "venetian-mask")
 local Button = Tab:CreateButton({
    Name = "Proxima hub",
    Callback = function()
@@ -546,7 +561,8 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://pastebin.com/raw/Piw5bqGq"))()
    end,
 })
-local Tab = Window:CreateTab("Break in 2", 4483362458)
+
+local Tab = Window:CreateTab("Break in 2", "drama")
 local Button = Tab:CreateButton({
    Name = "LKF hub",
    Callback = function()
@@ -613,7 +629,8 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://pastebin.com/raw/Piw5bqGq"))()
    end,
 })
-local Tab = Window:CreateTab("Forsaken", 4483362458)
+
+local Tab = Window:CreateTab("Forsaken", "beef")
 local Button = Tab:CreateButton({
    Name = "Walkspeed over and void rush auto control",
    Callback = function()
@@ -838,7 +855,8 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://pastebin.com/raw/nL596gUR"))()
    end,
 })
-local Tab = Window:CreateTab("Piggy", 4483362458)
+
+local Tab = Window:CreateTab("Piggy", "piggy-bank")
 local Button = Tab:CreateButton({
    Name = "UNKNOW hub [key: ALUKSX]",
    Callback = function()
@@ -893,7 +911,8 @@ local Button = Tab:CreateButton({
       loadstring(game:HttpGet("https://abre.ai/piggy-h9izextp"))();
    end,
 })
-local Tab = Window:CreateTab("System", 4483362458)
+
+local Tab = Window:CreateTab("System", "settings")
 local Button = Tab:CreateButton({
    Name = "Destroy the ui",
    Callback = function()
