@@ -911,6 +911,29 @@ local Button = Tab:CreateButton({
       loadstring(game:HttpGet("https://abre.ai/piggy-h9izextp"))();
    end,
 })
+local Button = Tab:CreateButton({
+   Name = "Auto farm",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/LuvisNOTreal/Scripts/refs/heads/main/thirstyvampireautofarm.lua"))()
+   end,
+})local Button = Tab:CreateButton({
+   Name = "Kill aura",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Thirsty-Vampire-kill-aura-70577"))();
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Touch of death",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Thirsty-Vampire-Touch-of-death-22023"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Veno hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/totallynothimplayz/Jd/refs/heads/main/Veno%20Hub", true))()
+   end,
+})
 
 local Tab = Window:CreateTab("System", "settings")
 local Button = Tab:CreateButton({
