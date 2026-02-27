@@ -10,41 +10,50 @@ sound:Play()
 ---custom sound when execute lmao
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
 local Window = Rayfield:CreateWindow({
-   Name = "Yosheph's hub",
-   Icon = "home",
-   LoadingTitle = "Yosheph's collection",
-   LoadingSubtitle = "by 007n70 (the_secondblueman)",
-   ShowText = "7n70",
-   Theme = "Amethyst",
+    Name = "Yosheph's Hub",
+    LoadingTitle = "Yosheph's Hub",
+    LoadingSubtitle = "c00lgui Mode",
+    ConfigurationSaving = {Enabled = false},
 
-   ToggleUIKeybind = "K",
+    Theme = {
+        TextColor = Color3.fromRGB(255,255,255),
 
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false,
+        Background = Color3.fromRGB(0,0,0),
+        Topbar = Color3.fromRGB(25,0,0),
+        Shadow = Color3.fromRGB(0,0,0),
 
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Y00Sevz Hub"
-   },
+        TabBackground = Color3.fromRGB(12,12,12),
+        TabStroke = Color3.fromRGB(140,0,0),
+        TabBackgroundSelected = Color3.fromRGB(55,0,0),
+        TabTextColor = Color3.fromRGB(210,210,210),
+        SelectedTabTextColor = Color3.fromRGB(255,255,255),
 
-   Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
+        ElementBackground = Color3.fromRGB(18,0,0),
+        ElementBackgroundHover = Color3.fromRGB(60,0,0),
+        SecondaryElementBackground = Color3.fromRGB(28,0,0),
 
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
+        ElementStroke = Color3.fromRGB(130,0,0),
+        SecondaryElementStroke = Color3.fromRGB(170,0,0),
+
+        SliderBackground = Color3.fromRGB(45,0,0),
+        SliderProgress = Color3.fromRGB(255,0,0),
+
+        ToggleBackground = Color3.fromRGB(35,0,0),
+        ToggleEnabled = Color3.fromRGB(255,0,0),
+        ToggleDisabled = Color3.fromRGB(70,0,0),
+
+        DropdownSelected = Color3.fromRGB(60,0,0),
+        DropdownUnselected = Color3.fromRGB(20,0,0),
+
+        InputBackground = Color3.fromRGB(18,0,0),
+        InputStroke = Color3.fromRGB(140,0,0),
+        PlaceholderColor = Color3.fromRGB(160,160,160),
+
+        NotificationBackground = Color3.fromRGB(20,0,0),
+        NotificationActionsBackground = Color3.fromRGB(40,0,0)
+    }
 })
 
 local Tab = Window:CreateTab("Blox hunt", "eye-off")
