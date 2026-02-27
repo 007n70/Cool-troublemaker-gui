@@ -911,6 +911,13 @@ local Button = Tab:CreateButton({
       loadstring(game:HttpGet("https://abre.ai/piggy-h9izextp"))();
    end,
 })
+local Tab = Window:CreateTab("Thirsty vampire", "sword")
+local Button = Tab:CreateButton({
+   Name = "Button pads v0.1",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/tester999scripts/Mobile-Roblox-scripts/refs/heads/main/T.V.%20script%20mobile.lua"))()
+   end,
+})
 local Button = Tab:CreateButton({
    Name = "Auto farm",
    Callback = function()
